@@ -1,0 +1,15 @@
+{
+  "modules": {
+    "common": [],
+    "documentation": ["common"],
+    "database": ["common", "generated"],
+    "public-content": ["common"],
+    "health": ["common", "database", "public-content"],
+    "oauth": ["common"],
+    "shares": ["common"],
+    "feedback": ["common"],
+    "releases": ["common"]
+  },
+  "compositionFiles": ["app.ts", "app.module.ts", "main.ts"],
+  "generatedDirectory": "generated"
+}

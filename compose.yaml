@@ -1,0 +1,58 @@
+name: open-zcode-server
+
+services:
+  db:
+    image: postgres:18.6-bookworm@sha256:3725f4e2499eef5134592b3b4ab79a543ed7f8e533b05b5b637af926630f6650
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-open_zcode}
+      POSTGRES_DB: ${POSTGRES_DB:-open_zcode}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    volumes:
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U "$${POSTGRES_USER}" -d "$${POSTGRES_DB}"']
+      interval: 5s
+      timeout: 3s
+      retries: 12
+
+  app:
+    build: .
+    restart: unless-stopped
+    init: true
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3000
+      DATABASE_URL: ${DATABASE_URL:?Set DATABASE_URL in .env}
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:-https://localhost:8443}
+      OPENAPI_ENABLED: ${OPENAPI_ENABLED:-true}
+      CORS_ORIGINS: ${CORS_ORIGINS:-}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      BODY_LIMIT_BYTES: ${BODY_LIMIT_BYTES:-1048576}
+    ports:
+      - '127.0.0.1:${API_PORT:-3000}:3000'
+
+  tls:
+    profiles: ['tls']
+    image: caddy:2.11.4-alpine@sha256:6aeddd44c3078b0f9a35206472a11420648a79c184603ef95957d0a20044cb2b
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      TLS_HOST: ${TLS_HOST:-localhost}
+    ports:
+      - '127.0.0.1:${HTTPS_PORT:-8443}:443'
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  postgres-data:
+  caddy-data:
+  caddy-config:

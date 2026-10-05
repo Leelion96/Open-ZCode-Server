@@ -1,0 +1,66 @@
+{
+  "name": "open-zcode-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Self-hosted ZCode-compatible public control-plane API",
+  "license": "Apache-2.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24.18.0 <25"
+  },
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "dev": "prisma generate && tsx watch src/main.ts",
+    "build": "prisma generate && tsc -p tsconfig.json",
+    "start": "node dist/main.js",
+    "typecheck": "pnpm build && tsc --noEmit -p tsconfig.check.json",
+    "lint": "eslint src tests scripts *.ts *.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "pnpm build && vitest run",
+    "test:database": "pnpm build && vitest run --config vitest.database.config.ts",
+    "architecture:check": "node scripts/check-architecture.mjs",
+    "content:check": "pnpm build && node scripts/check-content.mjs",
+    "db:generate": "prisma generate",
+    "db:validate": "prisma validate",
+    "db:migrate": "prisma migrate deploy",
+    "verify": "pnpm typecheck && pnpm lint && pnpm architecture:check && pnpm content:check && pnpm test && pnpm format:check",
+    "test:compose": "node scripts/test-compose.mjs"
+  },
+  "dependencies": {
+    "@fastify/helmet": "13.1.1",
+    "@fastify/static": "10.1.2",
+    "@nestjs/common": "11.2.7",
+    "@nestjs/core": "11.2.7",
+    "@nestjs/platform-fastify": "11.2.7",
+    "@nestjs/swagger": "11.4.7",
+    "@prisma/adapter-pg": "7.10.0",
+    "@prisma/client": "7.10.0",
+    "dotenv": "18.0.5",
+    "fastify": "5.11.3",
+    "nestjs-zod": "5.5.0",
+    "pg": "8.23.1",
+    "prisma": "7.10.0",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.13",
+    "@types/pg": "8.23.1",
+    "eslint": "10.11.0",
+    "prettier": "3.9.9",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.0",
+    "vitest": "5.0.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@nestjs/core",
+      "@prisma/engines",
+      "esbuild",
+      "prisma"
+    ]
+  }
+}

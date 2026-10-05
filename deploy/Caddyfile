@@ -1,0 +1,4 @@
+{$TLS_HOST:localhost} {
+  tls internal
+  reverse_proxy app:3000
+}

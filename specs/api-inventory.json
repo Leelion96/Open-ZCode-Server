@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "sourceCheckout": "29628c9acdb81b703bbd4080c207a0e7ce5e276e",
+  "endpoints": [
+    {
+      "feature": "oauth",
+      "state": "stub",
+      "method": "POST",
+      "path": "/api/v1/oauth/cli/init",
+      "status": 501,
+      "summary": "创建 OAuth 登录事务"
+    },
+    {
+      "feature": "oauth",
+      "state": "stub",
+      "method": "GET",
+      "path": "/api/v1/oauth/cli/poll/{flowId}",
+      "status": 501,
+      "summary": "轮询登录结果"
+    },
+    {
+      "feature": "oauth",
+      "state": "stub",
+      "method": "POST",
+      "path": "/api/v1/oauth/token",
+      "status": 501,
+      "summary": "兑换登录令牌"
+    },
+    {
+      "feature": "public-content",
+      "state": "implemented",
+      "method": "GET",
+      "path": "/api/v1/client/configs",
+      "status": 200,
+      "summary": "获取客户端默认配置与功能开关"
+    },
+    {
+      "feature": "public-content",
+      "state": "implemented",
+      "method": "GET",
+      "path": "/api/v1/client/scenes",
+      "status": 200,
+      "summary": "获取场景与任务模板"
+    },
+    {
+      "feature": "shares",
+      "state": "stub",
+      "method": "GET",
+      "path": "/api/v1/shares/capabilities",
+      "status": 501,
+      "summary": "查询分享能力"
+    },
+    {
+      "feature": "shares",
+      "state": "stub",
+      "method": "POST",
+      "path": "/api/v1/shares/preparations",
+      "status": 501,
+      "summary": "创建分享准备事务"
+    },
+    {
+      "feature": "shares",
+      "state": "stub",
+      "method": "POST",
+      "path": "/api/v1/shares/preparations/{preparationId}/artifacts",
+      "status": 501,
+      "summary": "上传分享产物文件"
+    },
+    {
+      "feature": "shares",
+      "state": "stub",
+      "method": "POST",
+      "path": "/api/v1/shares/preparations/{preparationId}/confirm",
+      "status": 501,
+      "summary": "确认并发布分享"
+    },
+    {
+      "feature": "shares",
+      "state": "stub",
+      "method": "GET",
+      "path": "/api/v1/shares/{shareCode}/preview",
+      "status": 501,
+      "summary": "获取分享预览"
+    },
+    {
+      "feature": "shares",
+      "state": "stub",
+      "method": "POST",
+      "path": "/api/v1/shares/{shareCode}/continuation",
+      "status": 501,
+      "summary": "获取继续对话内容"
+    },
+    {
+      "feature": "releases",
+      "state": "stub",
+      "method": "GET",
+      "path": "/api/v1/releases/electron/manifest",
+      "status": 501,
+      "summary": "查询桌面版本更新"
+    },
+    {
+      "feature": "feedback",
+      "state": "stub",
+      "method": "POST",
+      "path": "/api/v1/feedback/ticket",
+      "status": 501,
+      "summary": "创建反馈工单"
+    },
+    {
+      "feature": "feedback",
+      "state": "stub",
+      "method": "GET",
+      "path": "/api/v1/feedback/ticket",
+      "status": 501,
+      "summary": "查询反馈工单列表"
+    },
+    {
+      "feature": "feedback",
+      "state": "stub",
+      "method": "GET",
+      "path": "/api/v1/feedback/ticket/{id}",
+      "status": 501,
+      "summary": "查询反馈工单详情"
+    },
+    {
+      "feature": "feedback",
+      "state": "stub",
+      "method": "POST",
+      "path": "/api/v1/feedback/ticket/{id}/message",
+      "status": 501,
+      "summary": "添加工单评论"
+    },
+    {
+      "feature": "feedback",
+      "state": "stub",
+      "method": "POST",
+      "path": "/api/v1/feedback/attachment/upload-credential",
+      "status": 501,
+      "summary": "获取附件上传凭据"
+    },
+    {
+      "feature": "model-gateway",
+      "state": "absent",
+      "method": "POST",
+      "path": "/api/v1/ultra/anthropic/v1/messages",
+      "status": 404,
+      "summary": "BigModel Coding Plan 模型推理"
+    },
+    {
+      "feature": "model-gateway",
+      "state": "absent",
+      "method": "POST",
+      "path": "/api/v1/ultra-zai/anthropic/v1/messages",
+      "status": 404,
+      "summary": "Z.ai Coding Plan 模型推理"
+    },
+    {
+      "feature": "model-gateway",
+      "state": "absent",
+      "method": "POST",
+      "path": "/api/v1/zcode-plan/anthropic/v1/messages",
+      "status": 404,
+      "summary": "Start Plan 模型推理"
+    },
+    {
+      "feature": "billing",
+      "state": "absent",
+      "method": "GET",
+      "path": "/api/v1/zcode-plan/billing/balance",
+      "status": 404,
+      "summary": "查询套餐权益与余额"
+    },
+    {
+      "feature": "billing",
+      "state": "absent",
+      "method": "GET",
+      "path": "/api/v1/coding-plan/reset/status",
+      "status": 404,
+      "summary": "查询额度重置状态"
+    },
+    {
+      "feature": "billing",
+      "state": "absent",
+      "method": "POST",
+      "path": "/api/v1/coding-plan/reset/opportunity",
+      "status": 404,
+      "summary": "申请额度重置机会"
+    },
+    {
+      "feature": "billing",
+      "state": "absent",
+      "method": "POST",
+      "path": "/api/v1/coding-plan/reset/use",
+      "status": 404,
+      "summary": "使用额度重置机会"
+    },
+    {
+      "feature": "billing",
+      "state": "absent",
+      "method": "POST",
+      "path": "/api/v1/coding-plan/reset/history/read",
+      "status": 404,
+      "summary": "标记重置历史已读"
+    },
+    {
+      "feature": "mcp",
+      "state": "absent",
+      "method": "GET",
+      "path": "/api/v1/mcp/usage",
+      "status": 404,
+      "summary": "查询官方 MCP 用量"
+    },
+    {
+      "feature": "off-peak",
+      "state": "absent",
+      "method": "GET",
+      "path": "/api/v1/off-peak/ticket/availability",
+      "status": 404,
+      "summary": "查询闲时任务取号资格"
+    },
+    {
+      "feature": "off-peak",
+      "state": "absent",
+      "method": "POST",
+      "path": "/api/v1/off-peak/ticket",
+      "status": 404,
+      "summary": "申请闲时任务票"
+    },
+    {
+      "feature": "off-peak",
+      "state": "absent",
+      "method": "POST",
+      "path": "/api/v1/off-peak/ticket/status",
+      "status": 404,
+      "summary": "批量查询闲时票状态"
+    },
+    {
+      "feature": "off-peak",
+      "state": "absent",
+      "method": "POST",
+      "path": "/api/v1/off-peak/ticket/{ticketId}/settle",
+      "status": 404,
+      "summary": "结算闲时任务票"
+    },
+    {
+      "feature": "off-peak",
+      "state": "absent",
+      "method": "POST",
+      "path": "/api/v1/off-peak/anthropic/v1/messages",
+      "status": 404,
+      "summary": "闲时任务模型推理"
+    }
+  ]
+}

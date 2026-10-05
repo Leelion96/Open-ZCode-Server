@@ -1,0 +1,20 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+.generated/
+src/generated/
+artifacts/
+*.log
+.DS_Store
+
+# 本机 IDE 配置
+/.idea/
+
+# 本机部署覆盖
+/compose.override.yaml
+/compose.override.yml
+/compose.*.local.yaml
+/compose.*.local.yml

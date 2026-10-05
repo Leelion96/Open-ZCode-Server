@@ -1,0 +1,133 @@
+{
+  "code": 0,
+  "msg": "",
+  "data": {
+    "configs": {
+      "builtin_provider_config_json": "/assets/builtin-config.json",
+      "captcha": {
+        "enabled": false
+      },
+      "codingPlanStaticProducts": {},
+      "codingPlanStaticTeamProducts": {},
+      "computerUse": {
+        "enabled": true
+      },
+      "desktopContextPrompt": {
+        "config_version": "open-zcode-desktop-v1",
+        "enabled": true
+      },
+      "dynamicWorkflow": {
+        "mode": "alwaysOn"
+      },
+      "feedbackUrl": {
+        "community_urls": {
+          "en-US": "",
+          "zh-CN": ""
+        },
+        "feedback_url": "",
+        "feedback_api_base": "",
+        "feedback_use_external_form": false
+      },
+      "forceUpdate": null,
+      "notificationCard": {
+        "canShow": {
+          "highspeed": false,
+          "start-plan": false
+        },
+        "priority": []
+      },
+      "offPeak": {
+        "allowed_models": [],
+        "enable_offpeak_task": false
+      },
+      "pluginStoreOrder": {
+        "code": {
+          "categoryOrder": [
+            "developer-tools",
+            "utilities",
+            "productivity",
+            "finance",
+            "legal",
+            "template",
+            "other"
+          ],
+          "pluginOrder": {
+            "developer-tools": [
+              "github@zcode-plugins-official",
+              "gitlab@zcode-plugins-official",
+              "alibaba-cloud-cli@zcode-plugins-official",
+              "cloudbase-skills@zcode-plugins-official",
+              "mimosa@zcode-plugins-official"
+            ],
+            "finance": [
+              "tianyancha@zcode-plugins-official",
+              "wind@zcode-plugins-official",
+              "finance-search@zcode-plugins-official",
+              "hexin@zcode-plugins-official",
+              "model-deals@zcode-plugins-official",
+              "run-fpa@zcode-plugins-official",
+              "accounting-and-reporting@zcode-plugins-official",
+              "write-research@zcode-plugins-official",
+              "read-macro@zcode-plugins-official"
+            ],
+            "productivity": [
+              "video2code@zcode-plugins-official",
+              "lark-cli@zcode-plugins-official",
+              "tencent-meeting-cli@zcode-plugins-official",
+              "video-agent-kit@zcode-plugins-official",
+              "dingtalk-cli@zcode-plugins-official",
+              "wecom-cli@zcode-plugins-official"
+            ]
+          }
+        },
+        "work": {
+          "categoryOrder": [
+            "productivity",
+            "finance",
+            "legal",
+            "utilities",
+            "developer-tools",
+            "template",
+            "other"
+          ],
+          "pluginOrder": {
+            "developer-tools": [
+              "cloudbase-skills@zcode-plugins-official",
+              "mimosa@zcode-plugins-official",
+              "github@zcode-plugins-official",
+              "gitlab@zcode-plugins-official",
+              "alibaba-cloud-cli@zcode-plugins-official"
+            ],
+            "finance": [
+              "tianyancha@zcode-plugins-official",
+              "wind@zcode-plugins-official",
+              "finance-search@zcode-plugins-official",
+              "hexin@zcode-plugins-official",
+              "read-macro@zcode-plugins-official",
+              "write-research@zcode-plugins-official",
+              "watch-positions@zcode-plugins-official",
+              "pick-funds@zcode-plugins-official",
+              "accounting-and-reporting@zcode-plugins-official"
+            ],
+            "productivity": [
+              "lark-cli@zcode-plugins-official",
+              "tencent-meeting-cli@zcode-plugins-official",
+              "dingtalk-cli@zcode-plugins-official",
+              "wecom-cli@zcode-plugins-official",
+              "video-agent-kit@zcode-plugins-official",
+              "video2code@zcode-plugins-official"
+            ]
+          }
+        }
+      },
+      "rendererActionTrace": {
+        "configVersion": "open-zcode-disabled-v1",
+        "enabled": false,
+        "enabledGroups": [],
+        "localTtftEnabled": false,
+        "sampleRatio": 0
+      },
+      "startPlanPreview": null
+    }
+  }
+}
