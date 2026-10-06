@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mimosa Security Scan"
+  short_description: "Run evidence-grounded multi-stage security reviews"
+  default_prompt: "Use $mimosa-security-scan to run a sealed deep security review of this repository."

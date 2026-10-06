@@ -1,0 +1,107 @@
+{
+  "description": "Mimosa local-first security hooks for ZCode.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": [
+              "${ZCODE_PLUGIN_ROOT}/payload/hooks/scan-hook.mjs"
+            ],
+            "timeoutMs": 120000,
+            "statusMessage": "Mimosa 正在检查候选代码…"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": [
+              "${ZCODE_PLUGIN_ROOT}/payload/hooks/git-gate-hook.mjs"
+            ],
+            "timeoutMs": 120000,
+            "statusMessage": "Mimosa 正在检查命令与 Git 门禁…"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": [
+              "${ZCODE_PLUGIN_ROOT}/payload/hooks/scan-hook.mjs"
+            ],
+            "timeoutMs": 120000
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": [
+              "${ZCODE_PLUGIN_ROOT}/payload/hooks/git-gate-hook.mjs"
+            ],
+            "timeoutMs": 120000
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": [
+              "${ZCODE_PLUGIN_ROOT}/payload/hooks/prompt-hook.mjs"
+            ],
+            "timeoutMs": 30000
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": [
+              "${ZCODE_PLUGIN_ROOT}/payload/hooks/session-hook.mjs"
+            ],
+            "timeoutMs": 120000,
+            "statusMessage": "Mimosa 正在准备项目安全上下文…"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": [
+              "${ZCODE_PLUGIN_ROOT}/payload/hooks/stop-hook.mjs"
+            ],
+            "timeoutMs": 120000,
+            "statusMessage": "Mimosa 正在复查本轮改动…"
+          }
+        ]
+      }
+    ]
+  }
+}

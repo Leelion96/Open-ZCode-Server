@@ -1,0 +1,25 @@
+{
+  "name": "dingtalk-cli",
+  "version": "0.1.1",
+  "description": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
+  "description_i18n": {
+    "en": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
+    "zh-CN": "钉钉 Workspace CLI 工作流：OAuth/设备授权、验证组织账号，并按需安装上游 Skills。"
+  },
+  "author": {
+    "name": "Z.ai",
+    "url": "https://z.ai"
+  },
+  "homepage": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+  "repository": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+  "license": "Apache-2.0",
+  "keywords": [
+    "dingtalk",
+    "dws",
+    "workspace",
+    "chat",
+    "docs",
+    "calendar",
+    "tasks"
+  ]
+}

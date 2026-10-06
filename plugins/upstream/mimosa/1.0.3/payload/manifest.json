@@ -1,0 +1,238 @@
+{
+  "schema": "mimosa-protected-build/v1",
+  "protection": {
+    "bundle": "esbuild-minify-keep-names",
+    "encryption": "AES-256-GCM",
+    "keyEmbedded": true,
+    "keyExternalFileRequired": false,
+    "sourceMaps": false,
+    "plaintextBundleStaging": false,
+    "atomicStagingPublish": true,
+    "variantId": "af8b4e5393f28ec0b00d678d",
+    "variantStrategy": "artifact-bound-inert-veneer/v1",
+    "hooksEncrypted": true,
+    "rulesEncrypted": true,
+    "privateAssets": {
+      "schema": "mimosa-private-assets/v1",
+      "format": "binary-frame+AES-256-GCM",
+      "encrypted": true,
+      "plaintextShipped": false,
+      "assetCount": 5,
+      "classCounts": {
+        "rules": 3,
+        "knowledge": 2
+      },
+      "container": "mimosa-zcode/assets/d2bf40000eb99d38c3d461e657afe0f7.mimosa",
+      "runtimeBoundary": "node-memory-transitional"
+    },
+    "nativeKnowledge": {
+      "schema": "mimosa-native-knowledge-index/v1",
+      "encrypted": true,
+      "plaintextShipped": false,
+      "container": "mimosa-zcode/assets/bccd43e906bc0e1a6b987e9f127fd584.mimosa",
+      "artifactId": "mimosa/af8b4e5393f28ec0b00d678d/native-knowledge/bccd43e906bc0e1a6b987e9f127fd584",
+      "ruleCount": 8145,
+      "cveCount": 1071,
+      "runtimeBoundary": "native-knowledge-pilot"
+    },
+    "nativeMain": {
+      "runtimeBoundary": "unavailable"
+    },
+    "integritySignatureRequired": true,
+    "nativeHost": {
+      "enabled": false
+    },
+    "supportedSurfaces": [
+      "zcode-hooks",
+      "cli",
+      "mcp"
+    ],
+    "vscodeIncluded": false,
+    "layout": "node-single-artifact/v1",
+    "embeddedKeyBoundary": "obfuscated-node-module/cost-raising-only"
+  },
+  "files": [
+    {
+      "path": ".mcp.json",
+      "bytes": 267,
+      "sha256": "70330abbb7af8d08fe830df7344590053d14d01f306aac0ce30311153430ab56"
+    },
+    {
+      "path": ".zcode-plugin/plugin.json",
+      "bytes": 731,
+      "sha256": "9eeeef8f2aa3511da257ac667bc1561a5e1ecbddf0ed683bb82f87ab9958e710"
+    },
+    {
+      "path": "DELIVERY-MANIFEST.json",
+      "bytes": 226,
+      "sha256": "cc543755478c72900bd81ef97e3c41f7e2a8610f1494e26ae65ad080e8a3d207"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16046,
+      "sha256": "fee93794b7639b461e63859265008b53b47b3ae6437b47b491297f6f780b63fa"
+    },
+    {
+      "path": "assets/bccd43e906bc0e1a6b987e9f127fd584.mimosa",
+      "bytes": 27481,
+      "sha256": "cb62cc2e6dc7e6e4b314e087aeb5176c1bccecad4e8f4d49f42589218fd88514"
+    },
+    {
+      "path": "assets/d2bf40000eb99d38c3d461e657afe0f7.mimosa",
+      "bytes": 1691395,
+      "sha256": "93b9332681df6651e00baa8be4de6a462a77052f19e61ad9c5bfe5a02b75c83c"
+    },
+    {
+      "path": "commands/mimosa-deep-audit.md",
+      "bytes": 763,
+      "sha256": "c7a35638b4a94af23eba8f7381896606952740635085b231941169c253d10d71"
+    },
+    {
+      "path": "commands/mimosa-scan.md",
+      "bytes": 1188,
+      "sha256": "39598768882e7ba6d9ef6014620a869b736e326eb91f7724aabbbeed163010ce"
+    },
+    {
+      "path": "commands/mimosa-status.md",
+      "bytes": 1205,
+      "sha256": "ce6df09fd6c8eadb4a21a33d6ce0f4f4d1d7a075a2a23206ed0028c2408e2457"
+    },
+    {
+      "path": "contracts/scan-profiles.json",
+      "bytes": 1209,
+      "sha256": "2261984ba64c4f4449b2f9bceaf27c3c48cc598edc6cf9de44bd3604cd6e0075"
+    },
+    {
+      "path": "dist/cli.js",
+      "bytes": 586,
+      "sha256": "a144575ad2f46d59794a8d985fc26a2ac109e2ab15dab0b31c3cb7ef3df2813e"
+    },
+    {
+      "path": "dist/cli.mimosa",
+      "bytes": 1435438,
+      "sha256": "b02a53d4358e19d4f776ba6dc06651bcfa1acfeb6e29cc60cadb740c3d4762f1"
+    },
+    {
+      "path": "dist/mcp/security-scan-worker.js",
+      "bytes": 620,
+      "sha256": "0c29ae2cbbeba1183f5f3477828f93fc2640d1a479fd761bed524d67007a93e0"
+    },
+    {
+      "path": "dist/mcp/security-scan-worker.mimosa",
+      "bytes": 1306563,
+      "sha256": "a4d5963e3c471ce1935ed4630bd7639b0e634d42b4f618232696862e5370c246"
+    },
+    {
+      "path": "dist/mcp/server.js",
+      "bytes": 598,
+      "sha256": "44e228cc0fece756af40d29cbd7bd4df4b03487de5c7e41b0b2fb9c30d8f088f"
+    },
+    {
+      "path": "dist/mcp/server.mimosa",
+      "bytes": 1423319,
+      "sha256": "943d3dee910acc5bcca1939f9055e5326786f0e7e3de3cfd49b207045bb72c73"
+    },
+    {
+      "path": "hooks/git-gate-hook.mjs",
+      "bytes": 847,
+      "sha256": "7e8b5cc044ef330a3811745b9ba350feaa3d792d9f5499b4ce746c2dac36a941"
+    },
+    {
+      "path": "hooks/git-gate-hook.mjs.mimosa",
+      "bytes": 7438,
+      "sha256": "c20f588517ce0a894b26f632ebb25e29d352784088211f2dd5e8ddfbf60fa903"
+    },
+    {
+      "path": "hooks/hooks.json",
+      "bytes": 1538,
+      "sha256": "a3fb3dcdb25ed00e0b17bd5b0f8518db94e0de6c1a7b7aa09bbb1441998b8a2c"
+    },
+    {
+      "path": "hooks/language-packs.json",
+      "bytes": 1629,
+      "sha256": "2cd9730930531b366935cc87a9e097e028cd25af8bd9787d099c7bce4c1af08c"
+    },
+    {
+      "path": "hooks/prompt-hook.mjs",
+      "bytes": 841,
+      "sha256": "dc5c78c051b9aab94379c7bcebbd84d41a506ded7dc9edc9f7f9fbdf36bafbda"
+    },
+    {
+      "path": "hooks/prompt-hook.mjs.mimosa",
+      "bytes": 6144,
+      "sha256": "950ab240ed04886f8ca197a1f48d8e765b29c4d108b40da1253963dc6cbc19a5"
+    },
+    {
+      "path": "hooks/scan-hook.mjs",
+      "bytes": 835,
+      "sha256": "01220e9e43df6e53f5da9f8986e2bbdf4b4c78bed1b6199b3f8c658134153f2a"
+    },
+    {
+      "path": "hooks/scan-hook.mjs.mimosa",
+      "bytes": 19410,
+      "sha256": "d5855e5d44b8722170083fcbc3932ed68f3801460a8685bbe9768607da3439cc"
+    },
+    {
+      "path": "hooks/session-hook.mjs",
+      "bytes": 844,
+      "sha256": "d6019ab4d185e8ba3a24b53a015959c21496a2d26461ea779b9a7c4b2d1a6d98"
+    },
+    {
+      "path": "hooks/session-hook.mjs.mimosa",
+      "bytes": 2871,
+      "sha256": "77b6267eb7f709f979beebeba9889b889cd2c53e802148b36bb02605b2b89476"
+    },
+    {
+      "path": "hooks/stop-hook.mjs",
+      "bytes": 835,
+      "sha256": "56affd925d8e36075055c7a6f55207af310e8d8a1f8a1bca13b35e8344824721"
+    },
+    {
+      "path": "hooks/stop-hook.mjs.mimosa",
+      "bytes": 19042,
+      "sha256": "265a2d5e561035cf1da568604a232c0da65587b985a77b3b94c334346ed13fb2"
+    },
+    {
+      "path": "marketplace.json",
+      "bytes": 294,
+      "sha256": "bad3ba186f530ec8f7107c630faf4aa73738651ca9a093282b00603ee0488075"
+    },
+    {
+      "path": "rules/mimosa-offline.mimosa",
+      "bytes": 23208,
+      "sha256": "7293f4b961bd3db87684d19dd9c10e89f5aee1e76b7c59a19e766c3316138011"
+    },
+    {
+      "path": "runtime/mimosa-embedded-key.cjs",
+      "bytes": 9271,
+      "sha256": "f89558defdaa07a04e4bc6896530a10a64542a2d7720e0e43026f4e4de3ec0a4"
+    },
+    {
+      "path": "runtime/protected-loader.cjs",
+      "bytes": 21224,
+      "sha256": "f192bea30d933561590718a4e479c87dc4c0162cb452ac7c5506da8198332a4e"
+    },
+    {
+      "path": "skills/mimosa-security-scan/SKILL.md",
+      "bytes": 1957,
+      "sha256": "2cb62c7c5f12a8fc54630764f9d8946e00688f0b97d30a57257b5f3b681b9125"
+    },
+    {
+      "path": "skills/mimosa-security-scan/agents/openai.yaml",
+      "bytes": 227,
+      "sha256": "928935c8322893c2b24bb23fd93fdda328bdccacf45d95263cfb1c91a339965c"
+    },
+    {
+      "path": "skills/mimosa-security-scan/references/scan-contract.md",
+      "bytes": 2907,
+      "sha256": "711e68a502c0911930776bc01b1b126ec3bf2ac59fc3d0404d5e6e99429ff892"
+    }
+  ],
+  "integrity": {
+    "schema": "mimosa-protected-integrity/v1",
+    "algorithm": "Ed25519",
+    "publicKeySha256": "f076043b8a7b5783e930fb900668749aedab1e34e6738a32d00f0625dccfa45a",
+    "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAed1gHCLSatReM8maWfsdvWfTc40E8Gj6ZD5V5gKtN0E=\n-----END PUBLIC KEY-----\n",
+    "signature": "hvujHIq9cjYRub3/Z103VyWC7VSbmb2FO5GckX/0IhugNlFlmHFI9hLC/tj2hMfhCysIax6ivFXENuvbdluyBw=="
+  }
+}

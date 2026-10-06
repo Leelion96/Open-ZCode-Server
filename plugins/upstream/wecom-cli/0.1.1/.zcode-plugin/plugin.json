@@ -1,0 +1,26 @@
+{
+  "name": "wecom-cli",
+  "version": "0.1.1",
+  "description": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
+  "description_i18n": {
+    "en": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
+    "zh-CN": "企业微信 CLI 工作流：覆盖消息、文档、表格、邮件、日历、会议、通讯录和待办，并支持扫码授权与状态检查。"
+  },
+  "author": {
+    "name": "Z.ai",
+    "url": "https://z.ai"
+  },
+  "homepage": "https://github.com/WecomTeam/wecom-cli",
+  "repository": "https://github.com/WecomTeam/wecom-cli",
+  "license": "MIT",
+  "keywords": [
+    "wecom",
+    "wechat-work",
+    "wecom-cli",
+    "message",
+    "docs",
+    "sheets",
+    "calendar",
+    "todo"
+  ]
+}

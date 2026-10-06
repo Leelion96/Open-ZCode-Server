@@ -65,7 +65,9 @@ export async function createApplication(): Promise<NestFastifyApplication> {
       }
     });
     server.addHook('onSend', async (request, reply, payload) => {
-      reply.header('x-request-id', request.id).header('cache-control', 'no-store');
+      reply
+        .header('x-request-id', request.id)
+        .header('cache-control', reply.getHeader('cache-control') ?? 'no-store');
       return payload;
     });
     if (env.corsOrigins.length)

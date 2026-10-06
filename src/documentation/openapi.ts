@@ -8,6 +8,7 @@ import type { ApiInventory } from './catalog.js';
 import { createNotFoundEnvelope, createNotImplementedEnvelope } from '../common/api-error.js';
 
 const featureNames: Record<string, string> = {
+  'plugin-marketplace': '插件市场',
   'public-content': '客户端配置与场景',
   oauth: '账号与登录',
   shares: '会话与附件分享',
@@ -108,7 +109,9 @@ export function buildExplorerDocument(
     });
     if (endpoint.state === 'implemented') {
       operation.description =
-        '已实现。点击 Try it out，再点击 Execute 请求当前服务，查看实际返回的数据。配置接口接受版本/平台参数，但本版统一返回自有默认配置。';
+        endpoint.feature === 'plugin-marketplace'
+          ? '公开只读的插件市场目录。点击 Execute 查看真实插件、分组、作者、下载地址与 SHA-256；返回裸 JSON，可直接配置为应用的市场链接。'
+          : '已实现。点击 Try it out，再点击 Execute 请求当前服务，查看实际返回的数据。配置接口接受版本/平台参数，但本版统一返回自有默认配置。';
     } else {
       const example =
         endpoint.state === 'absent'

@@ -1,0 +1,767 @@
+{
+  "schemaVersion": 1,
+  "marketplace": {
+    "name": "zcode-plugins-official",
+    "description": "应用插件市场",
+    "plugins": [
+      {
+        "name": "cloudbase-skills",
+        "description": "CloudBase development skills and MCP integration for building, deploying, and troubleshooting Web, WeChat Mini Program, database, cloud function, CloudRun, storage, and AI projects.",
+        "description_i18n": {
+          "en": "CloudBase development skills and MCP integration for building, deploying, and troubleshooting Web, WeChat Mini Program, database, cloud function, CloudRun, storage, and AI projects.",
+          "zh-CN": "腾讯云 CloudBase 开发技能与 MCP 集成，覆盖 Web、微信小程序、数据库、云函数、云托管、云存储和 AI 项目的开发、部署与排障。"
+        },
+        "version": "0.1.0-open.1",
+        "author": { "name": "Open-ZCode" },
+        "icon": "/assets/plugins/cloudbase-skills/0.1.0-open.1/873d688c49b620a432147c45e94ce9bee919ba8893c2e757ccf1034f88f4e46b/icon.png",
+        "category": "developer-tools",
+        "keywords": ["cloudbase", "tencent-cloud", "wechat", "serverless", "mcp"],
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/cloudbase-skills/0.1.0-open.1/88b561194deba39620400e14f2267ac68bb7b3498192fd748343af577b8ab2c9/plugin.zip",
+          "sha256": "88b561194deba39620400e14f2267ac68bb7b3498192fd748343af577b8ab2c9",
+          "path": "cloudbase-skills"
+        }
+      },
+      {
+        "name": "mimosa",
+        "displayName": "Code Security Protection",
+        "displayName_i18n": { "en": "Code Security Protection", "zh-CN": "代码安全防护" },
+        "icon": "/assets/plugins/mimosa/1.0.3-open.1/05466a98ac49aa40fd96cd1f371ee3ff8574d76668f5649b24c62dd1dfd6361e/icon.png",
+        "description": "Local-first security guardrails with pre-write hooks, end-of-turn review, Git gates, commands, a security-scan skill, and an optional MCP server for sealed deep scans.",
+        "description_i18n": {
+          "en": "Local-first security guardrails with pre-write hooks, end-of-turn review, Git gates, commands, a security-scan skill, and an optional MCP server for sealed deep scans.",
+          "zh-CN": "面向 应用 的本地优先代码安全防线，提供写入前 Hook、任务收尾复查、Git 门禁、命令、安全扫描 Skill，以及用于密封深扫的可选 MCP 服务。"
+        },
+        "version": "1.0.3-open.1",
+        "author": { "name": "Open-ZCode" },
+        "category": "developer-tools",
+        "keywords": ["security", "code-scanning", "hooks", "mcp", "sdlc"],
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/mimosa/1.0.3-open.1/59b23b181ba9ec86ba67ef1dd7091bff4c19fd30b005b542ade3fe418530d3b7/plugin.zip",
+          "sha256": "59b23b181ba9ec86ba67ef1dd7091bff4c19fd30b005b542ade3fe418530d3b7",
+          "path": "mimosa"
+        }
+      },
+      {
+        "name": "video2code",
+        "description": "基于 应用 内置 Browser Use WebView 录制 WebM 并用 ffmpeg 转成 MP4/URL 复刻；无需 Playwright 或外部 Chromium",
+        "description_i18n": {
+          "en": "Records WebM through the app's built-in Browser Use WebView and converts it to MP4 with ffmpeg for video/URL replication; no Playwright or external Chromium required.",
+          "zh-CN": "基于 应用 内置 Browser Use WebView 录制 WebM 并用 ffmpeg 转成 MP4/URL 复刻；无需 Playwright 或外部 Chromium"
+        },
+        "version": "0.6.0-open.1",
+        "author": { "name": "Open-ZCode" },
+        "icon": "/assets/plugins/video2code/0.6.0-open.1/d90515535bf9615f848c80f56d234d606be7cc8e513f31b8564d1895298769e1/icon.png",
+        "category": "productivity",
+        "keywords": ["video2code", "replication", "webapp", "motion"],
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/video2code/0.6.0-open.1/bc6032813463a2e36f4b4bca87f8c4fbbc0473f30138fa7249adfa8a351215b8/plugin.zip",
+          "sha256": "bc6032813463a2e36f4b4bca87f8c4fbbc0473f30138fa7249adfa8a351215b8",
+          "path": "video2code"
+        }
+      },
+      {
+        "name": "gitlab",
+        "description": "GitLab CLI workflows based on GitLab's official Agent Skills for merge requests, issues, CI/CD, repositories, releases, and API operations.",
+        "description_i18n": {
+          "en": "GitLab CLI workflows based on GitLab's official Agent Skills for merge requests, issues, CI/CD, repositories, releases, and API operations.",
+          "zh-CN": "基于官方 GitLab CLI 的 Merge Request、Issue、CI/CD、仓库、Release 与 API 工作流。"
+        },
+        "version": "0.1.3-open.1",
+        "author": { "name": "Open-ZCode" },
+        "icon": "/assets/plugins/gitlab/0.1.3-open.1/b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5/icon.png",
+        "category": "developer-tools",
+        "keywords": ["gitlab", "glab", "merge-request", "issue", "ci-cd", "gitlab-api"],
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/gitlab/0.1.3-open.1/58bfc3a9f4c90b1545bf1d9a285d770f7094b1964492aab97fdf32ce7bb2f878/plugin.zip",
+          "sha256": "58bfc3a9f4c90b1545bf1d9a285d770f7094b1964492aab97fdf32ce7bb2f878",
+          "path": "gitlab"
+        }
+      },
+      {
+        "name": "alibaba-cloud-cli",
+        "displayName": "Alibaba Cloud CLI",
+        "displayName_i18n": { "en": "Alibaba Cloud CLI", "zh-CN": "阿里云 CLI" },
+        "icon": "/assets/plugins/alibaba-cloud-cli/0.1.2-open.1/37c636a4890e30a7ae7c3654144757b89c7d1a31d61c1b87ef40962d39e2b33c/icon.png",
+        "description": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
+        "description_i18n": {
+          "en": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
+          "zh-CN": "阿里云 CLI 工作流：配置凭证与 profile，并安全执行云资源查询和操作。"
+        },
+        "version": "0.1.2-open.1",
+        "author": { "name": "Open-ZCode" },
+        "category": "developer-tools",
+        "keywords": ["alibaba-cloud", "aliyun", "aliyun-cli", "cloud", "ecs", "oss", "ram"],
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/alibaba-cloud-cli/0.1.2-open.1/ccd3e838e42d3880776aaf4c3ca8c9192d63c79bee60009b9bc52bf8a2541b1b/plugin.zip",
+          "sha256": "ccd3e838e42d3880776aaf4c3ca8c9192d63c79bee60009b9bc52bf8a2541b1b",
+          "path": "alibaba-cloud-cli"
+        }
+      },
+      {
+        "name": "lark-cli",
+        "displayName": "Lark CLI",
+        "displayName_i18n": { "en": "Lark CLI", "zh-CN": "飞书 CLI" },
+        "icon": "/assets/plugins/lark-cli/0.1.2-open.1/ed459fb792bdd0abef88ee91f1ec82925d9c04fdbfcb3b72cf8d67b02f6f2748/icon.png",
+        "description": "Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login.",
+        "description_i18n": {
+          "en": "Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login.",
+          "zh-CN": "Lark CLI 工作流：覆盖文档、表格、多维表格、日历、消息等 SaaS 资源，并引导应用配置与 OAuth 登录。"
+        },
+        "version": "0.1.2-open.1",
+        "author": { "name": "Open-ZCode" },
+        "category": "productivity",
+        "keywords": [
+          "feishu",
+          "lark",
+          "lark-cli",
+          "docs",
+          "sheets",
+          "base",
+          "calendar",
+          "messaging"
+        ],
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/lark-cli/0.1.2-open.1/0d014a2bcfd5c1df6446f019c8d1462d0f8d827a2ee8fa1b20e9297aeea6a55e/plugin.zip",
+          "sha256": "0d014a2bcfd5c1df6446f019c8d1462d0f8d827a2ee8fa1b20e9297aeea6a55e",
+          "path": "lark-cli"
+        }
+      },
+      {
+        "name": "tencent-meeting-cli",
+        "displayName": "Tencent Meeting CLI",
+        "displayName_i18n": { "en": "Tencent Meeting CLI", "zh-CN": "腾讯会议 CLI" },
+        "icon": "/assets/plugins/tencent-meeting-cli/0.1.3-open.1/40f08c632268086cff8bbbbe6c292b95ccf5effbb1f7dfa9966592ed40df48c9/icon.png",
+        "description": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
+        "description_i18n": {
+          "en": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
+          "zh-CN": "腾讯会议 CLI 工作流：OAuth2 授权、会议管理、录制管理和参会报告查询。"
+        },
+        "version": "0.1.3-open.1",
+        "author": { "name": "Open-ZCode" },
+        "category": "productivity",
+        "keywords": ["tencent-meeting", "tencentmeeting", "meeting", "cli", "oauth2"],
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/tencent-meeting-cli/0.1.3-open.1/f88fb40b3882233ff3eb838ce08ad332f394d3084c9de9d6094e931d023bcaeb/plugin.zip",
+          "sha256": "f88fb40b3882233ff3eb838ce08ad332f394d3084c9de9d6094e931d023bcaeb",
+          "path": "tencent-meeting-cli"
+        }
+      },
+      {
+        "name": "dingtalk-cli",
+        "displayName": "DingTalk CLI",
+        "displayName_i18n": { "en": "DingTalk CLI", "zh-CN": "钉钉 CLI" },
+        "description": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
+        "description_i18n": {
+          "en": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
+          "zh-CN": "钉钉 Workspace CLI 工作流：OAuth/设备授权、验证组织账号，并按需安装上游 Skills。"
+        },
+        "version": "0.1.1-open.1",
+        "author": { "name": "Open-ZCode" },
+        "homepage": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+        "repository": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+        "license": "Apache-2.0",
+        "keywords": ["dingtalk", "dws", "workspace", "chat", "docs", "calendar", "tasks"],
+        "category": "productivity",
+        "icon": "/assets/plugins/dingtalk-cli/0.1.1-open.1/b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d/icon.png",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/dingtalk-cli/0.1.1-open.1/32be9ef84e308bcfa53c85368cca6bc1cfd9a21f937d3329d3aec8712baf123a/plugin.zip",
+          "sha256": "32be9ef84e308bcfa53c85368cca6bc1cfd9a21f937d3329d3aec8712baf123a",
+          "path": "dingtalk-cli"
+        }
+      },
+      {
+        "name": "wecom-cli",
+        "displayName": "WeCom CLI",
+        "displayName_i18n": { "en": "WeCom CLI", "zh-CN": "企业微信 CLI" },
+        "description": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
+        "description_i18n": {
+          "en": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
+          "zh-CN": "企业微信 CLI 工作流：覆盖消息、文档、表格、邮件、日历、会议、通讯录和待办，并支持扫码授权与状态检查。"
+        },
+        "version": "0.1.1-open.1",
+        "author": { "name": "Open-ZCode" },
+        "homepage": "https://github.com/WecomTeam/wecom-cli",
+        "repository": "https://github.com/WecomTeam/wecom-cli",
+        "license": "MIT",
+        "keywords": [
+          "wecom",
+          "wechat-work",
+          "wecom-cli",
+          "message",
+          "docs",
+          "sheets",
+          "calendar",
+          "todo"
+        ],
+        "category": "productivity",
+        "icon": "/assets/plugins/wecom-cli/0.1.1-open.1/f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be/icon.png",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/wecom-cli/0.1.1-open.1/bb419cb0c6faa0839a36a77a4ef1589714c24808ba56f6b772b19e6d6ce19a6e/plugin.zip",
+          "sha256": "bb419cb0c6faa0839a36a77a4ef1589714c24808ba56f6b772b19e6d6ce19a6e",
+          "path": "wecom-cli"
+        }
+      },
+      {
+        "name": "obsidian",
+        "displayName": "Obsidian",
+        "displayName_i18n": { "en": "Obsidian", "zh-CN": "Obsidian" },
+        "description": "Obsidian authoring skills from kepano/obsidian-skills: Obsidian Flavored Markdown notes, Bases database views, JSON Canvas boards, vault automation via Obsidian CLI, clean web extraction with Defuddle, and Knap template rendering — plus visualization skills from axtonliu/axton-obsidian-visual-skills: Mermaid and Excalidraw diagram generation and text-to-canvas layout. A setup skill verifies and installs the Obsidian CLI, defuddle, and knap.",
+        "description_i18n": {
+          "en": "Obsidian authoring skills from kepano/obsidian-skills: Obsidian Flavored Markdown notes, Bases database views, JSON Canvas boards, vault automation via Obsidian CLI, clean web extraction with Defuddle, and Knap template rendering — plus visualization skills from axtonliu/axton-obsidian-visual-skills: Mermaid and Excalidraw diagram generation and text-to-canvas layout. A setup skill verifies and installs the Obsidian CLI, defuddle, and knap.",
+          "zh-CN": "来自 kepano/obsidian-skills 的 Obsidian 创作技能：Obsidian 风格 Markdown 笔记、Bases 数据库视图、JSON Canvas 白板、Obsidian CLI 库操作、Defuddle 网页正文提取、Knap 模板批量生成笔记；并集成 axtonliu/axton-obsidian-visual-skills 的可视化技能：Mermaid/Excalidraw 图表生成与文本转画布布局。附 setup 技能，检测并安装 Obsidian CLI、defuddle 与 knap。"
+        },
+        "version": "0.1.2-open.1",
+        "author": { "name": "Open-ZCode" },
+        "category": "productivity",
+        "keywords": [
+          "obsidian",
+          "markdown",
+          "bases",
+          "canvas",
+          "notes",
+          "defuddle",
+          "knap",
+          "mermaid",
+          "excalidraw",
+          "visualization"
+        ],
+        "icon": "/assets/plugins/obsidian/0.1.2-open.1/6e4b6881c3e3c304cbcaa53ffb202aa68fece3a0082a451f1638ff2c730a1285/icon.png",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/obsidian/0.1.2-open.1/08ade14ac28b122cf811373595723d7c3a3c5959a1599bf65b77a5dc77783d41/plugin.zip",
+          "sha256": "08ade14ac28b122cf811373595723d7c3a3c5959a1599bf65b77a5dc77783d41",
+          "path": "obsidian"
+        }
+      },
+      {
+        "author": { "name": "Open-ZCode" },
+        "category": "developer-tools",
+        "displayName": "Android Emulator",
+        "displayName_i18n": { "zh-CN": "Android 模拟器" },
+        "icon": "/assets/plugins/android-emulator/0.1.0-open.1/ead629480a3a5c6d50a2133690e7917e70bb64d51ee48cd905ae498afdc75d6b/icon.png",
+        "description_i18n": { "zh-CN": "提供 Android 开发工作流与模拟器自动化能力。" },
+        "name": "android-emulator",
+        "version": "0.1.0-open.1",
+        "description": "Provides Android development workflows and emulator automation .",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/android-emulator/0.1.0-open.1/5a147d3360e4bf85eb5b0c6230f6d4f9837e84581276557fdfe3a57508e36151/plugin.zip",
+          "sha256": "5a147d3360e4bf85eb5b0c6230f6d4f9837e84581276557fdfe3a57508e36151",
+          "path": "android-emulator"
+        }
+      },
+      {
+        "author": { "name": "Open-ZCode" },
+        "category": "productivity",
+        "displayName": "Documents",
+        "displayName_i18n": { "zh-CN": "Word文档" },
+        "icon": "/assets/plugins/documents/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+        "description_i18n": { "zh-CN": "创建、编辑与审阅Word文档（DOCX）。" },
+        "name": "documents",
+        "version": "0.1.7-open.1",
+        "description": "DOCX document production skills, published as an official plugin.",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/documents/0.1.7-open.1/8f19ee5d3d1cbd0b59c7a1e14f6cc0440a7be52dd55fce92f8473d6ef197e371/plugin.zip",
+          "sha256": "8f19ee5d3d1cbd0b59c7a1e14f6cc0440a7be52dd55fce92f8473d6ef197e371",
+          "path": "documents"
+        }
+      },
+      {
+        "author": { "name": "Open-ZCode" },
+        "category": "developer-tools",
+        "displayName": "iOS Simulator",
+        "displayName_i18n": { "zh-CN": "iOS 模拟器" },
+        "icon": "/assets/plugins/ios-simulator/0.1.0-open.1/455d34704f7a0a6759b68270419498f09bd98af2a1ec8e4cddfb93c97cc55b04/icon.png",
+        "description_i18n": { "zh-CN": "提供 iOS 开发工作流与模拟器自动化能力。" },
+        "name": "ios-simulator",
+        "version": "0.1.0-open.1",
+        "description": "Provides iOS development workflows and simulator automation .",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/ios-simulator/0.1.0-open.1/03799771c297a527248b5125caf1bc6a51e986bd631f7c11577fbf73c259cd38/plugin.zip",
+          "sha256": "03799771c297a527248b5125caf1bc6a51e986bd631f7c11577fbf73c259cd38",
+          "path": "ios-simulator"
+        }
+      },
+      {
+        "author": { "name": "Open-ZCode" },
+        "category": "productivity",
+        "displayName": "PDF",
+        "displayName_i18n": { "zh-CN": "PDF" },
+        "icon": "/assets/plugins/pdf/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+        "description_i18n": { "zh-CN": "创建、编辑与审阅PDF（PDF）。" },
+        "name": "pdf",
+        "version": "0.1.7-open.1",
+        "description": "PDF document production skills, published as an official plugin.",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/pdf/0.1.7-open.1/83048844e366eb6565d7db82e0de9e506bd665417c7d2cd18419beb76e342e21/plugin.zip",
+          "sha256": "83048844e366eb6565d7db82e0de9e506bd665417c7d2cd18419beb76e342e21",
+          "path": "pdf"
+        }
+      },
+      {
+        "author": { "name": "Open-ZCode" },
+        "category": "utilities",
+        "displayName": "Plugin Creator",
+        "displayName_i18n": { "zh-CN": "插件创建器" },
+        "description_i18n": { "zh-CN": "开发、校验 插件，完成本地 dev 市场安装、试用与更新。" },
+        "name": "plugin-creator",
+        "version": "0.1.1-open.1",
+        "description": "Develop and validate plugins through a local dev marketplace, installation, trials and updates.",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/plugin-creator/0.1.1-open.1/3a44d77226028865d9f7835bdab296d61e9ff2a8d2d0d1b10fe60db8f22bff20/plugin.zip",
+          "sha256": "3a44d77226028865d9f7835bdab296d61e9ff2a8d2d0d1b10fe60db8f22bff20",
+          "path": "plugin-creator"
+        }
+      },
+      {
+        "author": { "name": "Open-ZCode" },
+        "category": "productivity",
+        "displayName": "Presentations",
+        "displayName_i18n": { "zh-CN": "演示文档" },
+        "icon": "/assets/plugins/presentations/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+        "description_i18n": { "zh-CN": "创建、编辑与审阅演示文档（PPTX）。" },
+        "name": "presentations",
+        "version": "0.1.7-open.1",
+        "description": "PPTX presentation production skills, published as an official plugin.",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/presentations/0.1.7-open.1/b091b21f485250d6a4c1abdf46e5d3ec5ece4ffd518811c767a66465453a7d39/plugin.zip",
+          "sha256": "b091b21f485250d6a4c1abdf46e5d3ec5ece4ffd518811c767a66465453a7d39",
+          "path": "presentations"
+        }
+      },
+      {
+        "author": { "name": "Open-ZCode" },
+        "category": "utilities",
+        "displayName": "Skill Creator",
+        "displayName_i18n": { "zh-CN": "技能创建器" },
+        "icon": "/assets/plugins/skill-creator/0.1.0-open.1/7501368309eeaa25e95b2249170367a22af0e95a8afb4f438f94ba2637700d86/icon.png",
+        "description_i18n": { "zh-CN": "创建、编辑和验证可复用的 技能。" },
+        "name": "skill-creator",
+        "version": "0.1.0-open.1",
+        "description": "Create, edit, and iterate local skills.",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/skill-creator/0.1.0-open.1/69bbebd249f42151e6e7cd91dcd02d2ef69d9332f673a9af8eee552f4e16ef9e/plugin.zip",
+          "sha256": "69bbebd249f42151e6e7cd91dcd02d2ef69d9332f673a9af8eee552f4e16ef9e",
+          "path": "skill-creator"
+        }
+      },
+      {
+        "author": { "name": "Open-ZCode" },
+        "category": "productivity",
+        "displayName": "Spreadsheets",
+        "displayName_i18n": { "zh-CN": "电子表格" },
+        "icon": "/assets/plugins/spreadsheets/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+        "description_i18n": { "zh-CN": "创建、编辑与审阅电子表格（XLSX）。" },
+        "name": "spreadsheets",
+        "version": "0.1.7-open.1",
+        "description": "XLSX spreadsheet production skills, published as an official plugin.",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/spreadsheets/0.1.7-open.1/daa9c7bbe3ba4ef0c28105310d19e3d99a2bf229fd58ecb922b7a9c533008aec/plugin.zip",
+          "sha256": "daa9c7bbe3ba4ef0c28105310d19e3d99a2bf229fd58ecb922b7a9c533008aec",
+          "path": "spreadsheets"
+        }
+      },
+      {
+        "author": { "name": "Open-ZCode" },
+        "category": "utilities",
+        "displayName": "Configuration and Diagnostics Guide",
+        "displayName_i18n": { "zh-CN": "配置与诊断指南" },
+        "icon": "/assets/plugins/zcode-guide/0.3.0-open.1/5dcd237200ded7360ed97eef45d4362886c9ba1177597d2e4e8ea1cc8c31f47d/icon.png",
+        "description_i18n": { "zh-CN": "提供配置指南与插件、技能、MCP、命令和钩子诊断。" },
+        "examplePrompts": ["How do I configure MCP servers?", "Diagnose my current setup"],
+        "examplePrompts_i18n": { "zh-CN": ["怎么配置 MCP 服务器？", "帮我诊断当前配置"] },
+        "name": "zcode-guide",
+        "version": "0.3.0-open.1",
+        "description": "The app usage and self-diagnosis guide: teaches agents and users how to configure MCP servers, commands, skills, hooks, and plugins, and how to locate and fix configuration problems for each.",
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/zcode-guide/0.3.0-open.1/fc80351f6e36c0b89bd1689b35f73276ff87e044a84fa0881fa46fc97f6ae013/plugin.zip",
+          "sha256": "fc80351f6e36c0b89bd1689b35f73276ff87e044a84fa0881fa46fc97f6ae013",
+          "path": "zcode-guide"
+        }
+      },
+      {
+        "name": "github",
+        "description": "GitHub CLI workflows for commits, pull requests, issues, releases, Actions, repositories, Codespaces, and other GitHub resources.",
+        "description_i18n": {
+          "en": "GitHub CLI workflows for commits, pull requests, issues, releases, Actions, repositories, Codespaces, and other GitHub resources.",
+          "zh-CN": "基于 GitHub CLI 的 GitHub 工作流，覆盖提交、Pull Request、Issue、Release、Actions、仓库、Codespaces 等资源。"
+        },
+        "version": "0.1.2-open.1",
+        "author": { "name": "Open-ZCode" },
+        "icon": "/assets/plugins/github/0.1.2-open.1/916da4b4e72d9e80df2b2162ae47d01db372caadaaaad2e3a26339284965a548/icon.png",
+        "category": "developer-tools",
+        "keywords": [
+          "git",
+          "github",
+          "github-cli",
+          "gh",
+          "pull-request",
+          "issues",
+          "actions",
+          "codespaces"
+        ],
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/github/0.1.2-open.1/6ff0da28c368c0e7465bacbabbf85c07e87c7a0b303c0d1d65d99d2e8586fca1/plugin.zip",
+          "sha256": "6ff0da28c368c0e7465bacbabbf85c07e87c7a0b303c0d1d65d99d2e8586fca1",
+          "path": "github"
+        }
+      },
+      {
+        "name": "accounting-and-reporting",
+        "displayName": "核算与报告",
+        "displayName_i18n": { "en": "Accounting & Reporting", "zh-CN": "核算与报告" },
+        "description": "Accounting close and statutory reporting off the company's own ledger: month-end close checks, ledger reconciliation to transaction-level root cause, account mapping for consolidation, and statutory statements delivered as review-ready drafts",
+        "description_i18n": {
+          "en": "Accounting close and statutory reporting off the company's own ledger: month-end close checks, ledger reconciliation to transaction-level root cause, account mapping for consolidation, and statutory statements delivered as review-ready drafts",
+          "zh-CN": "【企业财务】核算与报告:月结关账检查与阻断项、总账与明细账勾稽及交易级差异归因、科目映射与重分类、内部管理报表编制、三表勾稽复核"
+        },
+        "version": "0.1.1-open.1",
+        "author": { "name": "Open-ZCode" },
+        "icon": "/assets/plugins/accounting-and-reporting/0.1.1-open.1/e9e3215b0f0710b51b3c847a1c5b1ba74ab1ef1e0bd696c1fb571fc7c7e73f00/icon.png",
+        "category": "finance",
+        "keywords": [
+          "accounting",
+          "month-end-close",
+          "reconciliation",
+          "statutory-reporting",
+          "consolidation"
+        ],
+        "source": {
+          "source": "url",
+          "type": "zip",
+          "url": "/assets/plugins/accounting-and-reporting/0.1.1-open.1/271507036ec23284e2d718dbaf3c54830068001aec52a41979ba2225bb4edb51/plugin.zip",
+          "sha256": "271507036ec23284e2d718dbaf3c54830068001aec52a41979ba2225bb4edb51",
+          "path": "accounting-and-reporting"
+        }
+      }
+    ]
+  },
+  "assets": [
+    {
+      "path": "/assets/plugins/cloudbase-skills/0.1.0-open.1/873d688c49b620a432147c45e94ce9bee919ba8893c2e757ccf1034f88f4e46b/icon.png",
+      "file": "cloudbase-skills/0.1.0-open.1/873d688c49b620a432147c45e94ce9bee919ba8893c2e757ccf1034f88f4e46b/icon.png",
+      "sha256": "873d688c49b620a432147c45e94ce9bee919ba8893c2e757ccf1034f88f4e46b",
+      "bytes": 5560,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/mimosa/1.0.3-open.1/05466a98ac49aa40fd96cd1f371ee3ff8574d76668f5649b24c62dd1dfd6361e/icon.png",
+      "file": "mimosa/1.0.3-open.1/05466a98ac49aa40fd96cd1f371ee3ff8574d76668f5649b24c62dd1dfd6361e/icon.png",
+      "sha256": "05466a98ac49aa40fd96cd1f371ee3ff8574d76668f5649b24c62dd1dfd6361e",
+      "bytes": 7383,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/video2code/0.6.0-open.1/d90515535bf9615f848c80f56d234d606be7cc8e513f31b8564d1895298769e1/icon.png",
+      "file": "video2code/0.6.0-open.1/d90515535bf9615f848c80f56d234d606be7cc8e513f31b8564d1895298769e1/icon.png",
+      "sha256": "d90515535bf9615f848c80f56d234d606be7cc8e513f31b8564d1895298769e1",
+      "bytes": 6830,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/gitlab/0.1.3-open.1/b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5/icon.png",
+      "file": "gitlab/0.1.3-open.1/b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5/icon.png",
+      "sha256": "b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5",
+      "bytes": 13925,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/alibaba-cloud-cli/0.1.2-open.1/37c636a4890e30a7ae7c3654144757b89c7d1a31d61c1b87ef40962d39e2b33c/icon.png",
+      "file": "alibaba-cloud-cli/0.1.2-open.1/37c636a4890e30a7ae7c3654144757b89c7d1a31d61c1b87ef40962d39e2b33c/icon.png",
+      "sha256": "37c636a4890e30a7ae7c3654144757b89c7d1a31d61c1b87ef40962d39e2b33c",
+      "bytes": 4353,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/lark-cli/0.1.2-open.1/ed459fb792bdd0abef88ee91f1ec82925d9c04fdbfcb3b72cf8d67b02f6f2748/icon.png",
+      "file": "lark-cli/0.1.2-open.1/ed459fb792bdd0abef88ee91f1ec82925d9c04fdbfcb3b72cf8d67b02f6f2748/icon.png",
+      "sha256": "ed459fb792bdd0abef88ee91f1ec82925d9c04fdbfcb3b72cf8d67b02f6f2748",
+      "bytes": 8806,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/tencent-meeting-cli/0.1.3-open.1/40f08c632268086cff8bbbbe6c292b95ccf5effbb1f7dfa9966592ed40df48c9/icon.png",
+      "file": "tencent-meeting-cli/0.1.3-open.1/40f08c632268086cff8bbbbe6c292b95ccf5effbb1f7dfa9966592ed40df48c9/icon.png",
+      "sha256": "40f08c632268086cff8bbbbe6c292b95ccf5effbb1f7dfa9966592ed40df48c9",
+      "bytes": 13689,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/dingtalk-cli/0.1.1-open.1/b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d/icon.png",
+      "file": "dingtalk-cli/0.1.1-open.1/b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d/icon.png",
+      "sha256": "b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d",
+      "bytes": 11431,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/wecom-cli/0.1.1-open.1/f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be/icon.png",
+      "file": "wecom-cli/0.1.1-open.1/f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be/icon.png",
+      "sha256": "f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be",
+      "bytes": 4317,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/obsidian/0.1.2-open.1/6e4b6881c3e3c304cbcaa53ffb202aa68fece3a0082a451f1638ff2c730a1285/icon.png",
+      "file": "obsidian/0.1.2-open.1/6e4b6881c3e3c304cbcaa53ffb202aa68fece3a0082a451f1638ff2c730a1285/icon.png",
+      "sha256": "6e4b6881c3e3c304cbcaa53ffb202aa68fece3a0082a451f1638ff2c730a1285",
+      "bytes": 9277,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/android-emulator/0.1.0-open.1/ead629480a3a5c6d50a2133690e7917e70bb64d51ee48cd905ae498afdc75d6b/icon.png",
+      "file": "android-emulator/0.1.0-open.1/ead629480a3a5c6d50a2133690e7917e70bb64d51ee48cd905ae498afdc75d6b/icon.png",
+      "sha256": "ead629480a3a5c6d50a2133690e7917e70bb64d51ee48cd905ae498afdc75d6b",
+      "bytes": 17334,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/documents/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+      "file": "documents/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+      "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df",
+      "bytes": 10291,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/ios-simulator/0.1.0-open.1/455d34704f7a0a6759b68270419498f09bd98af2a1ec8e4cddfb93c97cc55b04/icon.png",
+      "file": "ios-simulator/0.1.0-open.1/455d34704f7a0a6759b68270419498f09bd98af2a1ec8e4cddfb93c97cc55b04/icon.png",
+      "sha256": "455d34704f7a0a6759b68270419498f09bd98af2a1ec8e4cddfb93c97cc55b04",
+      "bytes": 39678,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/pdf/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+      "file": "pdf/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+      "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df",
+      "bytes": 10291,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/presentations/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+      "file": "presentations/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+      "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df",
+      "bytes": 10291,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/skill-creator/0.1.0-open.1/7501368309eeaa25e95b2249170367a22af0e95a8afb4f438f94ba2637700d86/icon.png",
+      "file": "skill-creator/0.1.0-open.1/7501368309eeaa25e95b2249170367a22af0e95a8afb4f438f94ba2637700d86/icon.png",
+      "sha256": "7501368309eeaa25e95b2249170367a22af0e95a8afb4f438f94ba2637700d86",
+      "bytes": 3567,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/spreadsheets/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+      "file": "spreadsheets/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
+      "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df",
+      "bytes": 10291,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/zcode-guide/0.3.0-open.1/5dcd237200ded7360ed97eef45d4362886c9ba1177597d2e4e8ea1cc8c31f47d/icon.png",
+      "file": "zcode-guide/0.3.0-open.1/5dcd237200ded7360ed97eef45d4362886c9ba1177597d2e4e8ea1cc8c31f47d/icon.png",
+      "sha256": "5dcd237200ded7360ed97eef45d4362886c9ba1177597d2e4e8ea1cc8c31f47d",
+      "bytes": 3970,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/github/0.1.2-open.1/916da4b4e72d9e80df2b2162ae47d01db372caadaaaad2e3a26339284965a548/icon.png",
+      "file": "github/0.1.2-open.1/916da4b4e72d9e80df2b2162ae47d01db372caadaaaad2e3a26339284965a548/icon.png",
+      "sha256": "916da4b4e72d9e80df2b2162ae47d01db372caadaaaad2e3a26339284965a548",
+      "bytes": 9851,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/accounting-and-reporting/0.1.1-open.1/e9e3215b0f0710b51b3c847a1c5b1ba74ab1ef1e0bd696c1fb571fc7c7e73f00/icon.png",
+      "file": "accounting-and-reporting/0.1.1-open.1/e9e3215b0f0710b51b3c847a1c5b1ba74ab1ef1e0bd696c1fb571fc7c7e73f00/icon.png",
+      "sha256": "e9e3215b0f0710b51b3c847a1c5b1ba74ab1ef1e0bd696c1fb571fc7c7e73f00",
+      "bytes": 55723,
+      "mime": "image/png"
+    },
+    {
+      "path": "/assets/plugins/cloudbase-skills/0.1.0-open.1/88b561194deba39620400e14f2267ac68bb7b3498192fd748343af577b8ab2c9/plugin.zip",
+      "file": "cloudbase-skills/0.1.0-open.1/88b561194deba39620400e14f2267ac68bb7b3498192fd748343af577b8ab2c9/plugin.zip",
+      "sha256": "88b561194deba39620400e14f2267ac68bb7b3498192fd748343af577b8ab2c9",
+      "bytes": 401305,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/mimosa/1.0.3-open.1/59b23b181ba9ec86ba67ef1dd7091bff4c19fd30b005b542ade3fe418530d3b7/plugin.zip",
+      "file": "mimosa/1.0.3-open.1/59b23b181ba9ec86ba67ef1dd7091bff4c19fd30b005b542ade3fe418530d3b7/plugin.zip",
+      "sha256": "59b23b181ba9ec86ba67ef1dd7091bff4c19fd30b005b542ade3fe418530d3b7",
+      "bytes": 6008375,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/video2code/0.6.0-open.1/bc6032813463a2e36f4b4bca87f8c4fbbc0473f30138fa7249adfa8a351215b8/plugin.zip",
+      "file": "video2code/0.6.0-open.1/bc6032813463a2e36f4b4bca87f8c4fbbc0473f30138fa7249adfa8a351215b8/plugin.zip",
+      "sha256": "bc6032813463a2e36f4b4bca87f8c4fbbc0473f30138fa7249adfa8a351215b8",
+      "bytes": 385192,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/gitlab/0.1.3-open.1/58bfc3a9f4c90b1545bf1d9a285d770f7094b1964492aab97fdf32ce7bb2f878/plugin.zip",
+      "file": "gitlab/0.1.3-open.1/58bfc3a9f4c90b1545bf1d9a285d770f7094b1964492aab97fdf32ce7bb2f878/plugin.zip",
+      "sha256": "58bfc3a9f4c90b1545bf1d9a285d770f7094b1964492aab97fdf32ce7bb2f878",
+      "bytes": 17385,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/alibaba-cloud-cli/0.1.2-open.1/ccd3e838e42d3880776aaf4c3ca8c9192d63c79bee60009b9bc52bf8a2541b1b/plugin.zip",
+      "file": "alibaba-cloud-cli/0.1.2-open.1/ccd3e838e42d3880776aaf4c3ca8c9192d63c79bee60009b9bc52bf8a2541b1b/plugin.zip",
+      "sha256": "ccd3e838e42d3880776aaf4c3ca8c9192d63c79bee60009b9bc52bf8a2541b1b",
+      "bytes": 7725,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/lark-cli/0.1.2-open.1/0d014a2bcfd5c1df6446f019c8d1462d0f8d827a2ee8fa1b20e9297aeea6a55e/plugin.zip",
+      "file": "lark-cli/0.1.2-open.1/0d014a2bcfd5c1df6446f019c8d1462d0f8d827a2ee8fa1b20e9297aeea6a55e/plugin.zip",
+      "sha256": "0d014a2bcfd5c1df6446f019c8d1462d0f8d827a2ee8fa1b20e9297aeea6a55e",
+      "bytes": 8228,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/tencent-meeting-cli/0.1.3-open.1/f88fb40b3882233ff3eb838ce08ad332f394d3084c9de9d6094e931d023bcaeb/plugin.zip",
+      "file": "tencent-meeting-cli/0.1.3-open.1/f88fb40b3882233ff3eb838ce08ad332f394d3084c9de9d6094e931d023bcaeb/plugin.zip",
+      "sha256": "f88fb40b3882233ff3eb838ce08ad332f394d3084c9de9d6094e931d023bcaeb",
+      "bytes": 5960,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/dingtalk-cli/0.1.1-open.1/32be9ef84e308bcfa53c85368cca6bc1cfd9a21f937d3329d3aec8712baf123a/plugin.zip",
+      "file": "dingtalk-cli/0.1.1-open.1/32be9ef84e308bcfa53c85368cca6bc1cfd9a21f937d3329d3aec8712baf123a/plugin.zip",
+      "sha256": "32be9ef84e308bcfa53c85368cca6bc1cfd9a21f937d3329d3aec8712baf123a",
+      "bytes": 7815,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/wecom-cli/0.1.1-open.1/bb419cb0c6faa0839a36a77a4ef1589714c24808ba56f6b772b19e6d6ce19a6e/plugin.zip",
+      "file": "wecom-cli/0.1.1-open.1/bb419cb0c6faa0839a36a77a4ef1589714c24808ba56f6b772b19e6d6ce19a6e/plugin.zip",
+      "sha256": "bb419cb0c6faa0839a36a77a4ef1589714c24808ba56f6b772b19e6d6ce19a6e",
+      "bytes": 7174,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/obsidian/0.1.2-open.1/08ade14ac28b122cf811373595723d7c3a3c5959a1599bf65b77a5dc77783d41/plugin.zip",
+      "file": "obsidian/0.1.2-open.1/08ade14ac28b122cf811373595723d7c3a3c5959a1599bf65b77a5dc77783d41/plugin.zip",
+      "sha256": "08ade14ac28b122cf811373595723d7c3a3c5959a1599bf65b77a5dc77783d41",
+      "bytes": 57014,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/android-emulator/0.1.0-open.1/5a147d3360e4bf85eb5b0c6230f6d4f9837e84581276557fdfe3a57508e36151/plugin.zip",
+      "file": "android-emulator/0.1.0-open.1/5a147d3360e4bf85eb5b0c6230f6d4f9837e84581276557fdfe3a57508e36151/plugin.zip",
+      "sha256": "5a147d3360e4bf85eb5b0c6230f6d4f9837e84581276557fdfe3a57508e36151",
+      "bytes": 289954,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/documents/0.1.7-open.1/8f19ee5d3d1cbd0b59c7a1e14f6cc0440a7be52dd55fce92f8473d6ef197e371/plugin.zip",
+      "file": "documents/0.1.7-open.1/8f19ee5d3d1cbd0b59c7a1e14f6cc0440a7be52dd55fce92f8473d6ef197e371/plugin.zip",
+      "sha256": "8f19ee5d3d1cbd0b59c7a1e14f6cc0440a7be52dd55fce92f8473d6ef197e371",
+      "bytes": 203196,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/ios-simulator/0.1.0-open.1/03799771c297a527248b5125caf1bc6a51e986bd631f7c11577fbf73c259cd38/plugin.zip",
+      "file": "ios-simulator/0.1.0-open.1/03799771c297a527248b5125caf1bc6a51e986bd631f7c11577fbf73c259cd38/plugin.zip",
+      "sha256": "03799771c297a527248b5125caf1bc6a51e986bd631f7c11577fbf73c259cd38",
+      "bytes": 266780,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/pdf/0.1.7-open.1/83048844e366eb6565d7db82e0de9e506bd665417c7d2cd18419beb76e342e21/plugin.zip",
+      "file": "pdf/0.1.7-open.1/83048844e366eb6565d7db82e0de9e506bd665417c7d2cd18419beb76e342e21/plugin.zip",
+      "sha256": "83048844e366eb6565d7db82e0de9e506bd665417c7d2cd18419beb76e342e21",
+      "bytes": 368207,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/plugin-creator/0.1.1-open.1/3a44d77226028865d9f7835bdab296d61e9ff2a8d2d0d1b10fe60db8f22bff20/plugin.zip",
+      "file": "plugin-creator/0.1.1-open.1/3a44d77226028865d9f7835bdab296d61e9ff2a8d2d0d1b10fe60db8f22bff20/plugin.zip",
+      "sha256": "3a44d77226028865d9f7835bdab296d61e9ff2a8d2d0d1b10fe60db8f22bff20",
+      "bytes": 17717,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/presentations/0.1.7-open.1/b091b21f485250d6a4c1abdf46e5d3ec5ece4ffd518811c767a66465453a7d39/plugin.zip",
+      "file": "presentations/0.1.7-open.1/b091b21f485250d6a4c1abdf46e5d3ec5ece4ffd518811c767a66465453a7d39/plugin.zip",
+      "sha256": "b091b21f485250d6a4c1abdf46e5d3ec5ece4ffd518811c767a66465453a7d39",
+      "bytes": 27104,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/skill-creator/0.1.0-open.1/69bbebd249f42151e6e7cd91dcd02d2ef69d9332f673a9af8eee552f4e16ef9e/plugin.zip",
+      "file": "skill-creator/0.1.0-open.1/69bbebd249f42151e6e7cd91dcd02d2ef69d9332f673a9af8eee552f4e16ef9e/plugin.zip",
+      "sha256": "69bbebd249f42151e6e7cd91dcd02d2ef69d9332f673a9af8eee552f4e16ef9e",
+      "bytes": 4660,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/spreadsheets/0.1.7-open.1/daa9c7bbe3ba4ef0c28105310d19e3d99a2bf229fd58ecb922b7a9c533008aec/plugin.zip",
+      "file": "spreadsheets/0.1.7-open.1/daa9c7bbe3ba4ef0c28105310d19e3d99a2bf229fd58ecb922b7a9c533008aec/plugin.zip",
+      "sha256": "daa9c7bbe3ba4ef0c28105310d19e3d99a2bf229fd58ecb922b7a9c533008aec",
+      "bytes": 107801,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/zcode-guide/0.3.0-open.1/fc80351f6e36c0b89bd1689b35f73276ff87e044a84fa0881fa46fc97f6ae013/plugin.zip",
+      "file": "zcode-guide/0.3.0-open.1/fc80351f6e36c0b89bd1689b35f73276ff87e044a84fa0881fa46fc97f6ae013/plugin.zip",
+      "sha256": "fc80351f6e36c0b89bd1689b35f73276ff87e044a84fa0881fa46fc97f6ae013",
+      "bytes": 24599,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/github/0.1.2-open.1/6ff0da28c368c0e7465bacbabbf85c07e87c7a0b303c0d1d65d99d2e8586fca1/plugin.zip",
+      "file": "github/0.1.2-open.1/6ff0da28c368c0e7465bacbabbf85c07e87c7a0b303c0d1d65d99d2e8586fca1/plugin.zip",
+      "sha256": "6ff0da28c368c0e7465bacbabbf85c07e87c7a0b303c0d1d65d99d2e8586fca1",
+      "bytes": 30491,
+      "mime": "application/zip"
+    },
+    {
+      "path": "/assets/plugins/accounting-and-reporting/0.1.1-open.1/271507036ec23284e2d718dbaf3c54830068001aec52a41979ba2225bb4edb51/plugin.zip",
+      "file": "accounting-and-reporting/0.1.1-open.1/271507036ec23284e2d718dbaf3c54830068001aec52a41979ba2225bb4edb51/plugin.zip",
+      "sha256": "271507036ec23284e2d718dbaf3c54830068001aec52a41979ba2225bb4edb51",
+      "bytes": 286507,
+      "mime": "application/zip"
+    }
+  ]
+}

@@ -4,11 +4,12 @@
     "documentation": ["common"],
     "database": ["common", "generated"],
     "public-content": ["common"],
-    "health": ["common", "database", "public-content"],
+    "health": ["common", "database", "public-content", "plugin-marketplace"],
     "oauth": ["common"],
     "shares": ["common"],
     "feedback": ["common"],
-    "releases": ["common"]
+    "releases": ["common"],
+    "plugin-marketplace": ["common"]
   },
   "compositionFiles": ["app.ts", "app.module.ts", "main.ts"],
   "generatedDirectory": "generated"

@@ -1,5 +1,23 @@
 import { z } from 'zod';
 
+export const MarketplaceWire = z
+  .object({
+    name: z.string(),
+    plugins: z.array(
+      z
+        .object({
+          name: z.string(),
+          version: z.string(),
+          category: z.string().optional(),
+          icon: z.string().optional(),
+          author: z.object({ name: z.string() }),
+          source: z.object({ url: z.string(), sha256: z.string(), path: z.string() }),
+        })
+        .passthrough(),
+    ),
+  })
+  .passthrough();
+
 // 测试按客户端消费字段独立验证 HTTP 结果，不导入生产响应 schema 来重复实现。
 export const EnvelopeWire = z
   .object({

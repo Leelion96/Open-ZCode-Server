@@ -8,3 +8,5 @@ src/generated
 artifacts
 coverage
 *.log
+
+plugins/upstream

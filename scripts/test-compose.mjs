@@ -99,7 +99,7 @@ try {
     'node',
     '--input-type=module',
     '-e',
-    "import{readdir}from'node:fs/promises';const names=(await readdir('/app/data')).sort();if(JSON.stringify(names)!==JSON.stringify(['builtin.json','configs.json','scenes.json']))throw new Error('Unexpected runtime data');console.log('Runtime data verified');",
+    "import{readdir}from'node:fs/promises';const names=(await readdir('/app/data')).sort();if(JSON.stringify(names)!==JSON.stringify(['builtin.json','configs.json','plugins','scenes.json']))throw new Error('Unexpected runtime data');console.log('Runtime data verified');",
   ]);
   const scenes = await check('/api/v1/client/scenes', 200, origin);
   if (
@@ -122,7 +122,7 @@ try {
         total + Object.keys(path).filter((method) => ['get', 'post'].includes(method)).length,
       0,
     );
-  if (operations !== 31) throw new Error('Documentation inventory is incomplete');
+  if (operations !== 32) throw new Error('Documentation inventory is incomplete');
   phases.push('swagger-ui');
   phases.push('compose-http');
   await run('pnpm', ['test:database'], {

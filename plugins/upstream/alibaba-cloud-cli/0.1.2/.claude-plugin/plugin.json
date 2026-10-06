@@ -1,0 +1,25 @@
+{
+  "name": "alibaba-cloud-cli",
+  "version": "0.1.2",
+  "description": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
+  "description_i18n": {
+    "en": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
+    "zh-CN": "阿里云 CLI 工作流：配置凭证与 profile，并安全执行云资源查询和操作。"
+  },
+  "author": {
+    "name": "Z.ai",
+    "url": "https://z.ai"
+  },
+  "homepage": "https://www.alibabacloud.com/help/en/cli/",
+  "repository": "https://github.com/aliyun/aliyun-cli",
+  "license": "Apache-2.0",
+  "keywords": [
+    "alibaba-cloud",
+    "aliyun",
+    "aliyun-cli",
+    "cloud",
+    "ecs",
+    "oss",
+    "ram"
+  ]
+}

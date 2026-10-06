@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "mimosa-scan-profile/v1",
+  "profiles": {
+    "gate": {
+      "schemaVersion": "mimosa-scan-profile/v1",
+      "id": "gate",
+      "scope": "diff-only",
+      "network": "prohibited",
+      "llm": "prohibited",
+      "semgrep": "prohibited",
+      "defaultTokenBudget": 0,
+      "lifecycle": { "checkpoint": "none", "phaseCheckpoint": "none", "resume": "none", "cancel": "none" },
+      "performance": {
+        "preToolUse": { "maxDiffLines": 500, "p95TargetMs": 300, "hardTimeoutMs": 1000 },
+        "stop": { "maxChangedFiles": 20, "p95TargetMs": 2000 }
+      },
+      "incompleteOutcome": "partial/INCONCLUSIVE"
+    },
+    "audit": {
+      "schemaVersion": "mimosa-scan-profile/v1",
+      "id": "audit",
+      "scope": "full-repository",
+      "network": "explicit-only",
+      "llm": "host-optional",
+      "semgrep": "optional-second-opinion",
+      "defaultTokenBudget": 0,
+      "lifecycle": {
+        "checkpoint": "durable-job-state",
+        "phaseCheckpoint": "none",
+        "resume": "restart-unsealed-attempt",
+        "cancel": "cooperative"
+      },
+      "performance": { "preToolUse": null, "stop": null },
+      "incompleteOutcome": "partial/INCONCLUSIVE"
+    }
+  }
+}

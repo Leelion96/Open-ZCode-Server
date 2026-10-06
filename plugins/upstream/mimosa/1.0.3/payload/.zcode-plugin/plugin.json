@@ -1,0 +1,25 @@
+{
+  "name": "mimosa",
+  "version": "1.0.0",
+  "description": "Mimosa 三级代码安全防线：写入前实时拦截、任务收尾增量复查、commit/push 前跨文件深度扫描；MCP 仅提供 5 个深度审计生命周期工具。深度审计的复核与修复由 ZCode 自身模型完成，无需另配 GLM API Key。",
+  "author": {
+    "name": "Mimosa"
+  },
+  "license": "MIT",
+  "commands": "commands",
+  "skills": "skills",
+  "hooks": "hooks/hooks.json",
+  "mcpServers": {
+    "mimosa": {
+      "enabled": true,
+      "command": "node",
+      "args": [
+        "${ZCODE_PLUGIN_ROOT}/dist/mcp/server.js"
+      ],
+      "cwd": "${ZCODE_PROJECT_DIR}",
+      "env": {
+        "MIMOSA_ENGINE": "native"
+      }
+    }
+  }
+}

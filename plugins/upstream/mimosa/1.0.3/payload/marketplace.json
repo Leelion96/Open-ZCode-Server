@@ -1,0 +1,13 @@
+{
+  "name": "mimosa-local",
+  "version": 1,
+  "description": "Local marketplace for the Mimosa protected ZCode release.",
+  "plugins": [
+    {
+      "name": "mimosa",
+      "version": "1.0.0",
+      "description": "Mimosa Native security guardrails for ZCode.",
+      "source": "."
+    }
+  ]
+}

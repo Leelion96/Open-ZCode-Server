@@ -1,0 +1,20 @@
+{
+  "name": "cloudbase-skills",
+  "description": "CloudBase development skills and MCP integration for building, deploying, and troubleshooting Web, WeChat Mini Program, database, cloud function, CloudRun, storage, and AI projects.",
+  "description_i18n": {
+    "en": "CloudBase development skills and MCP integration for building, deploying, and troubleshooting Web, WeChat Mini Program, database, cloud function, CloudRun, storage, and AI projects.",
+    "zh-CN": "腾讯云 CloudBase 开发技能与 MCP 集成，覆盖 Web、微信小程序、数据库、云函数、云托管、云存储和 AI 项目的开发、部署与排障。"
+  },
+  "version": "0.1.0",
+  "author": {
+    "name": "TencentCloudBase",
+    "url": "https://github.com/TencentCloudBase/cloudbase-skills"
+  },
+  "keywords": [
+    "cloudbase",
+    "tencent-cloud",
+    "wechat",
+    "serverless",
+    "mcp"
+  ]
+}

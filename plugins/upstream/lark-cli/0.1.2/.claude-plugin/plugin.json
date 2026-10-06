@@ -1,0 +1,26 @@
+{
+  "name": "lark-cli",
+  "version": "0.1.2",
+  "description": "Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login.",
+  "description_i18n": {
+    "en": "Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login.",
+    "zh-CN": "Lark CLI 工作流：覆盖文档、表格、多维表格、日历、消息等 SaaS 资源，并引导应用配置与 OAuth 登录。"
+  },
+  "author": {
+    "name": "Z.ai",
+    "url": "https://z.ai"
+  },
+  "homepage": "https://github.com/larksuite/cli",
+  "repository": "https://github.com/larksuite/cli",
+  "license": "MIT",
+  "keywords": [
+    "feishu",
+    "lark",
+    "lark-cli",
+    "docs",
+    "sheets",
+    "base",
+    "calendar",
+    "messaging"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "cloudbase": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@cloudbase/cloudbase-mcp@2.23.11"
+      ],
+      "enabled": true,
+      "timeoutMs": 120000
+    }
+  }
+}

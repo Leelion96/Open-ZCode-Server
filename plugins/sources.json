@@ -1,0 +1,694 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-10-06T11:44:35.291Z",
+  "publisher": "Open-ZCode",
+  "plugins": [
+    {
+      "name": "cloudbase-skills",
+      "sourceVersion": "0.1.0",
+      "version": "0.1.0-open.1",
+      "sourceTreeSha256": "3592c56176bb3ac4032598ebbf539bbf172a5f4d967a04eba45fb8f29bf19e31",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "skills/cloudbase/SKILL.md",
+        "skills/cloudbase/references/ai-model-nodejs/SKILL.md",
+        "skills/cloudbase/references/ai-model-web/SKILL.md",
+        "skills/cloudbase/references/auth-nodejs/SKILL.md",
+        "skills/cloudbase/references/auth-tool/SKILL.md",
+        "skills/cloudbase/references/auth-tool/checklist.md",
+        "skills/cloudbase/references/auth-web/SKILL.md",
+        "skills/cloudbase/references/auth-wechat/SKILL.md",
+        "skills/cloudbase/references/cloud-functions/SKILL.md",
+        "skills/cloudbase/references/cloud-functions/checklist.md",
+        "skills/cloudbase/references/cloud-functions/references/http-functions-custom-image.md",
+        "skills/cloudbase/references/cloud-storage-web/SKILL.md",
+        "skills/cloudbase/references/cloudbase-agent/py/skill.md",
+        "skills/cloudbase/references/cloudbase-agent/ts/skill.md",
+        "skills/cloudbase/references/cloudbase-cli/SKILL.md",
+        "skills/cloudbase/references/cloudbase-cli/references/core.md",
+        "skills/cloudbase/references/cloudbase-code-review/references/rules/postgresql/PG-CR001.md",
+        "skills/cloudbase/references/cloudbase-code-review/references/rules/postgresql/PG-CR003.md",
+        "skills/cloudbase/references/cloudbase-code-review/references/rules/storage/STORAGE001.md",
+        "skills/cloudbase/references/cloudbase-platform/SKILL.md",
+        "skills/cloudbase/references/cloudbase-platform/references/protocols/change-safety-protocol.md",
+        "skills/cloudbase/references/cloudbase-platform/references/protocols/deployment-gate.md",
+        "skills/cloudbase/references/cloudrun-development/SKILL.md",
+        "skills/cloudbase/references/data-model-creation/SKILL.md",
+        "skills/cloudbase/references/http-api/SKILL.md",
+        "skills/cloudbase/references/http-api/checklist.md",
+        "skills/cloudbase/references/mcp-setup.md",
+        "skills/cloudbase/references/miniprogram-development/SKILL.md",
+        "skills/cloudbase/references/miniprogram-development/references/cloudbase-integration.md",
+        "skills/cloudbase/references/no-sql-web-sdk/SKILL.md",
+        "skills/cloudbase/references/no-sql-web-sdk/geolocation.md",
+        "skills/cloudbase/references/no-sql-web-sdk/security-rules.md",
+        "skills/cloudbase/references/no-sql-wx-mp-sdk/SKILL.md",
+        "skills/cloudbase/references/no-sql-wx-mp-sdk/geolocation.md",
+        "skills/cloudbase/references/ops-inspector/SKILL.md",
+        "skills/cloudbase/references/postgresql-development/SKILL.md",
+        "skills/cloudbase/references/postgresql-development/references/app-workflow.md",
+        "skills/cloudbase/references/postgresql-development/references/auth-and-rls.md",
+        "skills/cloudbase/references/postgresql-development/references/pg-mode-overview.md",
+        "skills/cloudbase/references/postgresql-development/references/storage-pg.md",
+        "skills/cloudbase/references/relational-database-tool/SKILL.md",
+        "skills/cloudbase/references/relational-database-web/SKILL.md",
+        "skills/cloudbase/references/ui-design/SKILL.md",
+        "skills/cloudbase/references/web-development/SKILL.md",
+        "skills/cloudbase/references/web-development/browser-testing.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://docs.cloudbase.net/en/img/favicon.png",
+          "sha256": "873d688c49b620a432147c45e94ce9bee919ba8893c2e757ccf1034f88f4e46b"
+        }
+      ]
+    },
+    {
+      "name": "mimosa",
+      "sourceVersion": "1.0.3",
+      "version": "1.0.3-open.1",
+      "sourceTreeSha256": "45c023d61c1b98d33086a789be353bff96c8a97b138f3b0a49ddab8c2ab13d67",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "package.json",
+        "payload/.zcode-plugin/plugin.json",
+        "payload/README.md",
+        "payload/skills/mimosa-security-scan/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "publisherSigningKeySha256": "adc6883e868dac7880fc07ea0e6aa838d5e022f681337f27eeeeb47370f1dcb0",
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/mimosa/icon.png",
+          "sha256": "05466a98ac49aa40fd96cd1f371ee3ff8574d76668f5649b24c62dd1dfd6361e"
+        }
+      ]
+    },
+    {
+      "name": "video2code",
+      "sourceVersion": "0.6.0",
+      "version": "0.6.0-open.1",
+      "sourceTreeSha256": "f02331571eb1297d6d800535be50255c572a1440ff9737a6e42f06feceac9ad1",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "commands/env-check.md",
+        "commands/record.md",
+        "commands/replicate-fullstack.md",
+        "commands/replicate.md",
+        "skills/env-setup/SKILL.md",
+        "skills/url2video/SKILL.md",
+        "skills/video2code-3d/SKILL.md",
+        "skills/video2code/SKILL.md",
+        "skills/video2fullstack/SKILL.md",
+        "skills/web-replicate/SKILL.md",
+        "skills/web-replicate/templates/default-3d/info.md",
+        "skills/web-replicate/templates/default-3d/template/package.json",
+        "skills/web-replicate/templates/default/info.md",
+        "skills/web-replicate/templates/default/template/package.json"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/video2code/icon.png",
+          "sha256": "d90515535bf9615f848c80f56d234d606be7cc8e513f31b8564d1895298769e1"
+        }
+      ]
+    },
+    {
+      "name": "gitlab",
+      "sourceVersion": "0.1.3",
+      "version": "0.1.3-open.1",
+      "sourceTreeSha256": "511fdaf50c118371664b5fbe0a060021c7052560ad5017806836d79e51046dc7",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "references/gitlab-cli-preflight.md",
+        "skills/glab/SKILL.md",
+        "skills/setup/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/gitlab/icon.png",
+          "sha256": "b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5"
+        }
+      ]
+    },
+    {
+      "name": "alibaba-cloud-cli",
+      "sourceVersion": "0.1.2",
+      "version": "0.1.2-open.1",
+      "sourceTreeSha256": "18f7084bf67cf25f0caf9be21ed4fc32dd3b6a98c4ded02b1ced7adc563e7e29",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "skills/cli/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/alibaba-cloud-cli/icon.png",
+          "sha256": "37c636a4890e30a7ae7c3654144757b89c7d1a31d61c1b87ef40962d39e2b33c"
+        }
+      ]
+    },
+    {
+      "name": "lark-cli",
+      "sourceVersion": "0.1.2",
+      "version": "0.1.2-open.1",
+      "sourceTreeSha256": "8925d42a98101feb44926f0ec5532308d2e5ddbe204a094cc5d7c926bd15d41b",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "skills/cli/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/lark-cli/icon.png",
+          "sha256": "ed459fb792bdd0abef88ee91f1ec82925d9c04fdbfcb3b72cf8d67b02f6f2748"
+        }
+      ]
+    },
+    {
+      "name": "tencent-meeting-cli",
+      "sourceVersion": "0.1.3",
+      "version": "0.1.3-open.1",
+      "sourceTreeSha256": "0477aeffe48af91e442ef49eea5b29c32cfac130d7894a9fd8e68a96a2d2f779",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "skills/setup/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/tencent-meeting-cli/icon.png",
+          "sha256": "40f08c632268086cff8bbbbe6c292b95ccf5effbb1f7dfa9966592ed40df48c9"
+        }
+      ]
+    },
+    {
+      "name": "dingtalk-cli",
+      "sourceVersion": "0.1.1",
+      "version": "0.1.1-open.1",
+      "sourceTreeSha256": "65b40dff181dcdf7abe4aa7f1740f165b86752fd286c96447c23a5d951b20e14",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "skills/cli/SKILL.md",
+        "skills/setup/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/dingtalk-cli/icon.png",
+          "sha256": "b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d"
+        }
+      ]
+    },
+    {
+      "name": "wecom-cli",
+      "sourceVersion": "0.1.1",
+      "version": "0.1.1-open.1",
+      "sourceTreeSha256": "72cfc4b2aa25b51f43dd8f3488da01952cd29b9bbd7b3229587bb0f6266ee864",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "skills/cli/SKILL.md",
+        "skills/setup/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/wecom-cli/icon.png",
+          "sha256": "f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be"
+        }
+      ]
+    },
+    {
+      "name": "obsidian",
+      "sourceVersion": "0.1.2",
+      "version": "0.1.2-open.1",
+      "sourceTreeSha256": "e41b21ec0996cdae98f0051a0b47654363eacd40a24f37e61e4202f028043d45",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "skills/excalidraw-diagram/SKILL.md",
+        "skills/json-canvas/SKILL.md",
+        "skills/mermaid-visualizer/SKILL.md",
+        "skills/obsidian-markdown/SKILL.md",
+        "skills/setup/SKILL.md",
+        "skills/setup/references/setup-preflight.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/obsidian/icon.png",
+          "sha256": "6e4b6881c3e3c304cbcaa53ffb202aa68fece3a0082a451f1638ff2c730a1285"
+        }
+      ]
+    },
+    {
+      "name": "android-emulator",
+      "sourceVersion": "0.1.0",
+      "version": "0.1.0-open.1",
+      "sourceTreeSha256": "9ea24a8b2a799a197727c785727b8a16b8bedb28e7e424ab24f74b96e5fa0677",
+      "changes": [
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "package.json",
+        "skills/android-dev/INSTALL_ENVIRONMENT.md",
+        "skills/android-dev/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/android-emulator/icon.png",
+          "sha256": "ead629480a3a5c6d50a2133690e7917e70bb64d51ee48cd905ae498afdc75d6b"
+        }
+      ]
+    },
+    {
+      "name": "documents",
+      "sourceVersion": "0.1.7",
+      "version": "0.1.7-open.1",
+      "sourceTreeSha256": "386e4e757604602166aba4ceedc08cb54a41a0adaf6c84981c6aff302698fbe0",
+      "changes": [
+        ".zcode-plugin/plugin.json",
+        "agents/visual-judge.md",
+        "package.json",
+        "skills/docx/SKILL.md",
+        "skills/docx/env_setup/setup.md",
+        "skills/docx/references/decorations.md",
+        "skills/docx/references/design-system.md",
+        "skills/docx/routes/create.md",
+        "skills/docx/scenes/academic.md",
+        "skills/docx/scenes/contract.md",
+        "skills/docx/scenes/exam.md",
+        "skills/docx/scenes/official-doc.md",
+        "skills/docx/scenes/report.md",
+        "skills/docx/scenes/resume.md"
+      ],
+      "retainedTechnicalReferences": [
+        {
+          "file": "skills/docx/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/document-skills/icon.png",
+          "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df"
+        }
+      ]
+    },
+    {
+      "name": "ios-simulator",
+      "sourceVersion": "0.1.0",
+      "version": "0.1.0-open.1",
+      "sourceTreeSha256": "5a914dbc1d6ecaec864642bb5c432ee96a505e4d02a03d017e7e1cd831fef368",
+      "changes": [
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "package.json",
+        "skills/ios-dev/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/ios-simulator/icon.png",
+          "sha256": "455d34704f7a0a6759b68270419498f09bd98af2a1ec8e4cddfb93c97cc55b04"
+        }
+      ]
+    },
+    {
+      "name": "pdf",
+      "sourceVersion": "0.1.7",
+      "version": "0.1.7-open.1",
+      "sourceTreeSha256": "86aec0fc4dd47a67c24092e533e8382d44262ebb1c57dd8ad74234841e0f7097",
+      "changes": [
+        ".zcode-plugin/plugin.json",
+        "agents/visual-judge.md",
+        "package.json",
+        "skills/pdf/SKILL.md",
+        "skills/pdf/briefs/academic.md",
+        "skills/pdf/briefs/creative-fixed-canvas.md",
+        "skills/pdf/briefs/creative.md",
+        "skills/pdf/briefs/poster.md",
+        "skills/pdf/briefs/process.md",
+        "skills/pdf/briefs/report.md",
+        "skills/pdf/briefs/resume.md",
+        "skills/pdf/configs/components.md",
+        "skills/pdf/env_setup/setup.md",
+        "skills/pdf/typesetting/cover-backgrounds.md",
+        "skills/pdf/typesetting/cover.md",
+        "skills/pdf/typesetting/pagination.md"
+      ],
+      "retainedTechnicalReferences": [
+        {
+          "file": "skills/pdf/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/document-skills/icon.png",
+          "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df"
+        }
+      ]
+    },
+    {
+      "name": "plugin-creator",
+      "sourceVersion": "0.1.1",
+      "version": "0.1.1-open.1",
+      "sourceTreeSha256": "e9ae315f635811670883c3ce4e6590a15a0c4f949c44b2044971da41eae3b3d3",
+      "changes": [
+        ".zcode-plugin/plugin.json",
+        "package.json",
+        "skills/plugin-creator/SKILL.md",
+        "skills/plugin-creator/references/installing-and-updating.md",
+        "skills/plugin-creator/references/plugin-json-spec.md"
+      ],
+      "retainedTechnicalReferences": [
+        {
+          "file": "skills/plugin-creator/SKILL.md",
+          "tokens": [
+            ".zcode-plugin"
+          ]
+        },
+        {
+          "file": "skills/plugin-creator/references/plugin-json-spec.md",
+          "tokens": [
+            ".zcode-plugin"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "presentations",
+      "sourceVersion": "0.1.7",
+      "version": "0.1.7-open.1",
+      "sourceTreeSha256": "05ccfa59c5860d65714f73ef24807ce17355d0b08b0b2cc56e6cea93273a765d",
+      "changes": [
+        ".zcode-plugin/plugin.json",
+        "agents/visual-judge.md",
+        "package.json",
+        "skills/pptx/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [
+        {
+          "file": "skills/pptx/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/document-skills/icon.png",
+          "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df"
+        }
+      ]
+    },
+    {
+      "name": "skill-creator",
+      "sourceVersion": "0.1.0",
+      "version": "0.1.0-open.1",
+      "sourceTreeSha256": "270dfa910c7c3551d9c2231b0e44a653acf656ba9f77386f9369839fb06edbdc",
+      "changes": [
+        ".zcode-plugin/plugin.json",
+        "package.json",
+        "skills/skill-creator/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [
+        {
+          "file": "skills/skill-creator/SKILL.md",
+          "tokens": [
+            "zcode/skills/",
+            "zcode/skills"
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/skill-creator/icon.png",
+          "sha256": "7501368309eeaa25e95b2249170367a22af0e95a8afb4f438f94ba2637700d86"
+        }
+      ]
+    },
+    {
+      "name": "spreadsheets",
+      "sourceVersion": "0.1.7",
+      "version": "0.1.7-open.1",
+      "sourceTreeSha256": "191941819b632ad3220c94d89ee99669a9fda2863578e4d3fe4c3ddef7b68cbe",
+      "changes": [
+        ".zcode-plugin/plugin.json",
+        "agents/visual-judge.md",
+        "package.json",
+        "skills/xlsx/SKILL.md",
+        "skills/xlsx/env_setup/setup.md"
+      ],
+      "retainedTechnicalReferences": [
+        {
+          "file": "skills/xlsx/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/document-skills/icon.png",
+          "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df"
+        }
+      ]
+    },
+    {
+      "name": "zcode-guide",
+      "sourceVersion": "0.3.0",
+      "version": "0.3.0-open.1",
+      "sourceTreeSha256": "5798d34213af4c494ad517a68390acb228bc883d06d97c0f3186cb9482969311",
+      "changes": [
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "package.json",
+        "skills/diagnosing-commands/SKILL.md",
+        "skills/diagnosing-hooks/SKILL.md",
+        "skills/diagnosing-mcp/SKILL.md",
+        "skills/diagnosing-plugins/SKILL.md",
+        "skills/diagnosing-skills/SKILL.md",
+        "skills/zcode-configuration-guide/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [
+        {
+          "file": "skills/diagnosing-commands/SKILL.md",
+          "tokens": [
+            "zcode/commands",
+            "zcode/command/",
+            "zcode/commands/"
+          ]
+        },
+        {
+          "file": "skills/diagnosing-hooks/SKILL.md",
+          "tokens": [
+            "zcode/cli/config.json",
+            "zcode/config.json",
+            "ZCODE_PROJECT_DIR",
+            "ZCODE_PLUGIN_ROOT"
+          ]
+        },
+        {
+          "file": "skills/diagnosing-mcp/SKILL.md",
+          "tokens": [
+            "zcode/cli/config.json",
+            "zcode/config.json",
+            "ZCODE_PLUGIN_ROOT"
+          ]
+        },
+        {
+          "file": "skills/diagnosing-plugins/SKILL.md",
+          "tokens": [
+            "zcode/cli/config.json",
+            "zcode-plugins-official",
+            "ZCODE_HTTP_PROXY",
+            ".zcode-plugin"
+          ]
+        },
+        {
+          "file": "skills/diagnosing-skills/SKILL.md",
+          "tokens": [
+            "zcode/skills",
+            "zcode/skills/",
+            "zcode/skills/.foo/",
+            "zcode/cli/config.json",
+            "zcode/config.json"
+          ]
+        },
+        {
+          "file": "skills/zcode-configuration-guide/SKILL.md",
+          "tokens": [
+            "zcode/cli/config.json",
+            "zcode/config.json",
+            "zcode/AGENTS.md",
+            "zcode/skills/",
+            "zcode/commands/",
+            "zcode/skills",
+            ".zcode-plugin",
+            "zcode/..."
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/zcode-guide/icon.png",
+          "sha256": "5dcd237200ded7360ed97eef45d4362886c9ba1177597d2e4e8ea1cc8c31f47d"
+        }
+      ]
+    },
+    {
+      "name": "github",
+      "sourceVersion": "0.1.2",
+      "version": "0.1.2-open.1",
+      "sourceTreeSha256": "9751cfc35aedd01bd5d73372a1a8519a8a0be48286f0ce5a73f4ed4f7a01ec87",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "references/github-cli-preflight.md",
+        "skills/codespace/SKILL.md",
+        "skills/commit/SKILL.md",
+        "skills/gist/SKILL.md",
+        "skills/issue/SKILL.md",
+        "skills/pr/SKILL.md",
+        "skills/release/SKILL.md",
+        "skills/repo/SKILL.md",
+        "skills/secret/SKILL.md",
+        "skills/setup/SKILL.md",
+        "skills/workflow-run/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/github/icon.png",
+          "sha256": "916da4b4e72d9e80df2b2162ae47d01db372caadaaaad2e3a26339284965a548"
+        }
+      ]
+    },
+    {
+      "name": "accounting-and-reporting",
+      "sourceVersion": "0.1.1",
+      "version": "0.1.1-open.1",
+      "sourceTreeSha256": "8d5cd366a389e8da154aac8ad19bed561096899d7042ae5fdfb5902e9ba07407",
+      "changes": [
+        ".claude-plugin/plugin.json",
+        ".zcode-plugin/plugin.json",
+        "README.md",
+        "README_CN.md",
+        "skills/report-render/SKILL.md",
+        "skills/report-render/references/docx.md",
+        "skills/report-render/references/pitfalls.md",
+        "skills/report-render/references/visual-review.md",
+        "skills/xlsx-author/SKILL.md"
+      ],
+      "retainedTechnicalReferences": [
+        {
+          "file": "skills/account-mapping/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        },
+        {
+          "file": "skills/financial-reporting/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        },
+        {
+          "file": "skills/ledger-reconciliation/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        },
+        {
+          "file": "skills/month-end-close-review/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        },
+        {
+          "file": "skills/report-render/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        },
+        {
+          "file": "skills/statement-consistency-check/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        },
+        {
+          "file": "skills/xlsx-author/SKILL.md",
+          "tokens": [
+            "::zcode-file-citation"
+          ]
+        }
+      ],
+      "assets": [
+        {
+          "field": "icon",
+          "origin": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/accounting-reporting/icon.png",
+          "sha256": "e9e3215b0f0710b51b3c847a1c5b1ba74ab1ef1e0bd696c1fb571fc7c7e73f00"
+        }
+      ]
+    }
+  ],
+  "issues": []
+}

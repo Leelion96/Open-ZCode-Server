@@ -2,7 +2,14 @@ import { afterAll, beforeAll, describe, expect, it } from 'vitest';
 import { readFile } from 'node:fs/promises';
 import type { NestFastifyApplication } from '@nestjs/platform-fastify';
 import { createApplication } from '../dist/app.js';
-import { BuiltinWire, ConfigWire, EnvelopeWire, OpenApiWire, ScenesWire } from './wire.js';
+import {
+  BuiltinWire,
+  ConfigWire,
+  EnvelopeWire,
+  MarketplaceWire,
+  OpenApiWire,
+  ScenesWire,
+} from './wire.js';
 
 let app: NestFastifyApplication;
 let origin: string;
@@ -31,9 +38,9 @@ afterAll(async () => {
 });
 
 describe('v1 route inventory over actual Fastify HTTP', () => {
-  it('records all 31 scoped upstream entrypoints', () => {
-    expect(inventory.endpoints).toHaveLength(31);
-    expect(inventory.endpoints.filter((item) => item.state === 'implemented')).toHaveLength(2);
+  it('records upstream entrypoints plus the new plugin marketplace', () => {
+    expect(inventory.endpoints).toHaveLength(32);
+    expect(inventory.endpoints.filter((item) => item.state === 'implemented')).toHaveLength(3);
     expect(inventory.endpoints.filter((item) => item.state === 'stub')).toHaveLength(15);
     expect(inventory.endpoints.filter((item) => item.state === 'absent')).toHaveLength(14);
   });
@@ -48,6 +55,11 @@ describe('v1 route inventory over actual Fastify HTTP', () => {
           : {}),
       });
       expect(response.status).toBe(route.status);
+      if (route.feature === 'plugin-marketplace') {
+        expect(response.headers.get('cache-control')).toBe('no-cache');
+        expect(MarketplaceWire.parse(await response.json()).name).toBe('zcode-plugins-official');
+        return;
+      }
       expect(response.headers.get('cache-control')).toBe('no-store');
       expect(response.headers.get('x-request-id')).toBeTruthy();
       const body = EnvelopeWire.parse(await response.json());
@@ -337,6 +349,11 @@ describe('failure handling, transport and operations', () => {
     const text = await response.text();
     expect(text).not.toContain('postgresql');
     expect(text).not.toContain('fixture:fixture');
-    expect(JSON.parse(text).checks).toEqual({ content: true, database: false, schema: false });
+    expect(JSON.parse(text).checks).toEqual({
+      content: true,
+      plugins: true,
+      database: false,
+      schema: false,
+    });
   });
 });

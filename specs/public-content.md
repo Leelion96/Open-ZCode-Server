@@ -2,7 +2,7 @@
 
 ## 数据与所有者
 
-- 运行数据只有 `data/configs.json`、`data/scenes.json`、`data/builtin.json` 三份完整JSON，直接编辑并纳入Git与Docker镜像；没有官方样本与policy的合并、索引、运行时采集manifest或版本/平台分流。
+- 原公共配置由 `data/configs.json`、`data/scenes.json`、`data/builtin.json` 提供；新增市场由独立模块读取 `data/plugins/catalog.json`，直接编辑并纳入Git与Docker镜像；没有官方样本与policy的合并、索引、运行时采集manifest或版本/平台分流。
 - PublicContentService在启动时异步读取、进行既有结构校验并原子建立只读快照；HTTP返回副本。请求路径不读文件、不访问官方、不改数据库。
 - `app_version`、`platform`继续接受与校验以兼容客户端，但不影响本版返回内容。configs/scenes保留成功信封，logid由common请求追踪生成，不要求配置JSON预置采集ID或占位字段。裸builtin release不增加信封字段。
 - builtin下载地址在配置中使用本服务相对路径，启动时按PUBLIC_ORIGIN转换为HTTPS绝对地址；HTTP部署不下发下载链接。其他模型供应商地址不做改写。
@@ -33,7 +33,7 @@ sequenceDiagram
 
 ## 验收
 
-1. 正式data只有三份JSON，直接编辑后的内容通过校验并随服务发布。
+1. 正式data包含原三份JSON和插件目录，直接编辑后的内容通过校验并随服务发布。
 2. 无版本、现有版本与未知平台返回同一份配置，query类型校验保持。
 3. 实际HTTP验证通用开关、空套餐、关闭能力、仅含draft-suggestion与scheduled-task的2场景、模板/模型规则、本地HTTPS链接与请求logid；场景提示词、插件默认引用和cron默认引用完整且在同场景内解析；官方运营URL不进入运行数据。
 4. 数据副本修改生效、错误JSON拒绝启动、响应副本隔离、离线启动；不写正常配置制造故障。

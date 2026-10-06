@@ -1,0 +1,10 @@
+{
+  "name": "@open-zcode/mimosa-builtin",
+  "private": true,
+  "version": "1.0.3-open.1",
+  "license": "MIT",
+  "type": "commonjs",
+  "author": {
+    "name": "Open-ZCode"
+  }
+}

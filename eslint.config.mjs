@@ -1,7 +1,17 @@
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['dist/**', 'node_modules/**', 'src/generated/**', 'data/**', 'artifacts/**'] },
+  {
+    ignores: [
+      'dist/**',
+      'node_modules/**',
+      'src/generated/**',
+      'data/**',
+      'artifacts/**',
+      'plugins/**',
+      'plugin-artifacts/**',
+    ],
+  },
   ...tseslint.configs.recommended,
   {
     files: ['**/*.{ts,mjs}'],

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "mimosa-language-packs/v1",
+  "ignoredSuffixes": [".min.js"],
+  "languages": [
+    { "id": "python", "editorIds": ["python"], "extensions": [".py"], "semgrepExtension": ".py" },
+    { "id": "typescript", "editorIds": ["typescript", "typescriptreact"], "extensions": [".ts", ".tsx"], "semgrepExtension": ".ts" },
+    { "id": "javascript", "editorIds": ["javascript", "javascriptreact"], "extensions": [".js", ".jsx"], "semgrepExtension": ".js" },
+    { "id": "go", "editorIds": ["go"], "extensions": [".go"], "semgrepExtension": ".go" },
+    { "id": "java", "editorIds": ["java"], "extensions": [".java"], "semgrepExtension": ".java" },
+    { "id": "php", "editorIds": ["php"], "extensions": [".php"], "semgrepExtension": ".php" },
+    { "id": "ruby", "editorIds": ["ruby"], "extensions": [".rb"], "semgrepExtension": ".rb" },
+    { "id": "csharp", "editorIds": ["csharp"], "extensions": [".cs"], "semgrepExtension": ".cs" },
+    { "id": "kotlin", "editorIds": ["kotlin"], "extensions": [".kt", ".kts"], "semgrepExtension": ".kt" },
+    { "id": "scala", "editorIds": ["scala"], "extensions": [".scala", ".sc"], "semgrepExtension": ".scala" },
+    { "id": "rust", "editorIds": ["rust"], "extensions": [".rs"], "semgrepExtension": ".rs" },
+    { "id": "bash", "editorIds": ["shellscript", "bash", "sh"], "extensions": [".sh", ".bash"], "semgrepExtension": ".sh" },
+    { "id": "c", "editorIds": ["c"], "extensions": [".c", ".h"], "semgrepExtension": ".c" },
+    { "id": "cpp", "editorIds": ["cpp", "c++"], "extensions": [".cpp", ".cxx", ".cc", ".c++", ".hpp", ".hxx", ".hh"], "semgrepExtension": ".cpp" }
+  ]
+}

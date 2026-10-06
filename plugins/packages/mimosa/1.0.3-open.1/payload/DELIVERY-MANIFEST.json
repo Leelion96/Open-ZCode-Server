@@ -1,0 +1,7 @@
+{
+  "schema": "mimosa-node-sdk/v1",
+  "layout": "node-single-artifact/v1",
+  "crossPlatform": true,
+  "nativeBinaries": false,
+  "integrityPublicKeySha256": "adc6883e868dac7880fc07ea0e6aa838d5e022f681337f27eeeeb47370f1dcb0"
+}

@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "mimosa": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "${ZCODE_PLUGIN_ROOT}/payload/dist/mcp/server.js"
+      ],
+      "cwd": "${ZCODE_PROJECT_DIR}",
+      "env": {
+        "MIMOSA_ENGINE": "${user_config.engine}"
+      },
+      "timeoutMs": 120000
+    }
+  }
+}

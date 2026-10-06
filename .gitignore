@@ -18,3 +18,5 @@ artifacts/
 /compose.override.yml
 /compose.*.local.yaml
 /compose.*.local.yml
+
+plugin-artifacts/

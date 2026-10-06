@@ -4,3 +4,6 @@ src/generated
 pnpm-lock.yaml
 artifacts
 .git
+
+plugins/**
+plugin-artifacts/**

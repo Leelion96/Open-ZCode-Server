@@ -1,0 +1,23 @@
+{
+  "name": "tencent-meeting-cli",
+  "version": "0.1.3",
+  "description": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
+  "description_i18n": {
+    "en": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
+    "zh-CN": "腾讯会议 CLI 工作流：OAuth2 授权、会议管理、录制管理和参会报告查询。"
+  },
+  "author": {
+    "name": "Z.ai",
+    "url": "https://z.ai"
+  },
+  "homepage": "https://github.com/TencentCloud/tencentmeeting-cli",
+  "repository": "https://github.com/TencentCloud/tencentmeeting-cli",
+  "license": "Apache-2.0",
+  "keywords": [
+    "tencent-meeting",
+    "tencentmeeting",
+    "meeting",
+    "cli",
+    "oauth2"
+  ]
+}

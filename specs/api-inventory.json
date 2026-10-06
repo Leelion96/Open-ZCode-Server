@@ -249,6 +249,14 @@
       "path": "/api/v1/off-peak/anthropic/v1/messages",
       "status": 404,
       "summary": "闲时任务模型推理"
+    },
+    {
+      "feature": "plugin-marketplace",
+      "state": "implemented",
+      "method": "GET",
+      "path": "/api/v1/plugins/marketplace.json",
+      "status": 200,
+      "summary": "获取应用插件市场目录"
     }
   ]
 }

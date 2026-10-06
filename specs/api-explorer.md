@@ -41,3 +41,7 @@ API清单 + Nest/Zod文档 → 启动校验/合成 → Swagger UI
 - 浏览器实际执行200配置、200场景、501占位和404不提供，查看响应正文；检查搜索无结果/恢复、键盘、窄屏与长JSON。
 - 禁用OPENAPI的独立测试确认页面、原始文档和静态资源均404，公共API仍可用。
 - 类型、lint、架构、格式和测试通过；Docker镜像内静态依赖及清单存在，Compose验证不回归。
+
+## 新插件市场
+
+GET /api/v1/plugins/marketplace.json 为裸市场目录，公开只读，按现有样式进入“插件市场”分组。GET/HEAD /assets/plugins/{name}/{version}/{digest}/{file} 发送启动时校验的内存工件，下载链接和图片链接在目录中提供，使用长期 immutable 缓存。目录为 no-cache；不带业务信封，不在接口页面执行插件代码。
