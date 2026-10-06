@@ -25,7 +25,7 @@ sequenceDiagram
 - 验证码、强制更新、遥测、闲时调度、Start Plan与套餐推广明确关闭；个人/团队套餐目录为空对象。移除促销文案与空magic_name。反馈与社群地址暂为空，待项目真实入口建立后填写。
 - 仅下发当前客户端消费的2个场景：draft-suggestion（编程模式新任务草稿推荐）与scheduled-task（自动化定时任务模板）。移除没有消费入口的ai-slides、ai-writing、artifact、data-insight、file-tool、full-stack；不恢复off-peak-task。保留两个场景的完整提示词、选项ID、插件与cron默认引用；引用在所属场景内解析，不依赖已移除的场景。
 - builtin保留15个API Key模板与通用模型规则；移除8个官方账号Provider及相应内置账号模型规则，清理指向zcode.z.ai的专用规则。删除bigmodel-api、zai-api两个Coding Plan API模板及引用它们的templateModelRules，保留bigmodel-standard-api、zai-standard-api普通API模板及对应规则。templateRules按openai、anthropic、其余模板原有相对顺序下发，不增加目录策略字段或接口。
-- 首次自有修订为24。2026-10-05 客户端联调确认随包基线为30，正式内容曾发布为31；2026-10-06模板删减与排序发布为32，schemaVersion保持1。后续改变内容时递增，客户端拒绝同修订号的不同内容。本次针对尚未上线的新应用，不提供旧模板依赖迁移、不修改客户端缓存与源码；客户端固定分组和Plan导航不属于本次服务端变更。
+- 首次自有修订为24。2026-10-05 客户端联调确认随包基线为30，正式内容曾发布为31；2026-10-06模板删减与排序发布为32，供应商官方文档核验更新发布为33，schemaVersion保持1。后续改变内容时递增，客户端拒绝同修订号的不同内容。本次针对尚未上线的新应用，不提供旧模板依赖迁移、不修改客户端缓存与源码；客户端固定分组和Plan导航不属于本次服务端变更。
 
 ## 内容维护
 
@@ -38,7 +38,19 @@ sequenceDiagram
 3. 实际HTTP验证通用开关、空套餐、关闭能力、仅含draft-suggestion与scheduled-task的2场景、模板/模型规则、本地HTTPS链接与请求logid；场景提示词、插件默认引用和cron默认引用完整且在同场景内解析；官方运营URL不进入运行数据。
 4. 数据副本修改生效、错误JSON拒绝启动、响应副本隔离、离线启动；不写正常配置制造故障。
 5. 类型、Lint、架构、格式、全部服务端测试和真实PostgreSQL/Compose检查；镜像只含正式数据，本机服务更新后数据库身份与既有数据保持。
-6. builtin实际HTTP返回revision 32、15个模板，前两项为openai、anthropic；两个Coding Plan API模板及关联规则不存在，普通BigModel/Z.AI API模板与规则完整保留，其余模型规则、configs和scenes不变。重建正常部署的app容器后核对响应，保留既有db、tls容器和volume。
+6. builtin实际HTTP返回revision 33、15个模板，前两项为openai、anthropic；两个Coding Plan API模板及关联规则不存在，普通BigModel/Z.AI API模板与规则完整保留。供应商更新范围见下节；configs和scenes不变。重建正常部署的app容器后核对响应，保留既有db、tls容器和volume。
+
+## 供应商目录核验（2026-10-06）
+
+- 唯一正式数据仍为 `data/builtin.json`，由 PublicContentService 启动加载；核验记录位于 `docs/provider-template-audit-2026-10-06.md`，不增加运行时抓取、动态目录或第二份配置。
+- 逐一核对全部15个模板对应供应商的官方模型目录、接口文档；聚合供应商另核对自己的模型ID和接口，不能直接照搬原厂ID。只新增现有文本/Agent接口能调用的模型，实时音视频、图像生成、专用决策接口与仅套餐可用的预览模型不加入这些模板。
+- OpenAI、OpenRouter、OpenCode Responses补齐GPT-6 Sol、GPT-6 Luna、GPT-6.1 Sol；OpenAI/OpenRouter补齐GPT-5.5及Pro并清理官方目录中不存在的裸GPT-5.6别名。GPT-6.1 Sol/Astra不提供none/minimal；Sol/Luna支持none。原厂模板保持Responses，OpenRouter Messages分别映射effort与关闭思考，不向OpenAI请求注入Anthropic参数。
+- Anthropic与已确认上架的聚合模板加入Opus 5.5、Sonnet 5.5，使用adaptive thinking与output_config.effort；1M上下文、128K输出。已宣布弃用但尚未到下线日期的旧模型保留，不把deprecated误判为已经不可调用。
+- Z.AI、BigModel加入GLM-5.2、GLM-5.3-FlashX；FlashX继承Flash的视觉能力和不可关闭思考规则。MiniMax保留普通API现有M3/M2系列，M3.1-Flash-Preview仅套餐可用。Kimi与DeepSeek原厂最新模型ID已齐全；DeepSeek继续使用deepseek-flash动态别名。
+- MiMo加入V2.6 Pro、Flash、Pro Ultraspeed及多模态/思考开关映射。Qwen中外模板加入已确认支持当前接口的3.8快照和开源版本；国际Omni按官方1M上下文、131072输出修正规则，不加入CN Messages不支持的Omni模型。
+- xAI与支持其Responses的聚合模板加入Grok 4.7；推理档位包含medium。原厂文档未明确给出的数值不推测成最新上限；聚合站点公开的上下文、输出和输入能力通过templateModelRules覆盖，不能污染原厂规则。
+- OpenRouter删除本次官方目录中缺失的ID及其templateModelRules；保留仍存在的旧条目及原有启用偏好。Zen的新模型按官方Endpoint表放入对应的三个既有模板，清理目录中缺失或接口不匹配的条目；未知预览模型保留通用能力默认值，不猜测上下文或推理档位。
+- 发布33前验证模型ID/模板规则引用一致、无重复、正则可编译、GPT-6推理参数映射、FlashX视觉继承、网关能力覆盖、实际HTTP与当前客户端解析；运行类型、Lint、架构、格式与服务端测试。重建正常app容器后验证HTTP/HTTPS返回33与就绪状态，db/tls容器及卷身份保持。
 
 ## 首轮客户端验收补充（2026-10-05）
 

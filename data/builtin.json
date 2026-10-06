@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 32,
+  "revision": 33,
   "config": {
     "providerConfigRules": {
       "templateRules": [
@@ -21,10 +21,14 @@
             },
             "builtinModelIds": [
               "gpt-6-astra",
+              "gpt-6.1-sol",
+              "gpt-6-sol",
+              "gpt-6-luna",
+              "gpt-5.5",
+              "gpt-5.5-pro",
               "gpt-5.6-sol",
               "gpt-5.6-terra",
               "gpt-5.6-luna",
-              "gpt-5.6",
               "gpt-5.4",
               "gpt-5.4-pro",
               "gpt-5.4-mini",
@@ -54,6 +58,8 @@
             },
             "builtinModelIds": [
               "claude-fable-5-1",
+              "claude-opus-5-5",
+              "claude-sonnet-5-5",
               "claude-fable-5",
               "claude-opus-5",
               "claude-sonnet-5",
@@ -83,6 +89,8 @@
             "builtinModelIds": [
               "GLM-5.3",
               "GLM-5.3-Flash",
+              "GLM-5.3-FlashX",
+              "GLM-5.2",
               "GLM-5V-Turbo",
               "GLM-5.1",
               "GLM-5.1-Highspeed",
@@ -130,6 +138,8 @@
             "builtinModelIds": [
               "GLM-5.3",
               "GLM-5.3-Flash",
+              "GLM-5.3-FlashX",
+              "GLM-5.2",
               "GLM-5V-Turbo",
               "GLM-5.1",
               "GLM-5.1-Highspeed",
@@ -258,7 +268,10 @@
             },
             "builtinModelIds": [
               "qwen3.8-max",
+              "qwen3.8-max-0902",
               "qwen3.8-flash",
+              "qwen3.8-27b",
+              "qwen3.8-2.4t-a95b",
               "qwen3.7-max",
               "qwen3.7-plus",
               "qwen3.7-flash",
@@ -294,7 +307,10 @@
             },
             "builtinModelIds": [
               "qwen3.8-max",
+              "qwen3.8-max-0902",
               "qwen3.8-flash",
+              "qwen3.8-27b",
+              "qwen3.8-2.4t-a95b",
               "qwen3.8-omni-flash",
               "qwen3.7-max",
               "qwen3.7-plus",
@@ -329,7 +345,13 @@
               "type": "anthropic-messages",
               "baseUrl": "https://api.xiaomimimo.com/anthropic"
             },
-            "builtinModelIds": ["mimo-v2.5-pro", "mimo-v2.5"],
+            "builtinModelIds": [
+              "mimo-v2.6-pro",
+              "mimo-v2.6-pro-ultraspeed",
+              "mimo-v2.6-flash",
+              "mimo-v2.5-pro",
+              "mimo-v2.5"
+            ],
             "logo": {
               "type": "builtin",
               "key": "xiaomi-mimo"
@@ -351,7 +373,7 @@
               "type": "openai-responses",
               "baseUrl": "https://api.x.ai/v1"
             },
-            "builtinModelIds": ["grok-4.6", "grok-build-0.1", "grok-4.3"],
+            "builtinModelIds": ["grok-4.7", "grok-4.6", "grok-build-0.1", "grok-4.3"],
             "logo": {
               "type": "builtin",
               "key": "xai"
@@ -374,14 +396,30 @@
               "baseUrl": "https://openrouter.ai/api"
             },
             "builtinModelIds": [
-              "anthropic/claude-fable-5.1",
               "openai/gpt-6-astra",
+              "openai/gpt-6.1-sol",
+              "openai/gpt-6-sol",
+              "openai/gpt-6-luna",
+              "openai/gpt-5.5",
+              "openai/gpt-5.5-pro",
+              "anthropic/claude-fable-5.1",
+              "anthropic/claude-opus-5.5",
+              "anthropic/claude-sonnet-5.5",
+              "z-ai/glm-5.3-flashx",
+              "z-ai/glm-5.3-prime",
+              "qwen/qwen3.8-max-prime",
+              "qwen/qwen3.8-27b",
+              "qwen/qwen3.8-2.4t-a95b",
+              "qwen/qwen3.8-omni-flash",
+              "xiaomi/mimo-v2.6-pro",
+              "xiaomi/mimo-v2.6-pro-ultraspeed",
+              "xiaomi/mimo-v2.6-flash",
+              "x-ai/grok-4.7",
               "openai/gpt-5.6-sol",
               "anthropic/claude-opus-5",
               "deepseek/deepseek-v4-pro",
               "moonshotai/kimi-k3",
               "z-ai/glm-5.3",
-              "qwen/qwen3.8-max",
               "minimax/minimax-m3",
               "xiaomi/mimo-v2.5-pro",
               "x-ai/grok-4.6",
@@ -389,7 +427,6 @@
               "qwen/qwen3.8-max-0902",
               "openai/gpt-5.6-terra",
               "openai/gpt-5.6-luna",
-              "openai/gpt-5.6",
               "openai/gpt-5.4",
               "openai/gpt-5.4-pro",
               "openai/gpt-5.4-mini",
@@ -426,8 +463,6 @@
               "qwen/qwen3.6-plus",
               "qwen/qwen3.6-flash",
               "qwen/qwen3.5-plus-20260420",
-              "qwen/qwen3-vl-plus",
-              "qwen/qwen3-vl-flash",
               "minimax/minimax-m2.7",
               "minimax/minimax-m2.5",
               "xiaomi/mimo-v2.5",
@@ -457,6 +492,15 @@
             },
             "builtinModelIds": [
               "gpt-6-astra",
+              "gpt-6.1-sol",
+              "gpt-6-sol",
+              "gpt-6-luna",
+              "grok-4.7",
+              "grok-4.6",
+              "grok-build-0.1",
+              "muse-spark-1.3",
+              "muse-spark-1.3-contributor-free",
+              "muse-spark-1.2-contributor-free",
               "gpt-5.6-sol",
               "gpt-5.6-terra",
               "gpt-5.6-luna",
@@ -494,8 +538,10 @@
             },
             "builtinModelIds": [
               "claude-fable-5-1",
+              "claude-opus-5-5",
+              "claude-sonnet-5-5",
+              "qwen3.8-flash",
               "claude-fable-5",
-              "qwen3.7-max",
               "qwen3.6-plus",
               "qwen3.5-plus",
               "claude-opus-5",
@@ -506,8 +552,7 @@
               "claude-opus-4-6",
               "claude-opus-4-5",
               "claude-sonnet-4-6",
-              "claude-sonnet-4-5",
-              "qwen3.7-plus"
+              "claude-sonnet-4-5"
             ],
             "logo": {
               "type": "builtin",
@@ -531,16 +576,23 @@
               "baseUrl": "https://opencode.ai/zen/v1"
             },
             "builtinModelIds": [
+              "deepseek-v4.1-flash",
+              "glm-5.3",
+              "glm-5.3-flash",
+              "qwen3.8-max",
+              "mimo-v2.6-flash-free",
+              "space-bunny-free",
+              "longcat-2.5-preview-free",
+              "fledge-alpha-free",
+              "ling-3.1-flash-free",
               "kimi-k3",
               "minimax-m3",
               "deepseek-v4-pro",
               "glm-5.2",
               "big-pickle",
               "mimo-v2.5-free",
-              "hy3-free",
               "ling-3.0-flash-fin-free",
               "nemotron-3-ultra-free",
-              "muse-spark-1.2-contributor-free",
               "minimax-m2.7",
               "deepseek-v4-flash",
               "glm-5.1",
@@ -669,7 +721,7 @@
           }
         },
         {
-          "modelMatch": ".*glm-5\\.3(?:-flash)?(?:[.\\-:/\\[].*)?",
+          "modelMatch": ".*glm-5\\.3(?:-flashx?)?(?:[.\\-:/\\[].*)?",
           "config": {
             "properties": {
               "contextWindow": 1000000,
@@ -689,7 +741,7 @@
           }
         },
         {
-          "modelMatch": ".*glm-5\\.3-flash(?:[.\\-:/\\[].*)?",
+          "modelMatch": ".*glm-5\\.3-flashx?(?:[.\\-:/\\[].*)?",
           "config": {
             "properties": {
               "inputFormat": {
@@ -1800,7 +1852,7 @@
           }
         },
         {
-          "modelMatch": ".*qwen3\\.8-(?:max|flash)(?:[.\\-:/\\[].*)?",
+          "modelMatch": ".*qwen3\\.8-(?:max|flash|27b|2\\.4t-a95b)(?:[.\\-:/\\[].*)?",
           "config": {
             "properties": {
               "contextWindow": 1000000,
@@ -2060,7 +2112,7 @@
           "modelMatch": ".*qwen3\\.8-omni-flash(?:-20\\d{2}(?:-?\\d{2}){2})?(?:[:/\\[].*)?",
           "config": {
             "properties": {
-              "contextWindow": 65536,
+              "contextWindow": 1000000,
               "inputFormat": {
                 "supportsImage": true,
                 "supportsVideo": true,
@@ -2073,7 +2125,7 @@
                 "values": ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
               },
               "maxOutputTokens": {
-                "max": 16384
+                "max": 131072
               }
             }
           }
@@ -2170,6 +2222,153 @@
               },
               "maxOutputTokens": {
                 "max": 65536
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*gpt-6\\.1-sol(?:[.\\-:/\\[].*)?",
+          "config": {
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "reasoningLevel": {
+                "values": ["low", "medium", "high", "xhigh", "max"]
+              },
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*gpt-6-(?:sol|luna)(?:[.\\-:/\\[].*)?",
+          "config": {
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "reasoningLevel": {
+                "values": ["none", "low", "medium", "high", "xhigh", "max"]
+              },
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*gpt-5\\.5(?:[.\\-:/\\[].*)?",
+          "config": {
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "reasoningLevel": {
+                "values": ["none", "low", "medium", "high", "xhigh"]
+              },
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*gpt-5\\.5-pro(?:[.\\-:/\\[].*)?",
+          "config": {
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "reasoningLevel": {
+                "values": ["medium", "high", "xhigh"]
+              },
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*grok-4\\.7(?:[.\\-:/\\[].*)?",
+          "config": {
+            "properties": {
+              "contextWindow": 500000,
+              "inputFormat": {
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "reasoningLevel": {
+                "values": ["low", "medium", "high", "xhigh"]
+              },
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*mimo-v2\\.6-(?:flash|pro(?:-ultraspeed)?)(?:[.\\-:/\\[].*)?",
+          "config": {
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": true
+              }
+            },
+            "optionSpecs": {
+              "reasoningLevel": {
+                "values": ["disabled", "enabled"]
+              },
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*qwen3\\.8-2\\.4t-a95b(?:[.\\-:/\\[].*)?",
+          "config": {
+            "properties": {
+              "inputFormat": {
+                "supportsImage": false,
+                "supportsVideo": false
               }
             }
           }
@@ -2285,7 +2484,7 @@
           }
         },
         {
-          "modelMatch": ".*glm-5\\.3(?:-flash)?(?:[.\\-:/\\[].*)?",
+          "modelMatch": ".*glm-5\\.3(?:-flashx?)?(?:[.\\-:/\\[].*)?",
           "apiTypeMatch": "anthropic-messages",
           "config": {
             "optionSpecs": {
@@ -2626,7 +2825,7 @@
           }
         },
         {
-          "modelMatch": ".*qwen3\\.8-(?:max|flash)(?:[.\\-:/\\[].*)?",
+          "modelMatch": ".*qwen3\\.8-(?:max|flash|27b|2\\.4t-a95b)(?:[.\\-:/\\[].*)?",
           "apiTypeMatch": "anthropic-messages",
           "config": {
             "optionSpecs": {
@@ -2637,7 +2836,7 @@
           }
         },
         {
-          "modelMatch": ".*qwen3\\.8-(?:max|flash)(?:[.\\-:/\\[].*)?",
+          "modelMatch": ".*qwen3\\.8-(?:max|flash|27b|2\\.4t-a95b)(?:[.\\-:/\\[].*)?",
           "apiTypeMatch": "openai-chat-completions",
           "config": {
             "optionSpecs": {
@@ -2648,7 +2847,7 @@
           }
         },
         {
-          "modelMatch": ".*qwen3\\.8-(?:max|flash)(?:[.\\-:/\\[].*)?",
+          "modelMatch": ".*qwen3\\.8-(?:max|flash|27b|2\\.4t-a95b)(?:[.\\-:/\\[].*)?",
           "apiTypeMatch": "openai-responses",
           "config": {
             "optionSpecs": {
@@ -2976,6 +3175,61 @@
               }
             }
           }
+        },
+        {
+          "modelMatch": ".*gpt-(?:6(?:\\.1)?-(?:astra|sol|luna)|5\\.5(?:-pro)?)(?:[.\\-:/\\[].*)?",
+          "apiTypeMatch": "openai-responses",
+          "config": {
+            "optionSpecs": {
+              "reasoningLevel": {
+                "map": "{\n  \"reasoning\": {\n    \"effort\": reasoningLevel\n  }\n}"
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*glm-5\\.3(?:-flashx?)?(?:[.\\-:/\\[].*)?",
+          "apiTypeMatch": "openai-chat-completions",
+          "config": {
+            "optionSpecs": {
+              "reasoningLevel": {
+                "map": "{\n  \"thinking\": { \"type\": \"enabled\" },\n  \"reasoning_effort\": reasoningLevel\n}"
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*grok-4\\.7(?:[.\\-:/\\[].*)?",
+          "apiTypeMatch": "openai-responses",
+          "config": {
+            "optionSpecs": {
+              "reasoningLevel": {
+                "map": "{\n  \"reasoning\": {\n    \"effort\": reasoningLevel\n  }\n}"
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*mimo-v2\\.6-(?:flash|pro(?:-ultraspeed)?)(?:[.\\-:/\\[].*)?",
+          "apiTypeMatch": "anthropic-messages",
+          "config": {
+            "optionSpecs": {
+              "reasoningLevel": {
+                "map": "{\n  \"thinking\": {\n    \"type\": reasoningLevel == \"enabled\" ? \"enabled\" : \"disabled\"\n  }\n}"
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*mimo-v2\\.6-(?:flash|pro(?:-ultraspeed)?)(?:[.\\-:/\\[].*)?",
+          "apiTypeMatch": "openai-chat-completions",
+          "config": {
+            "optionSpecs": {
+              "reasoningLevel": {
+                "map": "{\n  \"thinking\": {\n    \"type\": reasoningLevel == \"enabled\" ? \"enabled\" : \"disabled\"\n  }\n}"
+              }
+            }
+          }
         }
       ],
       "providerSiteRules": [
@@ -3249,6 +3503,30 @@
               "supportsJsonSchemaOutput": true
             }
           }
+        },
+        {
+          "modelMatch": ".*gpt-(?:6-astra|6\\.1-sol)(?:[.\\-:/\\[].*)?",
+          "apiTypeMatch": "anthropic-messages",
+          "baseUrlMatch": "https://openrouter\\.ai/api(?:/v1)?/?",
+          "config": {
+            "optionSpecs": {
+              "reasoningLevel": {
+                "map": "{\n  \"output_config\": { \"effort\": reasoningLevel }\n}"
+              }
+            }
+          }
+        },
+        {
+          "modelMatch": ".*gpt-(?:6-(?:sol|luna)|5\\.5(?:-pro)?)(?:[.\\-:/\\[].*)?",
+          "apiTypeMatch": "anthropic-messages",
+          "baseUrlMatch": "https://openrouter\\.ai/api(?:/v1)?/?",
+          "config": {
+            "optionSpecs": {
+              "reasoningLevel": {
+                "map": "reasoningLevel == \"none\"\n  ? { \"thinking\": { \"type\": \"disabled\" } }\n  : { \"output_config\": { \"effort\": reasoningLevel } }"
+              }
+            }
+          }
         }
       ],
       "templateModelRules": [
@@ -3498,13 +3776,6 @@
           }
         },
         {
-          "modelId": "gpt-5.6",
-          "templateId": "openai",
-          "config": {
-            "enabled": false
-          }
-        },
-        {
           "modelId": "gpt-5.3-codex",
           "templateId": "openai",
           "config": {
@@ -3564,140 +3835,437 @@
           "templateId": "openrouter",
           "modelId": "openai/gpt-5.6-sol",
           "config": {
-            "enabled": true
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "openai/gpt-5.6-terra",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "openai/gpt-5.6-luna",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "openai/gpt-5.3-codex",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 400000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "anthropic/claude-opus-5",
           "config": {
-            "enabled": true
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "anthropic/claude-sonnet-5",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "anthropic/claude-haiku-4.5",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 200000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 64000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "deepseek/deepseek-v4-pro",
           "config": {
-            "enabled": true
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 384000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "deepseek/deepseek-v4-flash",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 943718
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "moonshotai/kimi-k3",
           "config": {
-            "enabled": true
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 943718
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "moonshotai/kimi-k2.7-code",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 262144,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 235929
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-5.3",
           "config": {
-            "enabled": true
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 943718
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-5.3-flash",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 943717
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-5.2",
           "config": {
-            "enabled": false
-          }
-        },
-        {
-          "templateId": "openrouter",
-          "modelId": "qwen/qwen3.8-max",
-          "config": {
-            "enabled": true
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "qwen/qwen3.8-flash",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "minimax/minimax-m3",
           "config": {
-            "enabled": true
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 512000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "xiaomi/mimo-v2.5-pro",
           "config": {
-            "enabled": true
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "xiaomi/mimo-v2.5",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": true,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "x-ai/grok-4.6",
           "config": {
-            "enabled": true
+            "enabled": true,
+            "properties": {
+              "contextWindow": 500000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 450000
+              }
+            }
           }
         },
         {
@@ -3863,20 +4431,6 @@
         },
         {
           "templateId": "opencode-zen-messages",
-          "modelId": "qwen3.7-max",
-          "config": {
-            "enabled": true
-          }
-        },
-        {
-          "templateId": "opencode-zen-messages",
-          "modelId": "qwen3.7-plus",
-          "config": {
-            "enabled": false
-          }
-        },
-        {
-          "templateId": "opencode-zen-messages",
           "modelId": "qwen3.6-plus",
           "config": {
             "enabled": true
@@ -3954,13 +4508,6 @@
         },
         {
           "templateId": "opencode-zen-chat",
-          "modelId": "hy3-free",
-          "config": {
-            "enabled": true
-          }
-        },
-        {
-          "templateId": "opencode-zen-chat",
           "modelId": "ling-3.0-flash-fin-free",
           "config": {
             "enabled": true
@@ -3981,227 +4528,647 @@
           }
         },
         {
-          "templateId": "opencode-zen-chat",
-          "modelId": "muse-spark-1.2-contributor-free",
-          "config": {
-            "enabled": true
-          }
-        },
-        {
-          "templateId": "openrouter",
-          "modelId": "openai/gpt-5.6",
-          "config": {
-            "enabled": false
-          }
-        },
-        {
           "templateId": "openrouter",
           "modelId": "anthropic/claude-opus-4.8",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "anthropic/claude-opus-4.7",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "anthropic/claude-opus-4.6",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "anthropic/claude-opus-4.5",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 200000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 64000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "anthropic/claude-sonnet-4.6",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "anthropic/claude-sonnet-4.5",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 64000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "moonshotai/kimi-k2.6",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 262144,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 235929
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "moonshotai/kimi-k2.5",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 262144,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 235929
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-5.1",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 204800,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-5v-turbo",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 202752,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": false
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-5",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 204800,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-5-turbo",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 202752,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": false
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-4.7",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 204800,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-4.7-flash",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 200000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 117964
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-4.6",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 204800,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 16384
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-4.6v",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 131072,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": false
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 32768
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-4.5-air",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 131072,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": false
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 98304
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "z-ai/glm-4.5",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 131072,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": false
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 98304
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "qwen/qwen3.7-max",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "qwen/qwen3.7-plus",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "qwen/qwen3.7-flash",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": false
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 65536
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "qwen/qwen3.6-plus",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 65536
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "qwen/qwen3.6-flash",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 65536
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "qwen/qwen3.5-plus-20260420",
           "config": {
-            "enabled": false
-          }
-        },
-        {
-          "templateId": "openrouter",
-          "modelId": "qwen/qwen3-vl-plus",
-          "config": {
-            "enabled": false
-          }
-        },
-        {
-          "templateId": "openrouter",
-          "modelId": "qwen/qwen3-vl-flash",
-          "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 65536
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "minimax/minimax-m2.7",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 204800,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": false
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 176947
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "minimax/minimax-m2.5",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 204800,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "x-ai/grok-build-0.1",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 256000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 230400
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "x-ai/grok-4.3",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 900000
+              }
+            }
           }
         },
         {
@@ -4572,14 +5539,46 @@
           "templateId": "openrouter",
           "modelId": "openai/gpt-6-astra",
           "config": {
-            "enabled": true
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "anthropic/claude-fable-5.1",
           "config": {
-            "enabled": true
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
@@ -4621,28 +5620,92 @@
           "templateId": "openrouter",
           "modelId": "openai/gpt-5.4",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "openai/gpt-5.4-pro",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "openai/gpt-5.4-mini",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 400000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "openai/gpt-5.4-nano",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 400000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
           }
         },
         {
@@ -4733,14 +5796,731 @@
           "templateId": "openrouter",
           "modelId": "deepseek/deepseek-v4.1-flash",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 943718
+              }
+            }
           }
         },
         {
           "templateId": "openrouter",
           "modelId": "qwen/qwen3.8-max-0902",
           "config": {
-            "enabled": false
+            "enabled": false,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelId": "gpt-6.1-sol",
+          "templateId": "openai",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "gpt-6-sol",
+          "templateId": "openai",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "gpt-6-luna",
+          "templateId": "openai",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "gpt-5.5",
+          "templateId": "openai",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "gpt-5.5-pro",
+          "templateId": "openai",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "claude-opus-5-5",
+          "templateId": "anthropic",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "claude-sonnet-5-5",
+          "templateId": "anthropic",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "GLM-5.3-FlashX",
+          "templateId": "zai-standard-api",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "GLM-5.2",
+          "templateId": "zai-standard-api",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "GLM-5.3-FlashX",
+          "templateId": "bigmodel-standard-api",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "GLM-5.2",
+          "templateId": "bigmodel-standard-api",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "qwen3.8-max-0902",
+          "templateId": "qwen-alibaba-model-studio-cn",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "qwen3.8-27b",
+          "templateId": "qwen-alibaba-model-studio-cn",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "qwen3.8-2.4t-a95b",
+          "templateId": "qwen-alibaba-model-studio-cn",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "qwen3.8-max-0902",
+          "templateId": "qwen-alibaba-model-studio-intl",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "qwen3.8-27b",
+          "templateId": "qwen-alibaba-model-studio-intl",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "qwen3.8-2.4t-a95b",
+          "templateId": "qwen-alibaba-model-studio-intl",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "mimo-v2.6-pro",
+          "templateId": "xiaomi-mimo",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "mimo-v2.6-pro-ultraspeed",
+          "templateId": "xiaomi-mimo",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "mimo-v2.6-flash",
+          "templateId": "xiaomi-mimo",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "grok-4.7",
+          "templateId": "xai",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "openai/gpt-6.1-sol",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelId": "openai/gpt-6-sol",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelId": "openai/gpt-6-luna",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelId": "openai/gpt-5.5",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelId": "openai/gpt-5.5-pro",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelId": "anthropic/claude-opus-5.5",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelId": "anthropic/claude-sonnet-5.5",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 128000
+              }
+            }
+          }
+        },
+        {
+          "modelId": "z-ai/glm-5.3-flashx",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": false
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelId": "z-ai/glm-5.3-prime",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": false
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelId": "qwen/qwen3.8-max-prime",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelId": "qwen/qwen3.8-27b",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelId": "qwen/qwen3.8-2.4t-a95b",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": false,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelId": "qwen/qwen3.8-omni-flash",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1000000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": true,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.6-pro",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": true,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.6-pro-ultraspeed",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1048576,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": true,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelId": "xiaomi/mimo-v2.6-flash",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 1050000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": true,
+                "supportsAudio": true,
+                "supportsPdf": false
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 131072
+              }
+            }
+          }
+        },
+        {
+          "modelId": "x-ai/grok-4.7",
+          "templateId": "openrouter",
+          "config": {
+            "enabled": true,
+            "properties": {
+              "contextWindow": 500000,
+              "inputFormat": {
+                "supportsText": true,
+                "supportsImage": true,
+                "supportsVideo": false,
+                "supportsAudio": false,
+                "supportsPdf": true
+              },
+              "supportsJsonSchemaOutput": true
+            },
+            "optionSpecs": {
+              "maxOutputTokens": {
+                "max": 450000
+              }
+            }
+          }
+        },
+        {
+          "modelId": "gpt-6.1-sol",
+          "templateId": "opencode-zen-responses",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "gpt-6-sol",
+          "templateId": "opencode-zen-responses",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "gpt-6-luna",
+          "templateId": "opencode-zen-responses",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "grok-4.7",
+          "templateId": "opencode-zen-responses",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "grok-4.6",
+          "templateId": "opencode-zen-responses",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "grok-build-0.1",
+          "templateId": "opencode-zen-responses",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "muse-spark-1.3",
+          "templateId": "opencode-zen-responses",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "muse-spark-1.3-contributor-free",
+          "templateId": "opencode-zen-responses",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "muse-spark-1.2-contributor-free",
+          "templateId": "opencode-zen-responses",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "claude-opus-5-5",
+          "templateId": "opencode-zen-messages",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "claude-sonnet-5-5",
+          "templateId": "opencode-zen-messages",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "qwen3.8-flash",
+          "templateId": "opencode-zen-messages",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "deepseek-v4.1-flash",
+          "templateId": "opencode-zen-chat",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "glm-5.3",
+          "templateId": "opencode-zen-chat",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "glm-5.3-flash",
+          "templateId": "opencode-zen-chat",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "qwen3.8-max",
+          "templateId": "opencode-zen-chat",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "mimo-v2.6-flash-free",
+          "templateId": "opencode-zen-chat",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "space-bunny-free",
+          "templateId": "opencode-zen-chat",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "longcat-2.5-preview-free",
+          "templateId": "opencode-zen-chat",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "fledge-alpha-free",
+          "templateId": "opencode-zen-chat",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "ling-3.1-flash-free",
+          "templateId": "opencode-zen-chat",
+          "config": {
+            "enabled": true
           }
         }
       ],

@@ -162,7 +162,7 @@ describe('public content and wire compatibility', () => {
     expect(response.status).toBe(200);
     const release = BuiltinWire.parse(await response.json());
     expect(release.schemaVersion).toBe(1);
-    expect(release.revision).toBe(32);
+    expect(release.revision).toBe(33);
     expect(release.config.providerConfigRules.providerRules).toEqual([]);
     const templateIds = release.config.providerConfigRules.templateRules.map(
       (rule: { templateId: string }) => rule.templateId,
