@@ -15,7 +15,7 @@ export class PublicContentService implements OnModuleInit {
   constructor(@Inject(EnvironmentService) private readonly environment: EnvironmentService) {}
 
   async onModuleInit(): Promise<void> {
-    const bundle = await loadContentBundle(CONTENT_DIRECTORY);
+    const bundle = await loadContentBundle(CONTENT_DIRECTORY, this.environment.value.publicOrigin);
     const configs = bundle.configs.data.configs;
     if (configs.builtin_provider_config_json === '/assets/builtin-config.json') {
       const origin = this.environment.value.publicOrigin;
@@ -44,6 +44,14 @@ export class PublicContentService implements OnModuleInit {
 
   builtin() {
     return structuredClone(this.bundle.builtin);
+  }
+
+  announcements() {
+    return structuredClone(this.bundle.announcements);
+  }
+
+  announcementAsset(name: string) {
+    return this.bundle.announcementAssets.get(name);
   }
 
   private get bundle(): ContentBundle {

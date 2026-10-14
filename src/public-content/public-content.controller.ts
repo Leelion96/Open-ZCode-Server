@@ -1,4 +1,5 @@
-import { Controller, Get, Inject, Query } from '@nestjs/common';
+import { Controller, Get, Inject, NotFoundException, Param, Query, Res } from '@nestjs/common';
+import type { FastifyReply } from 'fastify';
 import { ApiOkResponse, ApiQuery, ApiTags } from '@nestjs/swagger';
 import { ZodValidationPipe } from 'nestjs-zod';
 import {
@@ -31,5 +32,21 @@ export class PublicContentController {
   @ApiOkResponse({ type: BuiltinReleaseResponseDto })
   builtin() {
     return this.content.builtin();
+  }
+
+  @Get('assets/announcements/:sha/:file')
+  asset(
+    @Param('sha') sha: string,
+    @Param('file') file: string,
+    @Res({ passthrough: true }) reply: FastifyReply,
+  ) {
+    const asset = this.content.announcementAsset(`${sha}/${file}`);
+    if (!asset) throw new NotFoundException('Announcement asset not found');
+    reply
+      .type(asset.contentType)
+      .header('etag', `"${asset.sha256}"`)
+      .header('cache-control', 'public, max-age=31536000, immutable')
+      .header('cross-origin-resource-policy', 'cross-origin');
+    return asset.bytes;
   }
 }

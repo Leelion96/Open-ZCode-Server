@@ -1,4 +1,5 @@
 import { Module } from '@nestjs/common';
+import { AnnouncementsModule } from './announcements/index.js';
 import { EnvironmentModule } from './common/environment.js';
 import { DatabaseModule } from './database/index.js';
 import { FeedbackModule } from './feedback/index.js';
@@ -14,6 +15,7 @@ import { SharesModule } from './shares/index.js';
     EnvironmentModule,
     DatabaseModule,
     PublicContentModule,
+    AnnouncementsModule,
     PluginMarketplaceModule,
     OauthModule,
     SharesModule,

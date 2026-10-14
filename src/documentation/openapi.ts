@@ -8,6 +8,7 @@ import type { ApiInventory } from './catalog.js';
 import { createNotFoundEnvelope, createNotImplementedEnvelope } from '../common/api-error.js';
 
 const featureNames: Record<string, string> = {
+  announcements: '普通公告',
   'plugin-marketplace': '插件市场',
   'public-content': '客户端配置与场景',
   oauth: '账号与登录',

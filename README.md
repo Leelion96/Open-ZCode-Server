@@ -210,8 +210,12 @@ pnpm test:compose
 
 ## 自建插件市场
 
-GET `/api/v1/plugins/marketplace.json` 提供原格式裸目录，当前发布 21 个插件；Browser Use 与 Node Repl Host 保留在客户端。`/assets/plugins/{name}/{version}/{sha256}/plugin.zip` 提供完整 ZIP，图标与图片也来自当前服务。分类与排序保留原信息，作者统一 Open-ZCode，技能正文清理品牌词；技术标识和原始版权/许可保留。
+GET `/api/v1/plugins/marketplace.json` 提供原格式裸目录，当前发布 21 个插件；客户端沿用上游 v3.15.1 的内置插件与 Gen UI 资源；自建市场继续提供安装和更新。`/assets/plugins/{name}/{version}/{sha256}/plugin.zip` 提供完整 ZIP，图标与图片也来自当前服务。分类与排序保留原信息，作者统一 Open-ZCode，技能正文清理品牌词；技术标识和原始版权/许可保留。
 
 `plugins/packages` 是服务端独立发行副本，`plugins/upstream` 保存输入原件，`plugins/sources.json` 记录来源和改动。编辑包后增加版本，再运行 `pnpm plugins:build`、`pnpm plugins:check` 和 `pnpm verify`。不要写入主机绝对路径、用户配置、凭据或虚拟环境。构建不依赖客户端仓库；镜像携带已验证工件。工件在启动时有界加载到内存，GET/HEAD 不读磁盘；ZIP 的 SHA-256、ETag 和长期缓存对应不可变内容。
 
 Docker 更新使用 `docker compose up -d --build --wait app`，保留既有数据库和 TLS volume。客户端通过现有 `ZCODE_BASE_URL` 配置产品 Server origin，默认市场自动使用其 `/api/v1/plugins/marketplace.json` 路径；Server 的 `PUBLIC_ORIGIN` 配置为对应公开 HTTPS origin。本机地址只放在开发环境配置，不再改客户端源码中的 URL。商业发布前仍需检查办公插件的非商业条款和来源不完整的第三方材料。验收报告见 `docs/plugin-marketplace-verification.md`。
+
+## 普通公告
+
+兼容客户端横幅和弹窗，提供按设备幂等的确认/关闭回执。内容发布、资源及数据库迁移见 [普通公告文档](docs/announcements.md)。

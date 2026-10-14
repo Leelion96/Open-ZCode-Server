@@ -9,7 +9,8 @@
     "shares": ["common"],
     "feedback": ["common"],
     "releases": ["common"],
-    "plugin-marketplace": ["common"]
+    "plugin-marketplace": ["common"],
+    "announcements": ["common", "database", "public-content"]
   },
   "compositionFiles": ["app.ts", "app.module.ts", "main.ts"],
   "generatedDirectory": "generated"

@@ -16,3 +16,13 @@ model ServerMetadata {
 
   @@map("server_metadata")
 }
+
+model AnnouncementReceipt {
+  deviceMid  String   @map("device_mid") @db.Uuid
+  campaignId String   @map("campaign_id") @db.VarChar(128)
+  actionType String   @map("action_type") @db.VarChar(7)
+  createdAt  DateTime @default(now()) @map("created_at")
+
+  @@id([deviceMid, campaignId])
+  @@map("announcement_receipts")
+}

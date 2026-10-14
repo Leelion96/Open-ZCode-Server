@@ -39,8 +39,8 @@ afterAll(async () => {
 
 describe('v1 route inventory over actual Fastify HTTP', () => {
   it('records upstream entrypoints plus the new plugin marketplace', () => {
-    expect(inventory.endpoints).toHaveLength(32);
-    expect(inventory.endpoints.filter((item) => item.state === 'implemented')).toHaveLength(3);
+    expect(inventory.endpoints).toHaveLength(34);
+    expect(inventory.endpoints.filter((item) => item.state === 'implemented')).toHaveLength(5);
     expect(inventory.endpoints.filter((item) => item.state === 'stub')).toHaveLength(15);
     expect(inventory.endpoints.filter((item) => item.state === 'absent')).toHaveLength(14);
   });
@@ -54,6 +54,12 @@ describe('v1 route inventory over actual Fastify HTTP', () => {
           ? { headers: { 'content-type': 'application/json' }, body: '{}' }
           : {}),
       });
+      if (route.feature === 'announcements') {
+        // 无设备标识/请求体的探测应明确拒绝；有效投放和回执由公告 HTTP 场景覆盖。
+        expect(response.status).toBe(400);
+        expect(EnvelopeWire.parse(await response.json()).code).not.toBe(0);
+        return;
+      }
       expect(response.status).toBe(route.status);
       if (route.feature === 'plugin-marketplace') {
         expect(response.headers.get('cache-control')).toBe('no-cache');

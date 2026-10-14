@@ -75,7 +75,14 @@ export async function createApplication(): Promise<NestFastifyApplication> {
         origin: env.corsOrigins,
         credentials: false,
         methods: ['GET', 'HEAD', 'POST', 'OPTIONS'],
-        allowedHeaders: ['Content-Type', 'Authorization', 'X-Request-Id'],
+        allowedHeaders: [
+          'Content-Type',
+          'Authorization',
+          'X-Request-Id',
+          'X-Device-Mid',
+          'X-Client-Language',
+          'X-ZCode-App-Version',
+        ],
         exposedHeaders: ['X-Request-Id'],
       });
     app.useGlobalPipes(new ZodValidationPipe());

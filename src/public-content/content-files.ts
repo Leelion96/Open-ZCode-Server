@@ -1,6 +1,8 @@
 import { readFile, realpath, stat } from 'node:fs/promises';
 import { isAbsolute, relative, resolve } from 'node:path';
 import { BuiltinReleaseSchema, ClientConfigSchema, ScenesSchema } from '../common/contracts.js';
+import { AnnouncementContentSchema } from '../common/announcement-contracts.js';
+import { loadAnnouncementAssets } from './announcement-assets.js';
 
 export function assertNoUnsafeKeys(value: unknown): void {
   if (Array.isArray(value)) {
@@ -53,7 +55,7 @@ export async function resolveContentFile(root: string, name: string): Promise<st
   return path;
 }
 
-export async function loadContentBundle(root: string) {
+export async function loadContentBundle(root: string, publicOrigin = 'https://localhost:8443') {
   const configs = ClientConfigSchema.parse(
     await readJsonFile(await resolveContentFile(root, 'configs.json')),
   );
@@ -63,7 +65,11 @@ export async function loadContentBundle(root: string) {
   const builtin = BuiltinReleaseSchema.parse(
     await readJsonFile(await resolveContentFile(root, 'builtin.json')),
   );
-  return { configs, scenes, builtin };
+  const announcements = AnnouncementContentSchema.parse(
+    await readJsonFile(await resolveContentFile(root, 'announcements.json')),
+  );
+  const announcementAssets = await loadAnnouncementAssets(root, announcements, publicOrigin);
+  return { configs, scenes, builtin, announcements, announcementAssets };
 }
 
 export type ContentBundle = Awaited<ReturnType<typeof loadContentBundle>>;

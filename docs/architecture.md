@@ -17,3 +17,7 @@ Nest 依赖显式构造器注入，Fastify 是唯一 HTTP adapter。schema 定�
 ## Plugin marketplace
 
 plugin-marketplace owns the immutable public catalog and bounded startup-loaded asset buffers. Controllers only select catalog/assets through the service; request paths never read files or execute plugin code. The source is data/plugins/catalog.json plus independently captured plugins/packages, built offline into plugin-artifacts. Deployment URLs derive from PUBLIC_ORIGIN. Health reads readiness through the public module index. Client installation, configuration, session and runtime state remain client-owned.
+
+## Announcements
+
+public-content owns startup-loaded announcement content and bounded local asset buffers. announcements depends on public-content/common/database through public indexes; AnnouncementRepository owns device/campaign receipts via DatabaseService. Controllers perform DTO validation and service calls only. No account, entitlement, telemetry or relay module is introduced.

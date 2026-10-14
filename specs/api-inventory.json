@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "sourceCheckout": "29628c9acdb81b703bbd4080c207a0e7ce5e276e",
+  "sourceCheckout": "aac4755666d09fdcd70272fcf063c077a639015f",
   "endpoints": [
     {
       "feature": "oauth",
@@ -257,6 +257,22 @@
       "path": "/api/v1/plugins/marketplace.json",
       "status": 200,
       "summary": "获取应用插件市场目录"
+    },
+    {
+      "feature": "announcements",
+      "state": "implemented",
+      "method": "GET",
+      "path": "/api/v1/marketing/touch",
+      "status": 200,
+      "summary": "按设备和语言获取普通公告"
+    },
+    {
+      "feature": "announcements",
+      "state": "implemented",
+      "method": "POST",
+      "path": "/api/v1/marketing/touch/action",
+      "status": 200,
+      "summary": "确认或关闭普通公告"
     }
   ]
 }
