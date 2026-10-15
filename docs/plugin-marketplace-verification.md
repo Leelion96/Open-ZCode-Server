@@ -1,8 +1,19 @@
 # 插件市场实现与验收
 
-2026-10-06 创建 Server 侧独立插件市场。客户端仓库只是一次性输入；服务端运行、构建、Docker 镜像均不读取客户端源码。当前发布 21 个插件，原有 Browser Use 和 Node Repl Host 仍在客户端保留。
+## 2026-10-15 官方目录同步
 
-## 已完成
+- 当前同步输入：官方 `marketplace.json`。41 个条目中排除 14 个 `requiresPaidPlan === true` 条目，Server 清单现为 27 个。
+- 上游 marketplace 对象及插件字段保持原样，仅移除付费项；ZIP 和图片 URL 仍指向官方 CDN。Browser Use 与 Node Repl Host 继续只由客户端提供。
+- `pnpm plugins:sync` 只下载官方目录 JSON 并直接更新 `data/plugins/catalog.json`；不下载、保存、编辑或重新打包插件 ZIP。
+- 取消了之前的插件重发方案，避免作者、版本、技能正文、签名和来源结构与上游分叉。
+- 按用户要求删除了此前保存的插件包、图标、抽取副本、市场安装缓存和对应签名工件；只保留 Server 的官方过滤目录。
+- 本次验证：Server 市场列表为 27 条且没有 `requiresPaidPlan: true`；ZIP/图片均为 `cdn-zcode.z.ai` 官方地址。`pnpm typecheck`、`pnpm lint`、`pnpm architecture:check`、`pnpm format:check`、`pnpm plugins:check`、`pnpm content:check` 以及 Compose 配置校验通过。Vitest 未运行。
+
+## 旧版本地托管实现记录（2026-10-06，已由上游目录镜像方案替代）
+
+2026-10-06 曾创建 Server 侧独立插件市场，发布 21 个本地适配的插件包。2026-10-15 按用户要求移除本地插件包和图标素材，改为只保留过滤后的官方 marketplace JSON；以下内容仅作历史记录。
+
+### 当时的实现与验收
 
 - 发布目录：`GET /api/v1/plugins/marketplace.json`，裸市场 JSON，原技术 ID、分类与排序保持。
 - ZIP 与图片：`GET/HEAD /assets/plugins/{name}/{version}/{digest}/{file}`，同域 HTTPS、真实 SHA-256、ETag 与 immutable 缓存。
@@ -42,10 +53,10 @@
 4. **本机 HTTPS**：当前地址为 `https://localhost:8443`，使用现有 Caddy CA；跨机器使用需设置正式 PUBLIC_ORIGIN、域名及可信 HTTPS，不能把 localhost 当公开域名，也不应关闭 TLS 验证。
 5. **外部依赖**：第三方 CLI/账号、Python 依赖、FFmpeg、Android SDK 和 Xcode 仍是各自运行环境要求，Server 不代持凭据或实现这些平台业务。本机 video2code 的既有 Python 环境已用于验证。
 6. **资源规模**：首版启动内存工件约 8.8 MB。若超过 128 MiB，构建部署应明确改为独立静态工件服务；当前不做无界内存读取。
-7. **客户端原材料**：已核对服务端 21 份输入快照与客户端最新运行材料的树哈希一致，再移除客户端的临时提取目录、额外内置定义和 inventory 构建依赖。完整清理前备份保存在被忽略的 `artifacts/client-plugin-cleanup-*`，不参与任一项目构建。Browser Use、Node Repl Host、原有工作流技能以及其他会话改动共 56 个受保护文件的哈希保持不变；正常用户资料和已安装插件数据未清理。
+7. **客户端原材料**：已核对服务端 21 份输入快照与客户端最新运行材料的树哈希一致，再移除客户端的临时提取目录、额外内置定义和 inventory 构建依赖。清理备份当时位于被忽略的 `artifacts/client-plugin-cleanup-*`，现已按用户要求删除其中保存的插件材料。Browser Use、Node Repl Host、原有工作流技能以及其他会话改动共 56 个受保护文件的哈希保持不变；正常用户资料和已安装插件数据未清理。
 8. **原生平台**：当前实际运行验收在 macOS；其他系统需要使用相应 SDK/CLI 并按原生依赖范围验证，不将 macOS 通过当作全平台通过。
 
-后续按用户确认范围回退了客户端临时适配，四个文件完整恢复 HEAD，移除黑名单模块及两项对应测试；额外 SEA 白名单恢复原范围，仅保留构建共用的导出。回退前备份位于被忽略的 `artifacts/client-plugin-rollback-*`，其中也归档了撤销忽略规则后露出的 video2code 运行缓存。62 个其他文件哈希保持不变；CLI 已重新编译并暂存，Server HTTPS 目录仍返回 21 个插件。
+后续按用户确认范围回退了客户端临时适配，四个文件完整恢复 HEAD，移除黑名单模块及两项对应测试；额外 SEA 白名单恢复原范围，仅保留构建共用的导出。回退备份中的 video2code runtime cache 已按用户后续要求删除。62 个其他文件哈希保持不变；CLI 已重新编译并暂存，Server HTTPS 目录仍返回 21 个插件。
 
 用户进一步明确按实际读取方界定范围：桌面与独立 CLI 共用的配置允许同步修改，独立 CLI 专用部分保持原样。共用市场地址和内置声明继续保留；CLI README 已恢复 HEAD。SEA 文件只新增原资产白名单的公开别名供桌面暂存读取，原资源采集代码保持 HEAD；在相同源文件下实际比对了完整 SEA 清单，文件哈希与模式均与 HEAD 一致。7 项回归、类型、Lint 和架构检查再次通过，验收记录位于客户端被忽略的 `.tmp/plugin-shared-scope-verification.json`。
 

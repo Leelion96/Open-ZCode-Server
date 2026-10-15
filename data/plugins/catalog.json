@@ -1,767 +1,981 @@
 {
-  "schemaVersion": 1,
-  "marketplace": {
-    "name": "zcode-plugins-official",
-    "description": "应用插件市场",
-    "plugins": [
-      {
-        "name": "cloudbase-skills",
-        "description": "CloudBase development skills and MCP integration for building, deploying, and troubleshooting Web, WeChat Mini Program, database, cloud function, CloudRun, storage, and AI projects.",
-        "description_i18n": {
-          "en": "CloudBase development skills and MCP integration for building, deploying, and troubleshooting Web, WeChat Mini Program, database, cloud function, CloudRun, storage, and AI projects.",
-          "zh-CN": "腾讯云 CloudBase 开发技能与 MCP 集成，覆盖 Web、微信小程序、数据库、云函数、云托管、云存储和 AI 项目的开发、部署与排障。"
-        },
-        "version": "0.1.0-open.1",
-        "author": { "name": "Open-ZCode" },
-        "icon": "/assets/plugins/cloudbase-skills/0.1.0-open.1/873d688c49b620a432147c45e94ce9bee919ba8893c2e757ccf1034f88f4e46b/icon.png",
-        "category": "developer-tools",
-        "keywords": ["cloudbase", "tencent-cloud", "wechat", "serverless", "mcp"],
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/cloudbase-skills/0.1.0-open.1/88b561194deba39620400e14f2267ac68bb7b3498192fd748343af577b8ab2c9/plugin.zip",
-          "sha256": "88b561194deba39620400e14f2267ac68bb7b3498192fd748343af577b8ab2c9",
-          "path": "cloudbase-skills"
-        }
-      },
-      {
-        "name": "mimosa",
-        "displayName": "Code Security Protection",
-        "displayName_i18n": { "en": "Code Security Protection", "zh-CN": "代码安全防护" },
-        "icon": "/assets/plugins/mimosa/1.0.3-open.1/05466a98ac49aa40fd96cd1f371ee3ff8574d76668f5649b24c62dd1dfd6361e/icon.png",
-        "description": "Local-first security guardrails with pre-write hooks, end-of-turn review, Git gates, commands, a security-scan skill, and an optional MCP server for sealed deep scans.",
-        "description_i18n": {
-          "en": "Local-first security guardrails with pre-write hooks, end-of-turn review, Git gates, commands, a security-scan skill, and an optional MCP server for sealed deep scans.",
-          "zh-CN": "面向 应用 的本地优先代码安全防线，提供写入前 Hook、任务收尾复查、Git 门禁、命令、安全扫描 Skill，以及用于密封深扫的可选 MCP 服务。"
-        },
-        "version": "1.0.3-open.1",
-        "author": { "name": "Open-ZCode" },
-        "category": "developer-tools",
-        "keywords": ["security", "code-scanning", "hooks", "mcp", "sdlc"],
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/mimosa/1.0.3-open.1/59b23b181ba9ec86ba67ef1dd7091bff4c19fd30b005b542ade3fe418530d3b7/plugin.zip",
-          "sha256": "59b23b181ba9ec86ba67ef1dd7091bff4c19fd30b005b542ade3fe418530d3b7",
-          "path": "mimosa"
-        }
-      },
-      {
-        "name": "video2code",
-        "description": "基于 应用 内置 Browser Use WebView 录制 WebM 并用 ffmpeg 转成 MP4/URL 复刻；无需 Playwright 或外部 Chromium",
-        "description_i18n": {
-          "en": "Records WebM through the app's built-in Browser Use WebView and converts it to MP4 with ffmpeg for video/URL replication; no Playwright or external Chromium required.",
-          "zh-CN": "基于 应用 内置 Browser Use WebView 录制 WebM 并用 ffmpeg 转成 MP4/URL 复刻；无需 Playwright 或外部 Chromium"
-        },
-        "version": "0.6.0-open.1",
-        "author": { "name": "Open-ZCode" },
-        "icon": "/assets/plugins/video2code/0.6.0-open.1/d90515535bf9615f848c80f56d234d606be7cc8e513f31b8564d1895298769e1/icon.png",
-        "category": "productivity",
-        "keywords": ["video2code", "replication", "webapp", "motion"],
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/video2code/0.6.0-open.1/bc6032813463a2e36f4b4bca87f8c4fbbc0473f30138fa7249adfa8a351215b8/plugin.zip",
-          "sha256": "bc6032813463a2e36f4b4bca87f8c4fbbc0473f30138fa7249adfa8a351215b8",
-          "path": "video2code"
-        }
-      },
-      {
-        "name": "gitlab",
-        "description": "GitLab CLI workflows based on GitLab's official Agent Skills for merge requests, issues, CI/CD, repositories, releases, and API operations.",
-        "description_i18n": {
-          "en": "GitLab CLI workflows based on GitLab's official Agent Skills for merge requests, issues, CI/CD, repositories, releases, and API operations.",
-          "zh-CN": "基于官方 GitLab CLI 的 Merge Request、Issue、CI/CD、仓库、Release 与 API 工作流。"
-        },
-        "version": "0.1.3-open.1",
-        "author": { "name": "Open-ZCode" },
-        "icon": "/assets/plugins/gitlab/0.1.3-open.1/b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5/icon.png",
-        "category": "developer-tools",
-        "keywords": ["gitlab", "glab", "merge-request", "issue", "ci-cd", "gitlab-api"],
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/gitlab/0.1.3-open.1/58bfc3a9f4c90b1545bf1d9a285d770f7094b1964492aab97fdf32ce7bb2f878/plugin.zip",
-          "sha256": "58bfc3a9f4c90b1545bf1d9a285d770f7094b1964492aab97fdf32ce7bb2f878",
-          "path": "gitlab"
-        }
-      },
-      {
-        "name": "alibaba-cloud-cli",
-        "displayName": "Alibaba Cloud CLI",
-        "displayName_i18n": { "en": "Alibaba Cloud CLI", "zh-CN": "阿里云 CLI" },
-        "icon": "/assets/plugins/alibaba-cloud-cli/0.1.2-open.1/37c636a4890e30a7ae7c3654144757b89c7d1a31d61c1b87ef40962d39e2b33c/icon.png",
-        "description": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
-        "description_i18n": {
-          "en": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
-          "zh-CN": "阿里云 CLI 工作流：配置凭证与 profile，并安全执行云资源查询和操作。"
-        },
-        "version": "0.1.2-open.1",
-        "author": { "name": "Open-ZCode" },
-        "category": "developer-tools",
-        "keywords": ["alibaba-cloud", "aliyun", "aliyun-cli", "cloud", "ecs", "oss", "ram"],
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/alibaba-cloud-cli/0.1.2-open.1/ccd3e838e42d3880776aaf4c3ca8c9192d63c79bee60009b9bc52bf8a2541b1b/plugin.zip",
-          "sha256": "ccd3e838e42d3880776aaf4c3ca8c9192d63c79bee60009b9bc52bf8a2541b1b",
-          "path": "alibaba-cloud-cli"
-        }
-      },
-      {
-        "name": "lark-cli",
-        "displayName": "Lark CLI",
-        "displayName_i18n": { "en": "Lark CLI", "zh-CN": "飞书 CLI" },
-        "icon": "/assets/plugins/lark-cli/0.1.2-open.1/ed459fb792bdd0abef88ee91f1ec82925d9c04fdbfcb3b72cf8d67b02f6f2748/icon.png",
-        "description": "Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login.",
-        "description_i18n": {
-          "en": "Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login.",
-          "zh-CN": "Lark CLI 工作流：覆盖文档、表格、多维表格、日历、消息等 SaaS 资源，并引导应用配置与 OAuth 登录。"
-        },
-        "version": "0.1.2-open.1",
-        "author": { "name": "Open-ZCode" },
-        "category": "productivity",
-        "keywords": [
-          "feishu",
-          "lark",
-          "lark-cli",
-          "docs",
-          "sheets",
-          "base",
-          "calendar",
-          "messaging"
-        ],
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/lark-cli/0.1.2-open.1/0d014a2bcfd5c1df6446f019c8d1462d0f8d827a2ee8fa1b20e9297aeea6a55e/plugin.zip",
-          "sha256": "0d014a2bcfd5c1df6446f019c8d1462d0f8d827a2ee8fa1b20e9297aeea6a55e",
-          "path": "lark-cli"
-        }
-      },
-      {
-        "name": "tencent-meeting-cli",
-        "displayName": "Tencent Meeting CLI",
-        "displayName_i18n": { "en": "Tencent Meeting CLI", "zh-CN": "腾讯会议 CLI" },
-        "icon": "/assets/plugins/tencent-meeting-cli/0.1.3-open.1/40f08c632268086cff8bbbbe6c292b95ccf5effbb1f7dfa9966592ed40df48c9/icon.png",
-        "description": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
-        "description_i18n": {
-          "en": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
-          "zh-CN": "腾讯会议 CLI 工作流：OAuth2 授权、会议管理、录制管理和参会报告查询。"
-        },
-        "version": "0.1.3-open.1",
-        "author": { "name": "Open-ZCode" },
-        "category": "productivity",
-        "keywords": ["tencent-meeting", "tencentmeeting", "meeting", "cli", "oauth2"],
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/tencent-meeting-cli/0.1.3-open.1/f88fb40b3882233ff3eb838ce08ad332f394d3084c9de9d6094e931d023bcaeb/plugin.zip",
-          "sha256": "f88fb40b3882233ff3eb838ce08ad332f394d3084c9de9d6094e931d023bcaeb",
-          "path": "tencent-meeting-cli"
-        }
-      },
-      {
-        "name": "dingtalk-cli",
-        "displayName": "DingTalk CLI",
-        "displayName_i18n": { "en": "DingTalk CLI", "zh-CN": "钉钉 CLI" },
-        "description": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
-        "description_i18n": {
-          "en": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
-          "zh-CN": "钉钉 Workspace CLI 工作流：OAuth/设备授权、验证组织账号，并按需安装上游 Skills。"
-        },
-        "version": "0.1.1-open.1",
-        "author": { "name": "Open-ZCode" },
-        "homepage": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
-        "repository": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
-        "license": "Apache-2.0",
-        "keywords": ["dingtalk", "dws", "workspace", "chat", "docs", "calendar", "tasks"],
-        "category": "productivity",
-        "icon": "/assets/plugins/dingtalk-cli/0.1.1-open.1/b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d/icon.png",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/dingtalk-cli/0.1.1-open.1/32be9ef84e308bcfa53c85368cca6bc1cfd9a21f937d3329d3aec8712baf123a/plugin.zip",
-          "sha256": "32be9ef84e308bcfa53c85368cca6bc1cfd9a21f937d3329d3aec8712baf123a",
-          "path": "dingtalk-cli"
-        }
-      },
-      {
-        "name": "wecom-cli",
-        "displayName": "WeCom CLI",
-        "displayName_i18n": { "en": "WeCom CLI", "zh-CN": "企业微信 CLI" },
-        "description": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
-        "description_i18n": {
-          "en": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
-          "zh-CN": "企业微信 CLI 工作流：覆盖消息、文档、表格、邮件、日历、会议、通讯录和待办，并支持扫码授权与状态检查。"
-        },
-        "version": "0.1.1-open.1",
-        "author": { "name": "Open-ZCode" },
-        "homepage": "https://github.com/WecomTeam/wecom-cli",
-        "repository": "https://github.com/WecomTeam/wecom-cli",
-        "license": "MIT",
-        "keywords": [
-          "wecom",
-          "wechat-work",
-          "wecom-cli",
-          "message",
-          "docs",
-          "sheets",
-          "calendar",
-          "todo"
-        ],
-        "category": "productivity",
-        "icon": "/assets/plugins/wecom-cli/0.1.1-open.1/f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be/icon.png",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/wecom-cli/0.1.1-open.1/bb419cb0c6faa0839a36a77a4ef1589714c24808ba56f6b772b19e6d6ce19a6e/plugin.zip",
-          "sha256": "bb419cb0c6faa0839a36a77a4ef1589714c24808ba56f6b772b19e6d6ce19a6e",
-          "path": "wecom-cli"
-        }
-      },
-      {
-        "name": "obsidian",
-        "displayName": "Obsidian",
-        "displayName_i18n": { "en": "Obsidian", "zh-CN": "Obsidian" },
-        "description": "Obsidian authoring skills from kepano/obsidian-skills: Obsidian Flavored Markdown notes, Bases database views, JSON Canvas boards, vault automation via Obsidian CLI, clean web extraction with Defuddle, and Knap template rendering — plus visualization skills from axtonliu/axton-obsidian-visual-skills: Mermaid and Excalidraw diagram generation and text-to-canvas layout. A setup skill verifies and installs the Obsidian CLI, defuddle, and knap.",
-        "description_i18n": {
-          "en": "Obsidian authoring skills from kepano/obsidian-skills: Obsidian Flavored Markdown notes, Bases database views, JSON Canvas boards, vault automation via Obsidian CLI, clean web extraction with Defuddle, and Knap template rendering — plus visualization skills from axtonliu/axton-obsidian-visual-skills: Mermaid and Excalidraw diagram generation and text-to-canvas layout. A setup skill verifies and installs the Obsidian CLI, defuddle, and knap.",
-          "zh-CN": "来自 kepano/obsidian-skills 的 Obsidian 创作技能：Obsidian 风格 Markdown 笔记、Bases 数据库视图、JSON Canvas 白板、Obsidian CLI 库操作、Defuddle 网页正文提取、Knap 模板批量生成笔记；并集成 axtonliu/axton-obsidian-visual-skills 的可视化技能：Mermaid/Excalidraw 图表生成与文本转画布布局。附 setup 技能，检测并安装 Obsidian CLI、defuddle 与 knap。"
-        },
-        "version": "0.1.2-open.1",
-        "author": { "name": "Open-ZCode" },
-        "category": "productivity",
-        "keywords": [
-          "obsidian",
-          "markdown",
-          "bases",
-          "canvas",
-          "notes",
-          "defuddle",
-          "knap",
-          "mermaid",
-          "excalidraw",
-          "visualization"
-        ],
-        "icon": "/assets/plugins/obsidian/0.1.2-open.1/6e4b6881c3e3c304cbcaa53ffb202aa68fece3a0082a451f1638ff2c730a1285/icon.png",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/obsidian/0.1.2-open.1/08ade14ac28b122cf811373595723d7c3a3c5959a1599bf65b77a5dc77783d41/plugin.zip",
-          "sha256": "08ade14ac28b122cf811373595723d7c3a3c5959a1599bf65b77a5dc77783d41",
-          "path": "obsidian"
-        }
-      },
-      {
-        "author": { "name": "Open-ZCode" },
-        "category": "developer-tools",
-        "displayName": "Android Emulator",
-        "displayName_i18n": { "zh-CN": "Android 模拟器" },
-        "icon": "/assets/plugins/android-emulator/0.1.0-open.1/ead629480a3a5c6d50a2133690e7917e70bb64d51ee48cd905ae498afdc75d6b/icon.png",
-        "description_i18n": { "zh-CN": "提供 Android 开发工作流与模拟器自动化能力。" },
-        "name": "android-emulator",
-        "version": "0.1.0-open.1",
-        "description": "Provides Android development workflows and emulator automation .",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/android-emulator/0.1.0-open.1/5a147d3360e4bf85eb5b0c6230f6d4f9837e84581276557fdfe3a57508e36151/plugin.zip",
-          "sha256": "5a147d3360e4bf85eb5b0c6230f6d4f9837e84581276557fdfe3a57508e36151",
-          "path": "android-emulator"
-        }
-      },
-      {
-        "author": { "name": "Open-ZCode" },
-        "category": "productivity",
-        "displayName": "Documents",
-        "displayName_i18n": { "zh-CN": "Word文档" },
-        "icon": "/assets/plugins/documents/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-        "description_i18n": { "zh-CN": "创建、编辑与审阅Word文档（DOCX）。" },
-        "name": "documents",
-        "version": "0.1.7-open.1",
-        "description": "DOCX document production skills, published as an official plugin.",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/documents/0.1.7-open.1/8f19ee5d3d1cbd0b59c7a1e14f6cc0440a7be52dd55fce92f8473d6ef197e371/plugin.zip",
-          "sha256": "8f19ee5d3d1cbd0b59c7a1e14f6cc0440a7be52dd55fce92f8473d6ef197e371",
-          "path": "documents"
-        }
-      },
-      {
-        "author": { "name": "Open-ZCode" },
-        "category": "developer-tools",
-        "displayName": "iOS Simulator",
-        "displayName_i18n": { "zh-CN": "iOS 模拟器" },
-        "icon": "/assets/plugins/ios-simulator/0.1.0-open.1/455d34704f7a0a6759b68270419498f09bd98af2a1ec8e4cddfb93c97cc55b04/icon.png",
-        "description_i18n": { "zh-CN": "提供 iOS 开发工作流与模拟器自动化能力。" },
-        "name": "ios-simulator",
-        "version": "0.1.0-open.1",
-        "description": "Provides iOS development workflows and simulator automation .",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/ios-simulator/0.1.0-open.1/03799771c297a527248b5125caf1bc6a51e986bd631f7c11577fbf73c259cd38/plugin.zip",
-          "sha256": "03799771c297a527248b5125caf1bc6a51e986bd631f7c11577fbf73c259cd38",
-          "path": "ios-simulator"
-        }
-      },
-      {
-        "author": { "name": "Open-ZCode" },
-        "category": "productivity",
-        "displayName": "PDF",
-        "displayName_i18n": { "zh-CN": "PDF" },
-        "icon": "/assets/plugins/pdf/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-        "description_i18n": { "zh-CN": "创建、编辑与审阅PDF（PDF）。" },
-        "name": "pdf",
-        "version": "0.1.7-open.1",
-        "description": "PDF document production skills, published as an official plugin.",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/pdf/0.1.7-open.1/83048844e366eb6565d7db82e0de9e506bd665417c7d2cd18419beb76e342e21/plugin.zip",
-          "sha256": "83048844e366eb6565d7db82e0de9e506bd665417c7d2cd18419beb76e342e21",
-          "path": "pdf"
-        }
-      },
-      {
-        "author": { "name": "Open-ZCode" },
-        "category": "utilities",
-        "displayName": "Plugin Creator",
-        "displayName_i18n": { "zh-CN": "插件创建器" },
-        "description_i18n": { "zh-CN": "开发、校验 插件，完成本地 dev 市场安装、试用与更新。" },
-        "name": "plugin-creator",
-        "version": "0.1.1-open.1",
-        "description": "Develop and validate plugins through a local dev marketplace, installation, trials and updates.",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/plugin-creator/0.1.1-open.1/3a44d77226028865d9f7835bdab296d61e9ff2a8d2d0d1b10fe60db8f22bff20/plugin.zip",
-          "sha256": "3a44d77226028865d9f7835bdab296d61e9ff2a8d2d0d1b10fe60db8f22bff20",
-          "path": "plugin-creator"
-        }
-      },
-      {
-        "author": { "name": "Open-ZCode" },
-        "category": "productivity",
-        "displayName": "Presentations",
-        "displayName_i18n": { "zh-CN": "演示文档" },
-        "icon": "/assets/plugins/presentations/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-        "description_i18n": { "zh-CN": "创建、编辑与审阅演示文档（PPTX）。" },
-        "name": "presentations",
-        "version": "0.1.7-open.1",
-        "description": "PPTX presentation production skills, published as an official plugin.",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/presentations/0.1.7-open.1/b091b21f485250d6a4c1abdf46e5d3ec5ece4ffd518811c767a66465453a7d39/plugin.zip",
-          "sha256": "b091b21f485250d6a4c1abdf46e5d3ec5ece4ffd518811c767a66465453a7d39",
-          "path": "presentations"
-        }
-      },
-      {
-        "author": { "name": "Open-ZCode" },
-        "category": "utilities",
-        "displayName": "Skill Creator",
-        "displayName_i18n": { "zh-CN": "技能创建器" },
-        "icon": "/assets/plugins/skill-creator/0.1.0-open.1/7501368309eeaa25e95b2249170367a22af0e95a8afb4f438f94ba2637700d86/icon.png",
-        "description_i18n": { "zh-CN": "创建、编辑和验证可复用的 技能。" },
-        "name": "skill-creator",
-        "version": "0.1.0-open.1",
-        "description": "Create, edit, and iterate local skills.",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/skill-creator/0.1.0-open.1/69bbebd249f42151e6e7cd91dcd02d2ef69d9332f673a9af8eee552f4e16ef9e/plugin.zip",
-          "sha256": "69bbebd249f42151e6e7cd91dcd02d2ef69d9332f673a9af8eee552f4e16ef9e",
-          "path": "skill-creator"
-        }
-      },
-      {
-        "author": { "name": "Open-ZCode" },
-        "category": "productivity",
-        "displayName": "Spreadsheets",
-        "displayName_i18n": { "zh-CN": "电子表格" },
-        "icon": "/assets/plugins/spreadsheets/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-        "description_i18n": { "zh-CN": "创建、编辑与审阅电子表格（XLSX）。" },
-        "name": "spreadsheets",
-        "version": "0.1.7-open.1",
-        "description": "XLSX spreadsheet production skills, published as an official plugin.",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/spreadsheets/0.1.7-open.1/daa9c7bbe3ba4ef0c28105310d19e3d99a2bf229fd58ecb922b7a9c533008aec/plugin.zip",
-          "sha256": "daa9c7bbe3ba4ef0c28105310d19e3d99a2bf229fd58ecb922b7a9c533008aec",
-          "path": "spreadsheets"
-        }
-      },
-      {
-        "author": { "name": "Open-ZCode" },
-        "category": "utilities",
-        "displayName": "Configuration and Diagnostics Guide",
-        "displayName_i18n": { "zh-CN": "配置与诊断指南" },
-        "icon": "/assets/plugins/zcode-guide/0.3.0-open.1/5dcd237200ded7360ed97eef45d4362886c9ba1177597d2e4e8ea1cc8c31f47d/icon.png",
-        "description_i18n": { "zh-CN": "提供配置指南与插件、技能、MCP、命令和钩子诊断。" },
-        "examplePrompts": ["How do I configure MCP servers?", "Diagnose my current setup"],
-        "examplePrompts_i18n": { "zh-CN": ["怎么配置 MCP 服务器？", "帮我诊断当前配置"] },
-        "name": "zcode-guide",
-        "version": "0.3.0-open.1",
-        "description": "The app usage and self-diagnosis guide: teaches agents and users how to configure MCP servers, commands, skills, hooks, and plugins, and how to locate and fix configuration problems for each.",
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/zcode-guide/0.3.0-open.1/fc80351f6e36c0b89bd1689b35f73276ff87e044a84fa0881fa46fc97f6ae013/plugin.zip",
-          "sha256": "fc80351f6e36c0b89bd1689b35f73276ff87e044a84fa0881fa46fc97f6ae013",
-          "path": "zcode-guide"
-        }
-      },
-      {
-        "name": "github",
-        "description": "GitHub CLI workflows for commits, pull requests, issues, releases, Actions, repositories, Codespaces, and other GitHub resources.",
-        "description_i18n": {
-          "en": "GitHub CLI workflows for commits, pull requests, issues, releases, Actions, repositories, Codespaces, and other GitHub resources.",
-          "zh-CN": "基于 GitHub CLI 的 GitHub 工作流，覆盖提交、Pull Request、Issue、Release、Actions、仓库、Codespaces 等资源。"
-        },
-        "version": "0.1.2-open.1",
-        "author": { "name": "Open-ZCode" },
-        "icon": "/assets/plugins/github/0.1.2-open.1/916da4b4e72d9e80df2b2162ae47d01db372caadaaaad2e3a26339284965a548/icon.png",
-        "category": "developer-tools",
-        "keywords": [
-          "git",
-          "github",
-          "github-cli",
-          "gh",
-          "pull-request",
-          "issues",
-          "actions",
-          "codespaces"
-        ],
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/github/0.1.2-open.1/6ff0da28c368c0e7465bacbabbf85c07e87c7a0b303c0d1d65d99d2e8586fca1/plugin.zip",
-          "sha256": "6ff0da28c368c0e7465bacbabbf85c07e87c7a0b303c0d1d65d99d2e8586fca1",
-          "path": "github"
-        }
-      },
-      {
-        "name": "accounting-and-reporting",
-        "displayName": "核算与报告",
-        "displayName_i18n": { "en": "Accounting & Reporting", "zh-CN": "核算与报告" },
-        "description": "Accounting close and statutory reporting off the company's own ledger: month-end close checks, ledger reconciliation to transaction-level root cause, account mapping for consolidation, and statutory statements delivered as review-ready drafts",
-        "description_i18n": {
-          "en": "Accounting close and statutory reporting off the company's own ledger: month-end close checks, ledger reconciliation to transaction-level root cause, account mapping for consolidation, and statutory statements delivered as review-ready drafts",
-          "zh-CN": "【企业财务】核算与报告:月结关账检查与阻断项、总账与明细账勾稽及交易级差异归因、科目映射与重分类、内部管理报表编制、三表勾稽复核"
-        },
-        "version": "0.1.1-open.1",
-        "author": { "name": "Open-ZCode" },
-        "icon": "/assets/plugins/accounting-and-reporting/0.1.1-open.1/e9e3215b0f0710b51b3c847a1c5b1ba74ab1ef1e0bd696c1fb571fc7c7e73f00/icon.png",
-        "category": "finance",
-        "keywords": [
-          "accounting",
-          "month-end-close",
-          "reconciliation",
-          "statutory-reporting",
-          "consolidation"
-        ],
-        "source": {
-          "source": "url",
-          "type": "zip",
-          "url": "/assets/plugins/accounting-and-reporting/0.1.1-open.1/271507036ec23284e2d718dbaf3c54830068001aec52a41979ba2225bb4edb51/plugin.zip",
-          "sha256": "271507036ec23284e2d718dbaf3c54830068001aec52a41979ba2225bb4edb51",
-          "path": "accounting-and-reporting"
-        }
-      }
-    ]
+  "name": "zcode-plugins-official",
+  "description": "Official ZCode plugins marketplace: built-in and community plugins for ZCode.",
+  "description_i18n": {
+    "en": "Official ZCode plugins marketplace: built-in and community plugins for ZCode.",
+    "zh-CN": "ZCode 官方插件市场：收录 ZCode 内置插件与社区贡献插件。"
   },
-  "assets": [
+  "owner": {
+    "name": "Z.ai",
+    "url": "https://z.ai"
+  },
+  "plugins": [
     {
-      "path": "/assets/plugins/cloudbase-skills/0.1.0-open.1/873d688c49b620a432147c45e94ce9bee919ba8893c2e757ccf1034f88f4e46b/icon.png",
-      "file": "cloudbase-skills/0.1.0-open.1/873d688c49b620a432147c45e94ce9bee919ba8893c2e757ccf1034f88f4e46b/icon.png",
-      "sha256": "873d688c49b620a432147c45e94ce9bee919ba8893c2e757ccf1034f88f4e46b",
-      "bytes": 5560,
-      "mime": "image/png"
+      "name": "cloudbase-skills",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/cloudbase-skills/0.1.0/plugin.zip",
+        "sha256": "d60429f6ed70ef7e16b4f1a11b9afccd28dbef1118eb760f3d045bf7726c7f7c",
+        "path": "cloudbase-skills"
+      },
+      "description": "CloudBase development skills and MCP integration for building, deploying, and troubleshooting Web, WeChat Mini Program, database, cloud function, CloudRun, storage, and AI projects.",
+      "description_i18n": {
+        "en": "CloudBase development skills and MCP integration for building, deploying, and troubleshooting Web, WeChat Mini Program, database, cloud function, CloudRun, storage, and AI projects.",
+        "zh-CN": "腾讯云 CloudBase 开发技能与 MCP 集成，覆盖 Web、微信小程序、数据库、云函数、云托管、云存储和 AI 项目的开发、部署与排障。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "TencentCloudBase"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/cloudbase-skills/icon.png",
+      "category": "developer-tools",
+      "keywords": ["cloudbase", "tencent-cloud", "wechat", "serverless", "mcp"],
+      "publisherType": "official",
+      "componentTypes": ["skill", "mcp"],
+      "_artifact": {
+        "path": "plugins/cloudbase-skills/0.1.0/plugin.zip",
+        "sha256": "d60429f6ed70ef7e16b4f1a11b9afccd28dbef1118eb760f3d045bf7726c7f7c",
+        "size": 394719
+      }
     },
     {
-      "path": "/assets/plugins/mimosa/1.0.3-open.1/05466a98ac49aa40fd96cd1f371ee3ff8574d76668f5649b24c62dd1dfd6361e/icon.png",
-      "file": "mimosa/1.0.3-open.1/05466a98ac49aa40fd96cd1f371ee3ff8574d76668f5649b24c62dd1dfd6361e/icon.png",
-      "sha256": "05466a98ac49aa40fd96cd1f371ee3ff8574d76668f5649b24c62dd1dfd6361e",
-      "bytes": 7383,
-      "mime": "image/png"
+      "name": "mimosa",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/mimosa/1.0.4/plugin.zip",
+        "sha256": "50d4da2cc1a24c63db06b51758699d5ffbf22aa4c79ae001a823e8177f0a1fe7",
+        "path": "mimosa"
+      },
+      "displayName": "Code Security Protection",
+      "displayName_i18n": {
+        "en": "Code Security Protection",
+        "zh-CN": "代码安全防护"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/mimosa/icon.png",
+      "description": "Local-first security guardrails for ZCode with pre-write hooks, end-of-turn review, Git gates, commands, a security-scan skill, and an optional MCP server for sealed deep scans.",
+      "description_i18n": {
+        "en": "Local-first security guardrails for ZCode with pre-write hooks, end-of-turn review, Git gates, commands, a security-scan skill, and an optional MCP server for sealed deep scans.",
+        "zh-CN": "面向 ZCode 的本地优先代码安全防线，提供写入前 Hook、任务收尾复查、Git 门禁、命令、安全扫描 Skill，以及用于密封深扫的可选 MCP 服务。"
+      },
+      "version": "1.0.4",
+      "author": {
+        "name": "Mimosa"
+      },
+      "category": "developer-tools",
+      "keywords": ["security", "code-scanning", "hooks", "mcp", "sdlc"],
+      "publisherType": "official",
+      "componentTypes": ["command", "skill", "hook", "mcp"],
+      "_artifact": {
+        "path": "plugins/mimosa/1.0.4/plugin.zip",
+        "sha256": "50d4da2cc1a24c63db06b51758699d5ffbf22aa4c79ae001a823e8177f0a1fe7",
+        "size": 6010525
+      }
     },
     {
-      "path": "/assets/plugins/video2code/0.6.0-open.1/d90515535bf9615f848c80f56d234d606be7cc8e513f31b8564d1895298769e1/icon.png",
-      "file": "video2code/0.6.0-open.1/d90515535bf9615f848c80f56d234d606be7cc8e513f31b8564d1895298769e1/icon.png",
-      "sha256": "d90515535bf9615f848c80f56d234d606be7cc8e513f31b8564d1895298769e1",
-      "bytes": 6830,
-      "mime": "image/png"
+      "name": "github",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/github/0.1.2/plugin.zip",
+        "sha256": "7320f15886d83625ed8eec944a7a2ab09fe99d64a42131ccec427eeecfd769b6",
+        "path": "github"
+      },
+      "description": "GitHub CLI workflows for commits, pull requests, issues, releases, Actions, repositories, Codespaces, and other GitHub resources.",
+      "description_i18n": {
+        "en": "GitHub CLI workflows for commits, pull requests, issues, releases, Actions, repositories, Codespaces, and other GitHub resources.",
+        "zh-CN": "基于 GitHub CLI 的 GitHub 工作流，覆盖提交、Pull Request、Issue、Release、Actions、仓库、Codespaces 等资源。"
+      },
+      "version": "0.1.2",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/github/icon.png",
+      "category": "developer-tools",
+      "keywords": [
+        "git",
+        "github",
+        "github-cli",
+        "gh",
+        "pull-request",
+        "issues",
+        "actions",
+        "codespaces"
+      ],
+      "publisherType": "official",
+      "componentTypes": ["skill"],
+      "_artifact": {
+        "path": "plugins/github/0.1.2/plugin.zip",
+        "sha256": "7320f15886d83625ed8eec944a7a2ab09fe99d64a42131ccec427eeecfd769b6",
+        "size": 30173
+      }
     },
     {
-      "path": "/assets/plugins/gitlab/0.1.3-open.1/b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5/icon.png",
-      "file": "gitlab/0.1.3-open.1/b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5/icon.png",
-      "sha256": "b67e1ff07805a95f62f01a8ce1797ae3e25be22d79252f074a73056d249c62d5",
-      "bytes": 13925,
-      "mime": "image/png"
+      "name": "video2code",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/video2code/0.6.0/plugin.zip",
+        "sha256": "9cbb927f5f039b28f93be35cbec3166792246fddf5ec58e16dfad6a38a07a5b7",
+        "path": "video2code"
+      },
+      "description": "基于 ZCode 内置 Browser Use WebView 录制 WebM 并用 ffmpeg 转成 MP4/URL 复刻；无需 Playwright 或外部 Chromium",
+      "description_i18n": {
+        "en": "Records WebM through ZCode's built-in Browser Use WebView and converts it to MP4 with ffmpeg for video/URL replication; no Playwright or external Chromium required.",
+        "zh-CN": "基于 ZCode 内置 Browser Use WebView 录制 WebM 并用 ffmpeg 转成 MP4/URL 复刻；无需 Playwright 或外部 Chromium"
+      },
+      "version": "0.6.0",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/video2code/icon.png",
+      "category": "productivity",
+      "keywords": ["video2code", "replication", "webapp", "motion"],
+      "publisherType": "official",
+      "componentTypes": ["command", "skill", "hook", "mcp"],
+      "_artifact": {
+        "path": "plugins/video2code/0.6.0/plugin.zip",
+        "sha256": "9cbb927f5f039b28f93be35cbec3166792246fddf5ec58e16dfad6a38a07a5b7",
+        "size": 380955
+      }
     },
     {
-      "path": "/assets/plugins/alibaba-cloud-cli/0.1.2-open.1/37c636a4890e30a7ae7c3654144757b89c7d1a31d61c1b87ef40962d39e2b33c/icon.png",
-      "file": "alibaba-cloud-cli/0.1.2-open.1/37c636a4890e30a7ae7c3654144757b89c7d1a31d61c1b87ef40962d39e2b33c/icon.png",
-      "sha256": "37c636a4890e30a7ae7c3654144757b89c7d1a31d61c1b87ef40962d39e2b33c",
-      "bytes": 4353,
-      "mime": "image/png"
+      "name": "accounting-and-reporting",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/accounting-and-reporting/0.1.1/plugin.zip",
+        "sha256": "6b37a08359b7a42e8b1af88c0f955293269934894df26b5f88e1a02877ee9fd5",
+        "path": "accounting-and-reporting"
+      },
+      "displayName": "核算与报告",
+      "displayName_i18n": {
+        "en": "Accounting & Reporting",
+        "zh-CN": "核算与报告"
+      },
+      "description": "Accounting close and statutory reporting off the company's own ledger: month-end close checks, ledger reconciliation to transaction-level root cause, account mapping for consolidation, and statutory statements delivered as review-ready drafts",
+      "description_i18n": {
+        "en": "Accounting close and statutory reporting off the company's own ledger: month-end close checks, ledger reconciliation to transaction-level root cause, account mapping for consolidation, and statutory statements delivered as review-ready drafts",
+        "zh-CN": "【企业财务】核算与报告:月结关账检查与阻断项、总账与明细账勾稽及交易级差异归因、科目映射与重分类、内部管理报表编制、三表勾稽复核"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/accounting-reporting/icon.png",
+      "category": "finance",
+      "keywords": [
+        "accounting",
+        "month-end-close",
+        "reconciliation",
+        "statutory-reporting",
+        "consolidation"
+      ],
+      "publisherType": "official",
+      "componentTypes": ["agent", "command", "skill"],
+      "_artifact": {
+        "path": "plugins/accounting-and-reporting/0.1.1/plugin.zip",
+        "sha256": "6b37a08359b7a42e8b1af88c0f955293269934894df26b5f88e1a02877ee9fd5",
+        "size": 282206
+      }
     },
     {
-      "path": "/assets/plugins/lark-cli/0.1.2-open.1/ed459fb792bdd0abef88ee91f1ec82925d9c04fdbfcb3b72cf8d67b02f6f2748/icon.png",
-      "file": "lark-cli/0.1.2-open.1/ed459fb792bdd0abef88ee91f1ec82925d9c04fdbfcb3b72cf8d67b02f6f2748/icon.png",
-      "sha256": "ed459fb792bdd0abef88ee91f1ec82925d9c04fdbfcb3b72cf8d67b02f6f2748",
-      "bytes": 8806,
-      "mime": "image/png"
+      "name": "gitlab",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/gitlab/0.1.3/plugin.zip",
+        "sha256": "398816e8782b1aa40b8f1f920805242c3a8688764c3073ef4576f0ae1d602c8a",
+        "path": "gitlab"
+      },
+      "description": "GitLab CLI workflows based on GitLab's official Agent Skills for merge requests, issues, CI/CD, repositories, releases, and API operations.",
+      "description_i18n": {
+        "en": "GitLab CLI workflows based on GitLab's official Agent Skills for merge requests, issues, CI/CD, repositories, releases, and API operations.",
+        "zh-CN": "基于官方 GitLab CLI 的 Merge Request、Issue、CI/CD、仓库、Release 与 API 工作流。"
+      },
+      "version": "0.1.3",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/gitlab/icon.png",
+      "category": "developer-tools",
+      "keywords": ["gitlab", "glab", "merge-request", "issue", "ci-cd", "gitlab-api"],
+      "publisherType": "official",
+      "componentTypes": ["skill"],
+      "_artifact": {
+        "path": "plugins/gitlab/0.1.3/plugin.zip",
+        "sha256": "398816e8782b1aa40b8f1f920805242c3a8688764c3073ef4576f0ae1d602c8a",
+        "size": 17137
+      }
     },
     {
-      "path": "/assets/plugins/tencent-meeting-cli/0.1.3-open.1/40f08c632268086cff8bbbbe6c292b95ccf5effbb1f7dfa9966592ed40df48c9/icon.png",
-      "file": "tencent-meeting-cli/0.1.3-open.1/40f08c632268086cff8bbbbe6c292b95ccf5effbb1f7dfa9966592ed40df48c9/icon.png",
-      "sha256": "40f08c632268086cff8bbbbe6c292b95ccf5effbb1f7dfa9966592ed40df48c9",
-      "bytes": 13689,
-      "mime": "image/png"
+      "name": "alibaba-cloud-cli",
+      "displayName": "Alibaba Cloud CLI",
+      "displayName_i18n": {
+        "en": "Alibaba Cloud CLI",
+        "zh-CN": "阿里云 CLI"
+      },
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/alibaba-cloud-cli/0.1.2/plugin.zip",
+        "sha256": "b0fb2362da466315a4f24c1910b6b40e27202e9c52226b3fb08f48b47122fb49",
+        "path": "alibaba-cloud-cli"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/alibaba-cloud-cli/icon.png",
+      "description": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
+      "description_i18n": {
+        "en": "Alibaba Cloud CLI workflows for credential setup, profile checks, and safe cloud resource operations.",
+        "zh-CN": "阿里云 CLI 工作流：配置凭证与 profile，并安全执行云资源查询和操作。"
+      },
+      "version": "0.1.2",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "category": "developer-tools",
+      "keywords": ["alibaba-cloud", "aliyun", "aliyun-cli", "cloud", "ecs", "oss", "ram"],
+      "publisherType": "official",
+      "componentTypes": ["skill"],
+      "_artifact": {
+        "path": "plugins/alibaba-cloud-cli/0.1.2/plugin.zip",
+        "sha256": "b0fb2362da466315a4f24c1910b6b40e27202e9c52226b3fb08f48b47122fb49",
+        "size": 7703
+      }
     },
     {
-      "path": "/assets/plugins/dingtalk-cli/0.1.1-open.1/b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d/icon.png",
-      "file": "dingtalk-cli/0.1.1-open.1/b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d/icon.png",
-      "sha256": "b3fb0715857df5d23213b5265166fabcb7f7b4b290890d7b5682a027cf39c85d",
-      "bytes": 11431,
-      "mime": "image/png"
+      "name": "lark-cli",
+      "displayName": "Lark CLI",
+      "displayName_i18n": {
+        "en": "Lark CLI",
+        "zh-CN": "飞书 CLI"
+      },
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/lark-cli/0.1.2/plugin.zip",
+        "sha256": "b53747950cf99c93da69ef72e481bff0090ab6f132c96db393053fbc282fe487",
+        "path": "lark-cli"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/lark-cli/icon.png",
+      "description": "Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login.",
+      "description_i18n": {
+        "en": "Lark CLI workflows for docs, sheets, Base, calendar, messaging, and other SaaS resources with guided setup and OAuth login.",
+        "zh-CN": "Lark CLI 工作流：覆盖文档、表格、多维表格、日历、消息等 SaaS 资源，并引导应用配置与 OAuth 登录。"
+      },
+      "version": "0.1.2",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "category": "productivity",
+      "keywords": ["feishu", "lark", "lark-cli", "docs", "sheets", "base", "calendar", "messaging"],
+      "publisherType": "official",
+      "componentTypes": ["skill"],
+      "_artifact": {
+        "path": "plugins/lark-cli/0.1.2/plugin.zip",
+        "sha256": "b53747950cf99c93da69ef72e481bff0090ab6f132c96db393053fbc282fe487",
+        "size": 8202
+      }
     },
     {
-      "path": "/assets/plugins/wecom-cli/0.1.1-open.1/f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be/icon.png",
-      "file": "wecom-cli/0.1.1-open.1/f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be/icon.png",
-      "sha256": "f89d5976ca6382cb1cab856bfd572daa543bd855e39431825cff0b14c1fbd1be",
-      "bytes": 4317,
-      "mime": "image/png"
+      "name": "tencent-meeting-cli",
+      "displayName": "Tencent Meeting CLI",
+      "displayName_i18n": {
+        "en": "Tencent Meeting CLI",
+        "zh-CN": "腾讯会议 CLI"
+      },
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/tencent-meeting-cli/0.1.3/plugin.zip",
+        "sha256": "a4516d203a5ccf9a22319d41700995d7952ad1d56f8cc64a08e371fc61047af8",
+        "path": "tencent-meeting-cli"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/tencent-meeting-cli/icon.png",
+      "description": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
+      "description_i18n": {
+        "en": "Tencent Meeting CLI workflows with OAuth2 setup, meeting management, recordings, and attendee reports.",
+        "zh-CN": "腾讯会议 CLI 工作流：OAuth2 授权、会议管理、录制管理和参会报告查询。"
+      },
+      "version": "0.1.3",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "category": "productivity",
+      "keywords": ["tencent-meeting", "tencentmeeting", "meeting", "cli", "oauth2"],
+      "publisherType": "official",
+      "componentTypes": ["skill"],
+      "_artifact": {
+        "path": "plugins/tencent-meeting-cli/0.1.3/plugin.zip",
+        "sha256": "a4516d203a5ccf9a22319d41700995d7952ad1d56f8cc64a08e371fc61047af8",
+        "size": 5946
+      }
     },
     {
-      "path": "/assets/plugins/obsidian/0.1.2-open.1/6e4b6881c3e3c304cbcaa53ffb202aa68fece3a0082a451f1638ff2c730a1285/icon.png",
-      "file": "obsidian/0.1.2-open.1/6e4b6881c3e3c304cbcaa53ffb202aa68fece3a0082a451f1638ff2c730a1285/icon.png",
-      "sha256": "6e4b6881c3e3c304cbcaa53ffb202aa68fece3a0082a451f1638ff2c730a1285",
-      "bytes": 9277,
-      "mime": "image/png"
+      "name": "dingtalk-cli",
+      "displayName": "DingTalk CLI",
+      "displayName_i18n": {
+        "en": "DingTalk CLI",
+        "zh-CN": "钉钉 CLI"
+      },
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/dingtalk-cli/0.1.1/plugin.zip",
+        "sha256": "ea35300430e9bacadfe1857a865c041ca72b149e9ae06b20ec78cbec9f5fa948",
+        "path": "dingtalk-cli"
+      },
+      "description": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
+      "description_i18n": {
+        "en": "DingTalk Workspace CLI workflows with OAuth/device authorization, profile checks, and optional upstream Skills.",
+        "zh-CN": "钉钉 Workspace CLI 工作流：OAuth/设备授权、验证组织账号，并按需安装上游 Skills。"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "homepage": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+      "repository": "https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli",
+      "license": "Apache-2.0",
+      "keywords": ["dingtalk", "dws", "workspace", "chat", "docs", "calendar", "tasks"],
+      "category": "productivity",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/dingtalk-cli/icon.png",
+      "publisherType": "official",
+      "componentTypes": ["skill"],
+      "_artifact": {
+        "path": "plugins/dingtalk-cli/0.1.1/plugin.zip",
+        "sha256": "ea35300430e9bacadfe1857a865c041ca72b149e9ae06b20ec78cbec9f5fa948",
+        "size": 7794
+      }
     },
     {
-      "path": "/assets/plugins/android-emulator/0.1.0-open.1/ead629480a3a5c6d50a2133690e7917e70bb64d51ee48cd905ae498afdc75d6b/icon.png",
-      "file": "android-emulator/0.1.0-open.1/ead629480a3a5c6d50a2133690e7917e70bb64d51ee48cd905ae498afdc75d6b/icon.png",
-      "sha256": "ead629480a3a5c6d50a2133690e7917e70bb64d51ee48cd905ae498afdc75d6b",
-      "bytes": 17334,
-      "mime": "image/png"
+      "name": "wecom-cli",
+      "displayName": "WeCom CLI",
+      "displayName_i18n": {
+        "en": "WeCom CLI",
+        "zh-CN": "企业微信 CLI"
+      },
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/wecom-cli/0.1.1/plugin.zip",
+        "sha256": "2d9b192856b0769ff66322baa168090855347ad82c57493b2a42c7c5b18329c5",
+        "path": "wecom-cli"
+      },
+      "description": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
+      "description_i18n": {
+        "en": "WeCom CLI workflows for messages, docs, sheets, mail, calendar, meetings, contacts, and todos with QR authentication.",
+        "zh-CN": "企业微信 CLI 工作流：覆盖消息、文档、表格、邮件、日历、会议、通讯录和待办，并支持扫码授权与状态检查。"
+      },
+      "version": "0.1.1",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "homepage": "https://github.com/WecomTeam/wecom-cli",
+      "repository": "https://github.com/WecomTeam/wecom-cli",
+      "license": "MIT",
+      "keywords": [
+        "wecom",
+        "wechat-work",
+        "wecom-cli",
+        "message",
+        "docs",
+        "sheets",
+        "calendar",
+        "todo"
+      ],
+      "category": "productivity",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/wecom-cli/icon.png",
+      "publisherType": "official",
+      "componentTypes": ["skill"],
+      "_artifact": {
+        "path": "plugins/wecom-cli/0.1.1/plugin.zip",
+        "sha256": "2d9b192856b0769ff66322baa168090855347ad82c57493b2a42c7c5b18329c5",
+        "size": 7168
+      }
     },
     {
-      "path": "/assets/plugins/documents/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-      "file": "documents/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-      "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df",
-      "bytes": 10291,
-      "mime": "image/png"
+      "name": "obsidian",
+      "displayName": "Obsidian",
+      "displayName_i18n": {
+        "en": "Obsidian",
+        "zh-CN": "Obsidian"
+      },
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/obsidian/0.1.2/plugin.zip",
+        "sha256": "16ce018f2249ba4f6f4ff838dd964f0bfcdcd730118cca49242259e39eb60a3f",
+        "path": "obsidian"
+      },
+      "description": "Obsidian authoring skills from kepano/obsidian-skills: Obsidian Flavored Markdown notes, Bases database views, JSON Canvas boards, vault automation via Obsidian CLI, clean web extraction with Defuddle, and Knap template rendering — plus visualization skills from axtonliu/axton-obsidian-visual-skills: Mermaid and Excalidraw diagram generation and text-to-canvas layout. A setup skill verifies and installs the Obsidian CLI, defuddle, and knap.",
+      "description_i18n": {
+        "en": "Obsidian authoring skills from kepano/obsidian-skills: Obsidian Flavored Markdown notes, Bases database views, JSON Canvas boards, vault automation via Obsidian CLI, clean web extraction with Defuddle, and Knap template rendering — plus visualization skills from axtonliu/axton-obsidian-visual-skills: Mermaid and Excalidraw diagram generation and text-to-canvas layout. A setup skill verifies and installs the Obsidian CLI, defuddle, and knap.",
+        "zh-CN": "来自 kepano/obsidian-skills 的 Obsidian 创作技能：Obsidian 风格 Markdown 笔记、Bases 数据库视图、JSON Canvas 白板、Obsidian CLI 库操作、Defuddle 网页正文提取、Knap 模板批量生成笔记；并集成 axtonliu/axton-obsidian-visual-skills 的可视化技能：Mermaid/Excalidraw 图表生成与文本转画布布局。附 setup 技能，检测并安装 Obsidian CLI、defuddle 与 knap。"
+      },
+      "version": "0.1.2",
+      "author": {
+        "name": "Z.ai",
+        "url": "https://z.ai"
+      },
+      "category": "productivity",
+      "keywords": [
+        "obsidian",
+        "markdown",
+        "bases",
+        "canvas",
+        "notes",
+        "defuddle",
+        "knap",
+        "mermaid",
+        "excalidraw",
+        "visualization"
+      ],
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/obsidian/icon.png",
+      "publisherType": "official",
+      "componentTypes": ["skill"],
+      "_artifact": {
+        "path": "plugins/obsidian/0.1.2/plugin.zip",
+        "sha256": "16ce018f2249ba4f6f4ff838dd964f0bfcdcd730118cca49242259e39eb60a3f",
+        "size": 56304
+      }
     },
     {
-      "path": "/assets/plugins/ios-simulator/0.1.0-open.1/455d34704f7a0a6759b68270419498f09bd98af2a1ec8e4cddfb93c97cc55b04/icon.png",
-      "file": "ios-simulator/0.1.0-open.1/455d34704f7a0a6759b68270419498f09bd98af2a1ec8e4cddfb93c97cc55b04/icon.png",
-      "sha256": "455d34704f7a0a6759b68270419498f09bd98af2a1ec8e4cddfb93c97cc55b04",
-      "bytes": 39678,
-      "mime": "image/png"
+      "name": "hyper3d-rodin",
+      "displayName": "Hyper3D Rodin",
+      "displayName_i18n": {
+        "en": "Hyper3D Rodin",
+        "zh-CN": "Hyper3D Rodin"
+      },
+      "description": "Generate 3D models from text or reference images with Hyper3D Rodin Gen-2.5, split completed models with BANG, and retrieve results.",
+      "description_i18n": {
+        "en": "Generate 3D models from text or reference images with Hyper3D Rodin Gen-2.5, split completed models with BANG, and retrieve results.",
+        "zh-CN": "通过文字或参考图片生成 Hyper3D Rodin Gen-2.5 三维模型，使用 BANG 拆分已完成模型，并获取生成结果。"
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Deemos",
+        "url": "https://hyper3d.ai"
+      },
+      "homepage": "https://hyper3d.ai",
+      "license": "MIT",
+      "keywords": ["hyper3d", "rodin", "3d", "text-to-3d", "image-to-3d", "bang", "mcp"],
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/hyper3d-rodin/0.1.0/plugin.zip",
+        "sha256": "7f051284526fb8842a15b1eb1107f95aca9c306fe864dc26a889516c41131217",
+        "path": "hyper3d-rodin"
+      },
+      "category": "developer-tools",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/hyper3d-rodin/icon.png",
+      "publisherType": "official",
+      "componentTypes": ["skill", "mcp"],
+      "_artifact": {
+        "path": "plugins/hyper3d-rodin/0.1.0/plugin.zip",
+        "sha256": "7f051284526fb8842a15b1eb1107f95aca9c306fe864dc26a889516c41131217",
+        "size": 9741
+      }
     },
     {
-      "path": "/assets/plugins/pdf/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-      "file": "pdf/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-      "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df",
-      "bytes": 10291,
-      "mime": "image/png"
+      "name": "zcode-mcp-app-dev",
+      "version": "0.1.1",
+      "description": "Develop MCP Apps for ZCode with official SDKs and a small host-extension reference.",
+      "description_i18n": {
+        "en": "Develop MCP Apps for ZCode with official SDKs and a small host-extension reference.",
+        "zh-CN": "使用官方 SDK 开发 ZCode MCP App，附宿主扩展约定与独立构建指引。"
+      },
+      "author": {
+        "name": "ZCode"
+      },
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/zcode-mcp-app-dev/0.1.1/plugin.zip",
+        "sha256": "b721811b450b98f3551cd678b2f81685a810855e918e0b2b1c66fd776083777f",
+        "path": "zcode-mcp-app-dev"
+      },
+      "category": "developer-tools",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/zcode-mcp-app-dev/icon.png",
+      "publisherType": "official",
+      "componentTypes": ["skill"],
+      "_artifact": {
+        "path": "plugins/zcode-mcp-app-dev/0.1.1/plugin.zip",
+        "sha256": "b721811b450b98f3551cd678b2f81685a810855e918e0b2b1c66fd776083777f",
+        "size": 5763
+      }
     },
     {
-      "path": "/assets/plugins/presentations/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-      "file": "presentations/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-      "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df",
-      "bytes": 10291,
-      "mime": "image/png"
+      "name": "blender",
+      "componentTypes": ["skill", "mcp", "ui"],
+      "displayName": "Blender",
+      "displayName_i18n": {
+        "en": "Blender",
+        "zh-CN": "Blender"
+      },
+      "version": "0.2.3",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/blender/0.2.3/plugin.zip",
+        "sha256": "eb99dca7cd4953519fde69365d8b5dd971f5d234a8ee548116c4f412b8e3f000",
+        "path": "blender"
+      },
+      "description": "在 ZCode 对话旁打开 Blender 场景：Agent 修改物体、材质、相机并渲染预览；面板用 Three.js 轻量浏览。",
+      "description_i18n": {
+        "en": "Edit Blender scenes with an interactive 3D panel and MCP tools.",
+        "zh-CN": "在 ZCode 对话旁打开 Blender 场景：Agent 修改物体、材质、相机并渲染预览；面板用 Three.js 轻量浏览。"
+      },
+      "category": "productivity",
+      "author": {
+        "name": "ZCode"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/blender/icon.png",
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/blender/0.2.3/plugin.zip",
+        "sha256": "eb99dca7cd4953519fde69365d8b5dd971f5d234a8ee548116c4f412b8e3f000",
+        "size": 587212
+      }
     },
     {
-      "path": "/assets/plugins/skill-creator/0.1.0-open.1/7501368309eeaa25e95b2249170367a22af0e95a8afb4f438f94ba2637700d86/icon.png",
-      "file": "skill-creator/0.1.0-open.1/7501368309eeaa25e95b2249170367a22af0e95a8afb4f438f94ba2637700d86/icon.png",
-      "sha256": "7501368309eeaa25e95b2249170367a22af0e95a8afb4f438f94ba2637700d86",
-      "bytes": 3567,
-      "mime": "image/png"
+      "name": "excalidraw",
+      "componentTypes": ["skill", "mcp", "ui"],
+      "displayName": "Excalidraw",
+      "displayName_i18n": {
+        "en": "Excalidraw",
+        "zh-CN": "Excalidraw"
+      },
+      "version": "0.2.2",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/excalidraw/0.2.2/plugin.zip",
+        "sha256": "34a6170b72aafb7761d05930f9c1bab484efeae3d0d83f59217a4d569666b16e",
+        "path": "excalidraw"
+      },
+      "description": "让 Agent 生成图形，在对话侧栏用 Excalidraw 编辑、引用选区、继续修改并导出。",
+      "description_i18n": {
+        "en": "Create and edit diagrams with Excalidraw and MCP tools.",
+        "zh-CN": "让 Agent 生成图形，在对话侧栏用 Excalidraw 编辑、引用选区、继续修改并导出。"
+      },
+      "category": "productivity",
+      "author": {
+        "name": "ZCode"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/excalidraw/icon.png",
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/excalidraw/0.2.2/plugin.zip",
+        "sha256": "34a6170b72aafb7761d05930f9c1bab484efeae3d0d83f59217a4d569666b16e",
+        "size": 16275280
+      }
     },
     {
-      "path": "/assets/plugins/spreadsheets/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-      "file": "spreadsheets/0.1.7-open.1/f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df/icon.png",
-      "sha256": "f75e45a5aab06df80aca5cf33a3426f2fbd609c4739f75e65960072b310582df",
-      "bytes": 10291,
-      "mime": "image/png"
+      "name": "openpencil",
+      "componentTypes": ["skill", "mcp", "ui"],
+      "displayName": "OpenPencil",
+      "displayName_i18n": {
+        "en": "OpenPencil",
+        "zh-CN": "OpenPencil"
+      },
+      "version": "0.3.1",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/openpencil/0.3.1/plugin.zip",
+        "sha256": "859ea449d106f068ac5677c34288caa1c86c9a18d020c5d6ed9e221eae2a2cb7",
+        "path": "openpencil"
+      },
+      "description": "在对话侧栏用 OpenPencil 编辑工作区里的 Figma .fig 设计稿，Agent 通过设计工具协同修改、引用选区并生成代码。",
+      "description_i18n": {
+        "en": "Edit design files with OpenPencil and MCP tools.",
+        "zh-CN": "在对话侧栏用 OpenPencil 编辑工作区里的 Figma .fig 设计稿，Agent 通过设计工具协同修改、引用选区并生成代码。"
+      },
+      "category": "productivity",
+      "author": {
+        "name": "ZCode"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/openpencil/icon.png",
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/openpencil/0.3.1/plugin.zip",
+        "sha256": "859ea449d106f068ac5677c34288caa1c86c9a18d020c5d6ed9e221eae2a2cb7",
+        "size": 18356830
+      }
     },
     {
-      "path": "/assets/plugins/zcode-guide/0.3.0-open.1/5dcd237200ded7360ed97eef45d4362886c9ba1177597d2e4e8ea1cc8c31f47d/icon.png",
-      "file": "zcode-guide/0.3.0-open.1/5dcd237200ded7360ed97eef45d4362886c9ba1177597d2e4e8ea1cc8c31f47d/icon.png",
-      "sha256": "5dcd237200ded7360ed97eef45d4362886c9ba1177597d2e4e8ea1cc8c31f47d",
-      "bytes": 3970,
-      "mime": "image/png"
+      "name": "photocraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/photocraft/icon.png",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/photocraft/0.2.2/plugin.zip",
+        "sha256": "30d8aa18f00a77841518f846f8978b18fa7c2066c2ff56bf16cbbc0599c9eca1",
+        "path": "photocraft"
+      },
+      "componentTypes": ["command", "mcp", "ui"],
+      "displayName": "PhotoCraft",
+      "displayName_i18n": {
+        "en": "PhotoCraft",
+        "zh-CN": "PhotoCraft"
+      },
+      "description": "PhotoCraft image editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "PhotoCraft image editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 PhotoCraft 进行图片编辑，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": ["artcraft", "wasm", "ui-plugin", "photocraft"],
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/photocraft/0.2.2/plugin.zip",
+        "sha256": "30d8aa18f00a77841518f846f8978b18fa7c2066c2ff56bf16cbbc0599c9eca1",
+        "size": 24380473
+      }
     },
     {
-      "path": "/assets/plugins/github/0.1.2-open.1/916da4b4e72d9e80df2b2162ae47d01db372caadaaaad2e3a26339284965a548/icon.png",
-      "file": "github/0.1.2-open.1/916da4b4e72d9e80df2b2162ae47d01db372caadaaaad2e3a26339284965a548/icon.png",
-      "sha256": "916da4b4e72d9e80df2b2162ae47d01db372caadaaaad2e3a26339284965a548",
-      "bytes": 9851,
-      "mime": "image/png"
+      "name": "vectorcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/vectorcraft/icon.png",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/vectorcraft/0.2.2/plugin.zip",
+        "sha256": "68aeea49302d686d041111e678d453978ae4a5af73f7095a6a8dfa1325dc2e06",
+        "path": "vectorcraft"
+      },
+      "componentTypes": ["command", "mcp", "ui"],
+      "displayName": "VectorCraft",
+      "displayName_i18n": {
+        "en": "VectorCraft",
+        "zh-CN": "VectorCraft"
+      },
+      "description": "VectorCraft vector illustration in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "VectorCraft vector illustration in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 VectorCraft 进行矢量绘图，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": ["artcraft", "wasm", "ui-plugin", "vectorcraft"],
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/vectorcraft/0.2.2/plugin.zip",
+        "sha256": "68aeea49302d686d041111e678d453978ae4a5af73f7095a6a8dfa1325dc2e06",
+        "size": 45831414
+      }
     },
     {
-      "path": "/assets/plugins/accounting-and-reporting/0.1.1-open.1/e9e3215b0f0710b51b3c847a1c5b1ba74ab1ef1e0bd696c1fb571fc7c7e73f00/icon.png",
-      "file": "accounting-and-reporting/0.1.1-open.1/e9e3215b0f0710b51b3c847a1c5b1ba74ab1ef1e0bd696c1fb571fc7c7e73f00/icon.png",
-      "sha256": "e9e3215b0f0710b51b3c847a1c5b1ba74ab1ef1e0bd696c1fb571fc7c7e73f00",
-      "bytes": 55723,
-      "mime": "image/png"
+      "name": "pdfcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/pdfcraft/icon.png",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/pdfcraft/0.2.2/plugin.zip",
+        "sha256": "e2e982cb2f940a3aceaea9930ff905962c9a685d25c7078e8874dfc295d3dfb5",
+        "path": "pdfcraft"
+      },
+      "componentTypes": ["command", "mcp", "ui"],
+      "displayName": "PdfCraft",
+      "displayName_i18n": {
+        "en": "PdfCraft",
+        "zh-CN": "PdfCraft"
+      },
+      "description": "PdfCraft PDF editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "PdfCraft PDF editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 PdfCraft 进行PDF 编辑，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": ["artcraft", "wasm", "ui-plugin", "pdfcraft"],
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/pdfcraft/0.2.2/plugin.zip",
+        "sha256": "e2e982cb2f940a3aceaea9930ff905962c9a685d25c7078e8874dfc295d3dfb5",
+        "size": 40237956
+      }
     },
     {
-      "path": "/assets/plugins/cloudbase-skills/0.1.0-open.1/88b561194deba39620400e14f2267ac68bb7b3498192fd748343af577b8ab2c9/plugin.zip",
-      "file": "cloudbase-skills/0.1.0-open.1/88b561194deba39620400e14f2267ac68bb7b3498192fd748343af577b8ab2c9/plugin.zip",
-      "sha256": "88b561194deba39620400e14f2267ac68bb7b3498192fd748343af577b8ab2c9",
-      "bytes": 401305,
-      "mime": "application/zip"
+      "name": "designcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/designcraft/icon.png",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/designcraft/0.2.2/plugin.zip",
+        "sha256": "5bc3c51c9c2f2135f20e48368df6cb11709c16956caaa99d7956407a4a1ecbdb",
+        "path": "designcraft"
+      },
+      "componentTypes": ["command", "mcp", "ui"],
+      "displayName": "DesignCraft",
+      "displayName_i18n": {
+        "en": "DesignCraft",
+        "zh-CN": "DesignCraft"
+      },
+      "description": "DesignCraft page layout in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "DesignCraft page layout in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 DesignCraft 进行页面排版，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": ["artcraft", "wasm", "ui-plugin", "designcraft"],
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/designcraft/0.2.2/plugin.zip",
+        "sha256": "5bc3c51c9c2f2135f20e48368df6cb11709c16956caaa99d7956407a4a1ecbdb",
+        "size": 40882626
+      }
     },
     {
-      "path": "/assets/plugins/mimosa/1.0.3-open.1/59b23b181ba9ec86ba67ef1dd7091bff4c19fd30b005b542ade3fe418530d3b7/plugin.zip",
-      "file": "mimosa/1.0.3-open.1/59b23b181ba9ec86ba67ef1dd7091bff4c19fd30b005b542ade3fe418530d3b7/plugin.zip",
-      "sha256": "59b23b181ba9ec86ba67ef1dd7091bff4c19fd30b005b542ade3fe418530d3b7",
-      "bytes": 6008375,
-      "mime": "application/zip"
+      "name": "wordcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/wordcraft/icon.png",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/wordcraft/0.2.2/plugin.zip",
+        "sha256": "ce8e1df85d03a2a46247e46687a9897e4728142c7a61966c3521230e58b6c384",
+        "path": "wordcraft"
+      },
+      "componentTypes": ["command", "mcp", "ui"],
+      "displayName": "WordCraft",
+      "displayName_i18n": {
+        "en": "WordCraft",
+        "zh-CN": "WordCraft"
+      },
+      "description": "WordCraft word processing in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "WordCraft word processing in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 WordCraft 进行文字处理，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": ["artcraft", "wasm", "ui-plugin", "wordcraft"],
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/wordcraft/0.2.2/plugin.zip",
+        "sha256": "ce8e1df85d03a2a46247e46687a9897e4728142c7a61966c3521230e58b6c384",
+        "size": 39952423
+      }
     },
     {
-      "path": "/assets/plugins/video2code/0.6.0-open.1/bc6032813463a2e36f4b4bca87f8c4fbbc0473f30138fa7249adfa8a351215b8/plugin.zip",
-      "file": "video2code/0.6.0-open.1/bc6032813463a2e36f4b4bca87f8c4fbbc0473f30138fa7249adfa8a351215b8/plugin.zip",
-      "sha256": "bc6032813463a2e36f4b4bca87f8c4fbbc0473f30138fa7249adfa8a351215b8",
-      "bytes": 385192,
-      "mime": "application/zip"
+      "name": "gridcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/gridcraft/icon.png",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/gridcraft/0.2.2/plugin.zip",
+        "sha256": "8a84f38bfe45558874325b9128f0c4fe8a2fa02654787242e6970faac3e9dffc",
+        "path": "gridcraft"
+      },
+      "componentTypes": ["command", "mcp", "ui"],
+      "displayName": "GridCraft",
+      "displayName_i18n": {
+        "en": "GridCraft",
+        "zh-CN": "GridCraft"
+      },
+      "description": "GridCraft spreadsheets in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "GridCraft spreadsheets in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 GridCraft 进行电子表格，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": ["artcraft", "wasm", "ui-plugin", "gridcraft"],
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/gridcraft/0.2.2/plugin.zip",
+        "sha256": "8a84f38bfe45558874325b9128f0c4fe8a2fa02654787242e6970faac3e9dffc",
+        "size": 20115022
+      }
     },
     {
-      "path": "/assets/plugins/gitlab/0.1.3-open.1/58bfc3a9f4c90b1545bf1d9a285d770f7094b1964492aab97fdf32ce7bb2f878/plugin.zip",
-      "file": "gitlab/0.1.3-open.1/58bfc3a9f4c90b1545bf1d9a285d770f7094b1964492aab97fdf32ce7bb2f878/plugin.zip",
-      "sha256": "58bfc3a9f4c90b1545bf1d9a285d770f7094b1964492aab97fdf32ce7bb2f878",
-      "bytes": 17385,
-      "mime": "application/zip"
+      "name": "deckcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/deckcraft/icon.png",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/deckcraft/0.2.2/plugin.zip",
+        "sha256": "a1b6ec2803038200050a8869444ca132d714c2a871397d2bc8547fdc0ad8b5f7",
+        "path": "deckcraft"
+      },
+      "componentTypes": ["command", "mcp", "ui"],
+      "displayName": "DeckCraft",
+      "displayName_i18n": {
+        "en": "DeckCraft",
+        "zh-CN": "DeckCraft"
+      },
+      "description": "DeckCraft presentations in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "DeckCraft presentations in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 DeckCraft 进行演示文稿，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": ["artcraft", "wasm", "ui-plugin", "deckcraft"],
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/deckcraft/0.2.2/plugin.zip",
+        "sha256": "a1b6ec2803038200050a8869444ca132d714c2a871397d2bc8547fdc0ad8b5f7",
+        "size": 34801700
+      }
     },
     {
-      "path": "/assets/plugins/alibaba-cloud-cli/0.1.2-open.1/ccd3e838e42d3880776aaf4c3ca8c9192d63c79bee60009b9bc52bf8a2541b1b/plugin.zip",
-      "file": "alibaba-cloud-cli/0.1.2-open.1/ccd3e838e42d3880776aaf4c3ca8c9192d63c79bee60009b9bc52bf8a2541b1b/plugin.zip",
-      "sha256": "ccd3e838e42d3880776aaf4c3ca8c9192d63c79bee60009b9bc52bf8a2541b1b",
-      "bytes": 7725,
-      "mime": "application/zip"
+      "name": "cadcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/cadcraft/icon.png",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/cadcraft/0.2.2/plugin.zip",
+        "sha256": "2ffa6cb8325dbe623130e802aa59d6141a272afe9177822030444a18b1743cbe",
+        "path": "cadcraft"
+      },
+      "componentTypes": ["command", "mcp", "ui"],
+      "displayName": "CADCraft",
+      "displayName_i18n": {
+        "en": "CADCraft",
+        "zh-CN": "CADCraft"
+      },
+      "description": "CADCraft CAD drafting in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "CADCraft CAD drafting in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 CADCraft 进行CAD 绘图，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": ["artcraft", "wasm", "ui-plugin", "cadcraft"],
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/cadcraft/0.2.2/plugin.zip",
+        "sha256": "2ffa6cb8325dbe623130e802aa59d6141a272afe9177822030444a18b1743cbe",
+        "size": 33535414
+      }
     },
     {
-      "path": "/assets/plugins/lark-cli/0.1.2-open.1/0d014a2bcfd5c1df6446f019c8d1462d0f8d827a2ee8fa1b20e9297aeea6a55e/plugin.zip",
-      "file": "lark-cli/0.1.2-open.1/0d014a2bcfd5c1df6446f019c8d1462d0f8d827a2ee8fa1b20e9297aeea6a55e/plugin.zip",
-      "sha256": "0d014a2bcfd5c1df6446f019c8d1462d0f8d827a2ee8fa1b20e9297aeea6a55e",
-      "bytes": 8228,
-      "mime": "application/zip"
+      "name": "soundcraft",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/soundcraft/icon.png",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/soundcraft/0.2.2/plugin.zip",
+        "sha256": "5a4b5c34a1481ac6381e7c8c6d2b1a52481b5401675b82e1ec6c8e17004a4dd1",
+        "path": "soundcraft"
+      },
+      "componentTypes": ["command", "mcp", "ui"],
+      "displayName": "SoundCraft",
+      "displayName_i18n": {
+        "en": "SoundCraft",
+        "zh-CN": "SoundCraft"
+      },
+      "description": "SoundCraft audio editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+      "description_i18n": {
+        "en": "SoundCraft audio editing in a ZCode panel, with workspace file opening and host-mediated exports.",
+        "zh-CN": "在 ZCode 面板中使用 SoundCraft 进行音频编辑，支持打开工作区文件和通过宿主保存导出。"
+      },
+      "version": "0.2.2",
+      "author": {
+        "name": "ZCode"
+      },
+      "category": "productivity",
+      "keywords": ["artcraft", "wasm", "ui-plugin", "soundcraft"],
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/soundcraft/0.2.2/plugin.zip",
+        "sha256": "5a4b5c34a1481ac6381e7c8c6d2b1a52481b5401675b82e1ec6c8e17004a4dd1",
+        "size": 18878878
+      }
     },
     {
-      "path": "/assets/plugins/tencent-meeting-cli/0.1.3-open.1/f88fb40b3882233ff3eb838ce08ad332f394d3084c9de9d6094e931d023bcaeb/plugin.zip",
-      "file": "tencent-meeting-cli/0.1.3-open.1/f88fb40b3882233ff3eb838ce08ad332f394d3084c9de9d6094e931d023bcaeb/plugin.zip",
-      "sha256": "f88fb40b3882233ff3eb838ce08ad332f394d3084c9de9d6094e931d023bcaeb",
-      "bytes": 5960,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/dingtalk-cli/0.1.1-open.1/32be9ef84e308bcfa53c85368cca6bc1cfd9a21f937d3329d3aec8712baf123a/plugin.zip",
-      "file": "dingtalk-cli/0.1.1-open.1/32be9ef84e308bcfa53c85368cca6bc1cfd9a21f937d3329d3aec8712baf123a/plugin.zip",
-      "sha256": "32be9ef84e308bcfa53c85368cca6bc1cfd9a21f937d3329d3aec8712baf123a",
-      "bytes": 7815,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/wecom-cli/0.1.1-open.1/bb419cb0c6faa0839a36a77a4ef1589714c24808ba56f6b772b19e6d6ce19a6e/plugin.zip",
-      "file": "wecom-cli/0.1.1-open.1/bb419cb0c6faa0839a36a77a4ef1589714c24808ba56f6b772b19e6d6ce19a6e/plugin.zip",
-      "sha256": "bb419cb0c6faa0839a36a77a4ef1589714c24808ba56f6b772b19e6d6ce19a6e",
-      "bytes": 7174,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/obsidian/0.1.2-open.1/08ade14ac28b122cf811373595723d7c3a3c5959a1599bf65b77a5dc77783d41/plugin.zip",
-      "file": "obsidian/0.1.2-open.1/08ade14ac28b122cf811373595723d7c3a3c5959a1599bf65b77a5dc77783d41/plugin.zip",
-      "sha256": "08ade14ac28b122cf811373595723d7c3a3c5959a1599bf65b77a5dc77783d41",
-      "bytes": 57014,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/android-emulator/0.1.0-open.1/5a147d3360e4bf85eb5b0c6230f6d4f9837e84581276557fdfe3a57508e36151/plugin.zip",
-      "file": "android-emulator/0.1.0-open.1/5a147d3360e4bf85eb5b0c6230f6d4f9837e84581276557fdfe3a57508e36151/plugin.zip",
-      "sha256": "5a147d3360e4bf85eb5b0c6230f6d4f9837e84581276557fdfe3a57508e36151",
-      "bytes": 289954,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/documents/0.1.7-open.1/8f19ee5d3d1cbd0b59c7a1e14f6cc0440a7be52dd55fce92f8473d6ef197e371/plugin.zip",
-      "file": "documents/0.1.7-open.1/8f19ee5d3d1cbd0b59c7a1e14f6cc0440a7be52dd55fce92f8473d6ef197e371/plugin.zip",
-      "sha256": "8f19ee5d3d1cbd0b59c7a1e14f6cc0440a7be52dd55fce92f8473d6ef197e371",
-      "bytes": 203196,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/ios-simulator/0.1.0-open.1/03799771c297a527248b5125caf1bc6a51e986bd631f7c11577fbf73c259cd38/plugin.zip",
-      "file": "ios-simulator/0.1.0-open.1/03799771c297a527248b5125caf1bc6a51e986bd631f7c11577fbf73c259cd38/plugin.zip",
-      "sha256": "03799771c297a527248b5125caf1bc6a51e986bd631f7c11577fbf73c259cd38",
-      "bytes": 266780,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/pdf/0.1.7-open.1/83048844e366eb6565d7db82e0de9e506bd665417c7d2cd18419beb76e342e21/plugin.zip",
-      "file": "pdf/0.1.7-open.1/83048844e366eb6565d7db82e0de9e506bd665417c7d2cd18419beb76e342e21/plugin.zip",
-      "sha256": "83048844e366eb6565d7db82e0de9e506bd665417c7d2cd18419beb76e342e21",
-      "bytes": 368207,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/plugin-creator/0.1.1-open.1/3a44d77226028865d9f7835bdab296d61e9ff2a8d2d0d1b10fe60db8f22bff20/plugin.zip",
-      "file": "plugin-creator/0.1.1-open.1/3a44d77226028865d9f7835bdab296d61e9ff2a8d2d0d1b10fe60db8f22bff20/plugin.zip",
-      "sha256": "3a44d77226028865d9f7835bdab296d61e9ff2a8d2d0d1b10fe60db8f22bff20",
-      "bytes": 17717,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/presentations/0.1.7-open.1/b091b21f485250d6a4c1abdf46e5d3ec5ece4ffd518811c767a66465453a7d39/plugin.zip",
-      "file": "presentations/0.1.7-open.1/b091b21f485250d6a4c1abdf46e5d3ec5ece4ffd518811c767a66465453a7d39/plugin.zip",
-      "sha256": "b091b21f485250d6a4c1abdf46e5d3ec5ece4ffd518811c767a66465453a7d39",
-      "bytes": 27104,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/skill-creator/0.1.0-open.1/69bbebd249f42151e6e7cd91dcd02d2ef69d9332f673a9af8eee552f4e16ef9e/plugin.zip",
-      "file": "skill-creator/0.1.0-open.1/69bbebd249f42151e6e7cd91dcd02d2ef69d9332f673a9af8eee552f4e16ef9e/plugin.zip",
-      "sha256": "69bbebd249f42151e6e7cd91dcd02d2ef69d9332f673a9af8eee552f4e16ef9e",
-      "bytes": 4660,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/spreadsheets/0.1.7-open.1/daa9c7bbe3ba4ef0c28105310d19e3d99a2bf229fd58ecb922b7a9c533008aec/plugin.zip",
-      "file": "spreadsheets/0.1.7-open.1/daa9c7bbe3ba4ef0c28105310d19e3d99a2bf229fd58ecb922b7a9c533008aec/plugin.zip",
-      "sha256": "daa9c7bbe3ba4ef0c28105310d19e3d99a2bf229fd58ecb922b7a9c533008aec",
-      "bytes": 107801,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/zcode-guide/0.3.0-open.1/fc80351f6e36c0b89bd1689b35f73276ff87e044a84fa0881fa46fc97f6ae013/plugin.zip",
-      "file": "zcode-guide/0.3.0-open.1/fc80351f6e36c0b89bd1689b35f73276ff87e044a84fa0881fa46fc97f6ae013/plugin.zip",
-      "sha256": "fc80351f6e36c0b89bd1689b35f73276ff87e044a84fa0881fa46fc97f6ae013",
-      "bytes": 24599,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/github/0.1.2-open.1/6ff0da28c368c0e7465bacbabbf85c07e87c7a0b303c0d1d65d99d2e8586fca1/plugin.zip",
-      "file": "github/0.1.2-open.1/6ff0da28c368c0e7465bacbabbf85c07e87c7a0b303c0d1d65d99d2e8586fca1/plugin.zip",
-      "sha256": "6ff0da28c368c0e7465bacbabbf85c07e87c7a0b303c0d1d65d99d2e8586fca1",
-      "bytes": 30491,
-      "mime": "application/zip"
-    },
-    {
-      "path": "/assets/plugins/accounting-and-reporting/0.1.1-open.1/271507036ec23284e2d718dbaf3c54830068001aec52a41979ba2225bb4edb51/plugin.zip",
-      "file": "accounting-and-reporting/0.1.1-open.1/271507036ec23284e2d718dbaf3c54830068001aec52a41979ba2225bb4edb51/plugin.zip",
-      "sha256": "271507036ec23284e2d718dbaf3c54830068001aec52a41979ba2225bb4edb51",
-      "bytes": 286507,
-      "mime": "application/zip"
+      "name": "tripo-3d",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/tripo-3d/0.1.3/plugin.zip",
+        "sha256": "888e64c11c9c631d3d2680a943d58972092705e0a2a95a682b3c8936b8cda29d",
+        "path": "tripo-3d"
+      },
+      "displayName": "Tripo 3D",
+      "displayName_i18n": {
+        "en": "Tripo 3D",
+        "zh-CN": "Tripo 3D"
+      },
+      "description": "Generate textured, rig-ready 3D models from a text prompt or a reference image with Tripo, and export GLB/FBX/OBJ/STL/USDZ/3MF straight into your project. Connect your China-mainland Tripo account once in the browser (OAuth), no API key pasting.",
+      "description_i18n": {
+        "en": "Generate textured, rig-ready 3D models from a text prompt or a reference image with Tripo, and export GLB/FBX/OBJ/STL/USDZ/3MF straight into your project. Connect your China-mainland Tripo account once in the browser (OAuth), no API key pasting.",
+        "zh-CN": "用 Tripo 从一句话或一张图生成带贴图、可绑骨的 3D 模型，支持动画、减面与 GLB/FBX/OBJ/STL/USDZ/3MF 导出，文件直接落到项目里。浏览器里授权一次国内站 Tripo 账号即可使用，无需粘贴 API Key。"
+      },
+      "version": "0.1.3",
+      "author": {
+        "name": "VAST",
+        "url": "https://www.tripo3d.ai"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/tripo-3d/icon.png",
+      "category": "productivity",
+      "keywords": [
+        "3d",
+        "asset-generation",
+        "game-development",
+        "glb",
+        "fbx",
+        "text-to-3d",
+        "image-to-3d",
+        "3d-printing",
+        "rigging",
+        "mcp"
+      ],
+      "examplePrompts": [
+        "Generate a low-poly treasure chest and export it as FBX for Unity",
+        "Turn this concept image into a textured 3D model and export it as GLB",
+        "Make a 3D-printable knight figurine and export STL"
+      ],
+      "examplePrompts_i18n": {
+        "zh-CN": [
+          "生成一个低多边形的宝箱 3D 模型，导出 FBX 给 Unity 用",
+          "把这张概念图变成带贴图的 3D 模型，导出 GLB",
+          "生成一个可 3D 打印的骑士小雕像，导出 STL 文件"
+        ]
+      },
+      "publisherType": "official",
+      "componentTypes": ["skill", "hook", "mcp"],
+      "_artifact": {
+        "path": "plugins/tripo-3d/0.1.3/plugin.zip",
+        "sha256": "888e64c11c9c631d3d2680a943d58972092705e0a2a95a682b3c8936b8cda29d",
+        "size": 29018
+      }
     }
   ]
 }

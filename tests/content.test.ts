@@ -70,7 +70,6 @@ describe('independent public content', () => {
     const directory = await mkdtemp(resolve(tmpdir(), 'open-zcode-config-'));
     temporary.push(directory);
     await cp('data', resolve(directory, 'data'), { recursive: true });
-    await cp('plugin-artifacts', resolve(directory, 'plugin-artifacts'), { recursive: true });
     const configFile = resolve(directory, 'data/configs.json');
     const config = JSON.parse(await readFile(configFile, 'utf8'));
     config.data.configs.futureFlag = { enabled: false };

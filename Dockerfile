@@ -10,10 +10,7 @@ RUN pnpm install --frozen-lockfile
 COPY tsconfig*.json prisma.config.ts ./
 COPY prisma ./prisma
 COPY src ./src
-COPY scripts/build-plugin-marketplace.mjs scripts/plugin-package-build.mjs ./scripts/
 COPY data ./data
-COPY plugins/packages ./plugins/packages
-COPY plugins/assets ./plugins/assets
 RUN pnpm build && pnpm prune --prod
 
 FROM base AS runtime
@@ -23,7 +20,6 @@ COPY --from=build --chown=node:node /app/dist ./dist
 COPY --chown=node:node package.json pnpm-lock.yaml prisma.config.ts ./
 COPY --chown=node:node prisma ./prisma
 COPY --chown=node:node data ./data
-COPY --from=build --chown=node:node /app/plugin-artifacts ./plugin-artifacts
 COPY --chown=node:node specs/api-inventory.json ./specs/api-inventory.json
 COPY --chown=node:node deploy/docker-entrypoint.sh ./deploy/docker-entrypoint.sh
 USER node

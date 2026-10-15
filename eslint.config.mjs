@@ -9,7 +9,6 @@ export default tseslint.config(
       'data/**',
       'artifacts/**',
       'plugins/**',
-      'plugin-artifacts/**',
     ],
   },
   ...tseslint.configs.recommended,

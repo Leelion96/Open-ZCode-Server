@@ -2,7 +2,7 @@
 
 ## 数据与所有者
 
-- 原公共配置由 `data/configs.json`、`data/scenes.json`、`data/builtin.json` 提供；新增市场由独立模块读取 `data/plugins/catalog.json`，直接编辑并纳入Git与Docker镜像；没有官方样本与policy的合并、索引、运行时采集manifest或版本/平台分流。
+- 原公共配置由 `data/configs.json`、`data/scenes.json`、`data/builtin.json` 提供；插件市场由独立模块读取 `data/plugins/catalog.json`。`pnpm plugins:sync` 将官方 marketplace JSON 中 `requiresPaidPlan === true` 的条目移除后保存，其他字段与官方下载 URL 不改写；Server 不保存插件 ZIP 或图片。
 - PublicContentService在启动时异步读取、进行既有结构校验并原子建立只读快照；HTTP返回副本。请求路径不读文件、不访问官方、不改数据库。
 - `app_version`、`platform`继续接受与校验以兼容客户端，但不影响本版返回内容。configs/scenes保留成功信封，logid由common请求追踪生成，不要求配置JSON预置采集ID或占位字段。裸builtin release不增加信封字段。
 - builtin下载地址在配置中使用本服务相对路径，启动时按PUBLIC_ORIGIN转换为HTTPS绝对地址；HTTP部署不下发下载链接。其他模型供应商地址不做改写。

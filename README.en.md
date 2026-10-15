@@ -34,13 +34,12 @@ Open-ZCode owns the application UI, workspaces, sessions, and Agent runtime; thi
 | `GET /api/v1/client/configs`                                    | Implemented: public feature configuration, with compatible version and platform parameters                                |
 | `GET /api/v1/client/scenes`                                     | Implemented: draft suggestions and scheduled-task scenes                                                                  |
 | `GET /assets/builtin-config.json`                               | Implemented: 15 API Key provider templates and model rules                                                                |
-| `GET /api/v1/plugins/marketplace.json`                          | Implemented: metadata, categories, and download URLs for 21 plugins                                                       |
-| `GET/HEAD /assets/plugins/{name}/{version}/{sha256}/{file}`     | Implemented: ZIP, icon, and image delivery with ETag, conditional requests, and immutable caching                         |
+| `GET /api/v1/plugins/marketplace.json`                          | Implemented: metadata, categories, and download URLs for 27 non-paid official plugins                                     |
 | 3 login, 6 sharing, 5 feedback, and 1 update APIs               | Placeholders: HTTP 501; business capabilities are not implemented                                                         |
 | 14 model gateway, plan quota, MCP usage, and off-peak task APIs | Unavailable: routes are not registered, returning HTTP 404                                                                |
 | PostgreSQL / Prisma                                             | Migrations, connection lifecycle, and readiness checks are provided; account and business data models are not implemented |
 
-Counted by method and path, the 32 product APIs include 3 implemented routes, 15 placeholders, and 14 unavailable routes. Built-in configuration and plugin artifacts are counted separately. Placeholders do not generate tokens, publish shares, create tickets, upload files, or return installers.
+Counted by method and path, the 32 product APIs include 3 implemented routes, 15 placeholders, and 14 unavailable routes. Built-in configuration resources are counted separately. Placeholders do not generate tokens, publish shares, create tickets, upload files, or return installers.
 
 See the [v1 specification](specs/v1.md) and [machine-readable API inventory](specs/api-inventory.json) for contracts. Integration scope and evidence are recorded in [Verification](docs/verification.md).
 
@@ -120,44 +119,40 @@ The three original configuration JSON files and the plugin catalog define public
 | [data/configs.json](data/configs.json)                 | Feature flags, feedback and community links, plugin ordering, and the built-in configuration download entry point    |
 | [data/scenes.json](data/scenes.json)                   | Draft suggestions and scheduled-task templates, including localized prompts, plugin references, and scheduling rules |
 | [data/builtin.json](data/builtin.json)                 | API Key provider templates and model rules; increment revision after changes                                         |
-| [data/plugins/catalog.json](data/plugins/catalog.json) | Plugin metadata, categories, listing information, download URLs, and SHA-256                                         |
-| [plugins/packages/](plugins/packages/)                 | Independent release packages organized by plugin name and version                                                    |
-| [plugins/assets/](plugins/assets/)                     | Plugin icons and listing images                                                                                      |
-| [plugins/upstream/](plugins/upstream/)                 | Captured source material with original licenses; excluded from Docker builds                                         |
-| [plugins/sources.json](plugins/sources.json)           | Provenance, versions, content changes, and compatibility records                                                     |
+| [data/plugins/catalog.json](data/plugins/catalog.json) | Official catalog with paid-plan entries removed                                                                      |
 
-The marketplace currently publishes 21 plugins. Browser Use and Node Repl Host remain client-provided. PluginMarketplaceService owns the catalog and artifacts; PublicContentService owns configuration, scenes, and provider templates. Both load validated read-only snapshots at startup.
+The marketplace publishes 27 official entries whose `requiresPaidPlan` is not `true`. Browser Use and Node Repl Host remain client-provided. PluginMarketplaceService owns the catalog; clients fetch package archives and images from the official CDN. PublicContentService owns configuration, scenes, and provider templates.
 
-Keep package names, versions, and artifact information consistent between the catalog and release material. Content changes require a new version, while original licenses and provenance are retained. `pnpm plugins:build` generates ZIPs and SHA-256 offline under the ignored `plugin-artifacts/` directory; changed content at the same version prevents the build. Mimosa content changes also require re-signing. See the [Plugin Marketplace Specification](specs/plugin-marketplace.md).
+Run `pnpm plugins:sync` to fetch the official marketplace JSON and remove paid-plan entries. `pnpm plugins:check` validates the resulting listing. Plugin metadata and package contents remain unchanged. See the [Plugin Marketplace Specification](specs/plugin-marketplace.md).
 
 Current defaults disable CAPTCHA, forced updates, telemetry, off-peak tasks, Start Plan, and plan promotion. Personal and team plan catalogs are empty. General feature flags and plugin ordering are retained; feedback and community URLs are empty and can be set to your own entry points. A feature flag does not make a missing client runtime component available.
 
 Scenes are limited to draft suggestions and scheduled tasks consumed by the current client. There are 15 API Key provider templates, with OpenAI and Anthropic first. Standard BigModel / Z.ai API templates are retained; official account Providers and Coding Plan API templates are removed. Third-party model provider URLs retain their original purpose.
 
-The configs endpoint accepts and validates `app_version`, `platform`, and extension parameters. This version returns the same content for all versions and platforms. The service asynchronously loads and validates public configuration, catalog and artifacts at startup and creates a read-only snapshot; responses return copies. Restart or rebuild after editing files. Missing files, invalid JSON, or failure of existing structure validation prevents startup.
+The configs endpoint accepts and validates `app_version`, `platform`, and extension parameters. This version returns the same content for all versions and platforms. The service asynchronously loads and validates public configuration and catalog at startup and creates a read-only snapshot; responses return copies. Restart or rebuild after editing files. Missing files, invalid JSON, or failure of existing structure validation prevents startup.
 
 ```mermaid
 sequenceDiagram
-  participant Files as Configuration JSON, catalog, and built artifacts
+  participant Files as Configuration JSON and catalog
   participant Server as Server
   participant Client as Open-ZCode
   Files->>Server: Load and validate at startup
   Server->>Server: Create read-only snapshot
-  Client->>Server: Request configuration, scenes, templates, or plugin catalog/artifacts
+  Client->>Server: Request configuration, scenes, templates, or plugin catalog
   Server-->>Client: Return a content copy
 ```
 
 Check and publish changes:
 
 ```sh
-pnpm plugins:build
+pnpm plugins:sync
 pnpm plugins:check
 pnpm content:check
-# Docker deployment: rebuild the app, retaining the database and TLS containers.
+# Docker deployment: rebuild the API, retaining database and TLS volumes.
 docker compose up -d --build --wait app
 ```
 
-For local development, restart the service. Run all commands from the project root. Configuration and the catalog are read from `data/`, and plugin artifacts from `plugin-artifacts/`; their Docker paths are `/app/data/` and `/app/plugin-artifacts/`. Do not publish different built-in content at the same revision or different plugin content at the same version. Official data capture, automatic imports, additional override files, and a runtime administration UI are not provided. See the [Public Content Specification](specs/public-content.md) and [Plugin Marketplace Specification](specs/plugin-marketplace.md).
+For local development, restart the service. Run all commands from the project root. Configuration and the filtered catalog are read from `data/`. `pnpm plugins:sync` only fetches the upstream marketplace JSON; it does not download or modify plugin packages. See the [Public Content Specification](specs/public-content.md) and [Plugin Marketplace Specification](specs/plugin-marketplace.md).
 
 ## API Documentation
 
@@ -207,8 +202,8 @@ Code is licensed under [Apache-2.0](LICENSE). This project is independently main
 
 ## Self-hosted plugin marketplace
 
-GET `/api/v1/plugins/marketplace.json` serves a bare compatible catalog of 21 packages. Browser Use and Node Repl Host remain client-provided. ZIPs and mirrored images use immutable same-origin paths under `/assets/plugins/`. Release authors are Open-ZCode; skill prose is normalized while technical identifiers and original license/copyright notices remain intact.
+GET `/api/v1/plugins/marketplace.json` returns the upstream catalog format, with only the 14 entries marked `requiresPaidPlan: true` removed. The remaining 27 entries retain their upstream fields, order, authors, versions, package URLs, and images. Clients fetch ZIPs and images directly from the official CDN. Browser Use and Node Repl Host remain client-provided.
 
 Configure the client's existing `ZCODE_BASE_URL` with the product Server origin. Its default marketplace uses that origin and `/api/v1/plugins/marketplace.json`; configure the Server's `PUBLIC_ORIGIN` with the corresponding public HTTPS origin. Keep local addresses in development configuration rather than editing client source URLs.
 
-`plugins/packages` holds independent release material; `plugins/upstream` and `plugins/sources.json` preserve provenance. Bump changed versions, run `pnpm plugins:build`, `pnpm plugins:check`, then `pnpm verify`. Startup validates and loads bounded immutable assets in memory; request paths perform no file IO. Docker builds do not depend on the client checkout. See `docs/plugin-marketplace-verification.md` for actual verification and remaining constraints.
+Run `pnpm plugins:sync` to update `data/plugins/catalog.json`, then `pnpm plugins:check` to verify it. The Server does not download, save, repackage, or host plugin archives. See `docs/plugin-marketplace-verification.md` for current verification and constraints.

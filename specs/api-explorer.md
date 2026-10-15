@@ -44,4 +44,4 @@ API清单 + Nest/Zod文档 → 启动校验/合成 → Swagger UI
 
 ## 新插件市场
 
-GET /api/v1/plugins/marketplace.json 为裸市场目录，公开只读，按现有样式进入“插件市场”分组。GET/HEAD /assets/plugins/{name}/{version}/{digest}/{file} 发送启动时校验的内存工件，下载链接和图片链接在目录中提供，使用长期 immutable 缓存。目录为 no-cache；不带业务信封，不在接口页面执行插件代码。
+GET /api/v1/plugins/marketplace.json 返回官方插件市场格式的裸 JSON，公开只读，按现有样式进入“插件市场”分组。Server 过滤 `requiresPaidPlan === true` 的插件，其余目录字段及官方 ZIP/图片 URL 保持原样；客户端下载包时直接访问官方 CDN。目录使用 no-cache，不带业务信封。

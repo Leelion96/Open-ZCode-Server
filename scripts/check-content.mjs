@@ -5,11 +5,11 @@ import { loadContentBundle } from '../dist/public-content/content-files.js';
 
 try {
   const bundle = await loadContentBundle(CONTENT_DIRECTORY);
-  await loadCatalog(resolve('data/plugins/catalog.json'), resolve('plugin-artifacts'));
+  await loadCatalog(resolve('data/plugins/catalog.json'));
   console.log(
     `Content validated: one config, ${bundle.scenes.data.length} scenes, ${bundle.builtin.config.providerConfigRules.templateRules.length} provider templates, builtin revision ${bundle.builtin.revision}`,
   );
 } catch {
-  process.stderr.write('Content validation failed: check public JSON and plugin artifacts.\n');
+  process.stderr.write('Content validation failed: check public JSON and plugin catalog.\n');
   process.exitCode = 1;
 }

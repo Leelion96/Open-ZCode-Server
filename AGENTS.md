@@ -4,7 +4,7 @@
 - 固定 TypeScript、NestJS、Fastify、PostgreSQL、Prisma。只使用当前安装版本的 API，禁止 Express/Multer 与跨客户端源码导入。
 - Controller 仅处理 HTTP DTO 与调用 Service；Service 持有业务规则；数据库仅通过 Repository / DatabaseService 访问。禁止循环依赖和 `forwardRef` 掩盖循环。
 - 对外契约以 Zod schema 为统一来源，DTO/校验/OpenAPI复用它；数据库模型不得直接作为外部响应。
-- data中的 configs/scenes/builtin 和 plugins/catalog 公共JSON是唯一展示内容来源，直接编辑完整配置；插件工件来自 plugins/packages 的独立副本。内容与部署 URL/凭据分离。
+- data中的 configs/scenes/builtin 和 plugins/catalog 公共JSON是唯一展示内容来源。插件目录由 `pnpm plugins:sync` 从官方 marketplace 同步，只过滤 `requiresPaidPlan=true`；其余字段与官方 ZIP/图片 URL 保持原样，Server 不保存插件包。
 - 接口浏览页面的行为与设计规则统一维护在 `specs/api-explorer.md`，样式实现位于 `src/documentation/styles.ts`。
 - 首版占位 API 返回明确失败，不生成令牌、分享地址、上传凭据或有效更新文件。不注册排除的接口，不运行时代理官方。
 - 使用异步 IO；不得在生产请求路径读取文件或跑迁移。不记录 body、query、Authorization、Cookie、数据库 URL或用户数据。

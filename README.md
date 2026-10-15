@@ -10,26 +10,21 @@
 
 技术栈为 **TypeScript + NestJS + Fastify + PostgreSQL + Prisma**，按功能模块组织单体服务。当前版本 **0.1.0**，兼容基线为 ZCode **3.14.3** 的相关客户端契约。
 
-
-
 ## 当前能力
 
-| 能力                                                        | 当前状态                                                          |
-| ----------------------------------------------------------- | ----------------------------------------------------------------- |
-| `GET /api/v1/client/configs`                                | 已实现：公共功能配置，兼容版本和平台参数                          |
-| `GET /api/v1/client/scenes`                                 | 已实现：草稿推荐、定时任务两个场景                                |
-| `GET /assets/builtin-config.json`                           | 已实现：15 个 API Key 供应商模板及模型规则                        |
-| `GET /api/v1/plugins/marketplace.json`                      | 已实现：21 个插件的元数据、分类及下载地址                         |
-| `GET/HEAD /assets/plugins/{name}/{version}/{sha256}/{file}` | 已实现：ZIP、图标与图片分发，支持 ETag、条件请求及 immutable 缓存 |
-| 登录 3 个、分享 6 个、反馈 5 个、更新 1 个 API              | 占位：HTTP 501，业务尚未实现                                      |
-| 模型网关、套餐额度、MCP 用量、闲时任务共 14 个 API          | 当前不提供：未注册路由，HTTP 404                                  |
-| PostgreSQL / Prisma                                         | 已提供迁移、连接生命周期和就绪检查；尚无账号或业务数据模型        |
+| 能力                                               | 当前状态                                                   |
+| -------------------------------------------------- | ---------------------------------------------------------- |
+| `GET /api/v1/client/configs`                       | 已实现：公共功能配置，兼容版本和平台参数                   |
+| `GET /api/v1/client/scenes`                        | 已实现：草稿推荐、定时任务两个场景                         |
+| `GET /assets/builtin-config.json`                  | 已实现：15 个 API Key 供应商模板及模型规则                 |
+| `GET /api/v1/plugins/marketplace.json`             | 已实现：27 个非付费官方插件的元数据、分类及下载地址        |
+| 登录 3 个、分享 6 个、反馈 5 个、更新 1 个 API     | 占位：HTTP 501，业务尚未实现                               |
+| 模型网关、套餐额度、MCP 用量、闲时任务共 14 个 API | 当前不提供：未注册路由，HTTP 404                           |
+| PostgreSQL / Prisma                                | 已提供迁移、连接生命周期和就绪检查；尚无账号或业务数据模型 |
 
-按方法与路径计数，32 个产品 API 中有 3 个已实现、15 个占位、14 个不提供；内置配置与插件工件资源另计。占位接口不会生成令牌、发布分享、创建工单、上传文件或返回安装包。
+按方法与路径计数，32 个产品 API 中有 3 个已实现、15 个占位、14 个不提供；内置配置资源另计。占位接口不会生成令牌、发布分享、创建工单、上传文件或返回安装包。
 
 完整契约见 [首版规范](specs/v1.md) 和 [机器可读接口清单](specs/api-inventory.json)。联调范围与验证证据见 [验证记录](docs/verification.md)。
-
-
 
 ## 快速部署
 
@@ -57,8 +52,6 @@ curl http://127.0.0.1:3000/api/v1/client/scenes
 
 更新代码或内容后运行 `docker compose up -d --build --wait`。`docker compose down` 保留数据；数据库使用持久化 volume，不要在生产环境使用 `down --volumes`。不要提交 `.env` 或在日志中打印凭据。
 
-
-
 ### HTTPS
 
 生产部署可接入已有 HTTPS 反向代理，将 `.env` 中的 `PUBLIC_ORIGIN` 设置为客户端能访问的公开 origin，例如 `https://your-server.example.com`。域名、证书、端口和防火墙按实际部署配置。
@@ -73,8 +66,6 @@ curl --cacert ./artifacts/local-root.crt https://localhost:8443/api/v1/client/sc
 ```
 
 Caddy 使用内部 CA，仅供本部署使用；客户端及其网络运行时需信任该 CA，服务不会自动修改宿主机信任库。提供的 Caddyfile 是本地 TLS 示例，默认绑定回环地址，不会自动发布公网服务。
-
-
 
 ## 连接 Open-ZCode
 
@@ -102,8 +93,6 @@ pnpm dev:desktop
 
 `ZCODE_BASE_URL` 控制相关产品服务接口。CDN、远程资源、第三方模型地址和客户端内置回退有各自规则；部署本服务不等于所有客户端网络请求都已改为自有地址。其他客户端仍可能保留官方帮助入口，需在各自 fork 中核对。
 
-
-
 ## 定制下发内容
 
 三份原有配置 JSON 与插件目录是公开内容的来源，直接编辑并纳入 Git，随镜像发布：
@@ -113,46 +102,40 @@ pnpm dev:desktop
 | [data/configs.json](data/configs.json)                 | 功能开关、反馈与社群入口、插件排序及内置配置下载入口         |
 | [data/scenes.json](data/scenes.json)                   | 草稿推荐、定时任务模板，包含本地化提示词、插件引用和调度规则 |
 | [data/builtin.json](data/builtin.json)                 | API Key 供应商模板与模型规则；修改后必须递增 revision        |
-| [data/plugins/catalog.json](data/plugins/catalog.json) | 插件元数据、分类、展示信息、下载地址及 SHA-256               |
-| [plugins/packages/](plugins/packages/)                 | 独立插件发行副本，按插件名与版本组织                         |
-| [plugins/assets/](plugins/assets/)                     | 插件图标及展示图片                                           |
-| [plugins/upstream/](plugins/upstream/)                 | 输入原件，保留来源与原始许可，不参与 Docker 构建             |
-| [plugins/sources.json](plugins/sources.json)           | 插件来源、版本、内容改动及兼容性记录                         |
+| [data/plugins/catalog.json](data/plugins/catalog.json) | 上游官方目录过滤 `requiresPaidPlan=true` 后的公开列表        |
 
-当前市场发布 21 个插件，Browser Use 与 Node Repl Host 仍由客户端提供。插件目录与工件由独立的 PluginMarketplaceService 管理；配置、场景和供应商模板由 PublicContentService 管理，均在启动时加载校验后的只读快照。
+当前市场发布官方目录中 `requiresPaidPlan !== true` 的 27 个插件；Browser Use 与 Node Repl Host 仍由客户端提供。Server 托管市场列表 API；插件 ZIP 和图片 URL 保持官方地址，客户端直接从官方 CDN 下载。
 
-插件维护时同步更新目录与发行副本的名称、版本和工件信息；内容变化必须使用新版本，保留原许可证及来源记录。`pnpm plugins:build` 离线生成 ZIP 和 SHA-256，输出到被忽略的 `plugin-artifacts/`；同一版本内容发生变化会拒绝构建。Mimosa 内容修改还需要按签名流程重新签名，详细规则见 [插件市场规范](specs/plugin-marketplace.md)。
+运行 `pnpm plugins:sync` 拉取官方市场目录并过滤付费插件，`pnpm plugins:check` 检查结果。Server 不下载、保存或改写插件包，详细规则见 [插件市场规范](specs/plugin-marketplace.md)。
 
 当前默认内容关闭验证码、强制更新、遥测、闲时任务、Start Plan 和套餐推广，个人与团队套餐目录为空。保留通用功能开关和插件排序，反馈与社群地址暂为空，可填写自己的入口。功能开关不代表客户端缺失的运行组件已经可用。
 
 场景仅保留当前客户端消费的草稿推荐与定时任务。供应商模板保留 15 个 API Key 模板，OpenAI 与 Anthropic 排在前两位；普通 BigModel / Z.ai API 模板保留，官方账号 Provider 与 Coding Plan API 模板已移除。第三方模型供应商地址保留其原有用途。
 
-configs 接口接受并校验 `app_version`、`platform` 及扩展参数；本版所有版本和平台返回相同内容。服务在启动时异步读取并校验原配置、插件目录与工件，建立只读快照；每次响应返回副本，修改文件后需要重启或重建。缺文件、无效 JSON 或既有结构校验失败会阻止启动。
+configs 接口接受并校验 `app_version`、`platform` 及扩展参数；本版所有版本和平台返回相同内容。服务在启动时异步读取并校验原配置和插件目录，建立只读快照；每次响应返回副本，修改文件后需要重启或重建。缺文件、无效 JSON 或既有结构校验失败会阻止启动。
 
 ```mermaid
 sequenceDiagram
-  participant Files as 配置 JSON、插件目录与已构建工件
+  participant Files as 配置 JSON 与插件目录
   participant Server as Server
   participant Client as Open-ZCode
   Files->>Server: 启动时加载与校验
   Server->>Server: 建立只读快照
-  Client->>Server: 请求配置、场景、模板或插件目录/工件
+  Client->>Server: 请求配置、场景、模板或插件目录
   Server-->>Client: 返回内容副本
 ```
 
 修改后的检查与发布：
 
 ```sh
-pnpm plugins:build
+pnpm plugins:sync
 pnpm plugins:check
 pnpm content:check
-# Docker 部署：重建应用，保留数据库与 TLS 容器。
+# Docker 部署：重建 API，保留数据库与 TLS volume。
 docker compose up -d --build --wait app
 ```
 
-本地开发则重启服务。所有命令从项目根目录执行，配置与目录读取 `data/`，插件分发工件读取 `plugin-artifacts/`；Docker 中分别为 `/app/data/` 和 `/app/plugin-artifacts/`。不要发布同 revision 的不同 builtin 内容或同版本的不同插件内容；不提供官方数据采集、自动导入、额外覆盖文件或运行时管理后台。详细规则见 [公开内容规范](specs/public-content.md) 和 [插件市场规范](specs/plugin-marketplace.md)。
-
-
+本地开发则重启服务。所有命令从项目根目录执行；配置与目录读取 `data/`。`pnpm plugins:sync` 只下载官方目录 JSON，过滤 `requiresPaidPlan === true` 的插件后保存市场列表，不下载或修改插件包。详细规则见 [公开内容规范](specs/public-content.md) 和 [插件市场规范](specs/plugin-marketplace.md)。
 
 ## 接口文档
 
@@ -161,8 +144,6 @@ docker compose up -d --build --wait app
 14 个不提供的接口仅列于文档，不注册路由；占位 POST 示例用于探测失败响应，不代表官方完整请求体。分享错误码 `3200` 来自客户端已知契约；通用占位码 `1501`、内部错误 `1500`、就绪失败 `1503` 是本项目定义。
 
 页面、JS/CSS 和文档均由本地服务提供，请求默认同源；`OPENAPI_ENABLED=false` 同时关闭 `/docs`、文档静态资源及原始 JSON / YAML。该入口用于服务端调试，独立于客户端接入。
-
-
 
 ## 本地开发与验证
 
@@ -192,29 +173,23 @@ pnpm test:compose
 
 贡献时遵循 [AGENTS.md](AGENTS.md) 和 [架构说明](docs/architecture.md)：先更新规范，再实现行为；功能模块通过公开入口依赖，Controller 不做 IO 或访问 Prisma，外部契约与数据库模型分开。
 
-
-
 ## 后续方向与兼容边界
 
 后续按实际需求扩展：自有账号与登录、分享的上传发布和预览、更新 manifest 与安装包、反馈工单与附件，以及版本或平台分流。反馈附件当前涉及客户端的 OSS 表单签名契约，不能直接用 S3 凭据替换。
 
 兼容依据是客户端源码和匿名公共接口样本。官方闭源实现的技术栈、内部数据模型与完整灰度算法未知；本项目不承诺兼容所有历史或未来客户端版本，也不提供官方套餐与账号权益。具体版本和联调范围以 [验证记录](docs/verification.md) 为准。
 
-
-
 ## 许可
 
 代码采用 [Apache-2.0](LICENSE)。本项目独立维护，上游客户端源码见 [ZCode](https://github.com/zai-org/ZCode)。
 
-
-
 ## 自建插件市场
 
-GET `/api/v1/plugins/marketplace.json` 提供原格式裸目录，当前发布 21 个插件；客户端沿用上游 v3.15.1 的内置插件与 Gen UI 资源；自建市场继续提供安装和更新。`/assets/plugins/{name}/{version}/{sha256}/plugin.zip` 提供完整 ZIP，图标与图片也来自当前服务。分类与排序保留原信息，作者统一 Open-ZCode，技能正文清理品牌词；技术标识和原始版权/许可保留。
+GET `/api/v1/plugins/marketplace.json` 返回上游原格式裸目录，只移除 `requiresPaidPlan === true` 的 14 个条目；其余 27 个条目的字段和顺序保持上游原样。插件包与图片仍使用官方 CDN URL，客户端直接下载；Browser Use 与 Node Repl Host 继续由客户端提供。
 
-`plugins/packages` 是服务端独立发行副本，`plugins/upstream` 保存输入原件，`plugins/sources.json` 记录来源和改动。编辑包后增加版本，再运行 `pnpm plugins:build`、`pnpm plugins:check` 和 `pnpm verify`。不要写入主机绝对路径、用户配置、凭据或虚拟环境。构建不依赖客户端仓库；镜像携带已验证工件。工件在启动时有界加载到内存，GET/HEAD 不读磁盘；ZIP 的 SHA-256、ETag 和长期缓存对应不可变内容。
+运行 `pnpm plugins:sync` 更新官方过滤后目录，`pnpm plugins:check` 验证条目来源和付费项过滤。
 
-Docker 更新使用 `docker compose up -d --build --wait app`，保留既有数据库和 TLS volume。客户端通过现有 `ZCODE_BASE_URL` 配置产品 Server origin，默认市场自动使用其 `/api/v1/plugins/marketplace.json` 路径；Server 的 `PUBLIC_ORIGIN` 配置为对应公开 HTTPS origin。本机地址只放在开发环境配置，不再改客户端源码中的 URL。商业发布前仍需检查办公插件的非商业条款和来源不完整的第三方材料。验收报告见 `docs/plugin-marketplace-verification.md`。
+Docker 更新使用 `docker compose up -d --build --wait app`，保留既有数据库和 TLS volume。客户端通过现有 `ZCODE_BASE_URL` 配置 Server origin，默认市场自动使用其 `/api/v1/plugins/marketplace.json` 路径。插件 ZIP/图片由客户端访问官方 CDN；Server 不承载这些包。验收报告见 `docs/plugin-marketplace-verification.md`。
 
 ## 普通公告
 

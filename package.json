@@ -11,7 +11,7 @@
   "packageManager": "pnpm@10.33.2",
   "scripts": {
     "dev": "prisma generate && tsx watch src/main.ts",
-    "build": "pnpm plugins:build && prisma generate && tsc -p tsconfig.json",
+    "build": "prisma generate && tsc -p tsconfig.json",
     "start": "node dist/main.js",
     "typecheck": "pnpm build && tsc --noEmit -p tsconfig.check.json",
     "lint": "eslint src tests scripts *.ts *.mjs",
@@ -24,9 +24,9 @@
     "db:generate": "prisma generate",
     "db:validate": "prisma validate",
     "db:migrate": "prisma migrate deploy",
+    "plugins:sync": "node scripts/sync-official-plugin-marketplace.mjs",
     "verify": "pnpm typecheck && pnpm lint && pnpm architecture:check && pnpm content:check && pnpm test && pnpm format:check",
     "test:compose": "node scripts/test-compose.mjs",
-    "plugins:build": "node scripts/build-plugin-marketplace.mjs",
     "plugins:check": "node scripts/check-plugin-marketplace.mjs"
   },
   "dependencies": {
@@ -51,7 +51,6 @@
     "@types/node": "24.10.13",
     "@types/pg": "8.23.1",
     "eslint": "10.11.0",
-    "fflate": "0.8.2",
     "prettier": "3.9.9",
     "tsx": "4.23.15",
     "typescript": "6.0.3",
