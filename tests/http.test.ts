@@ -175,20 +175,25 @@ describe('public content and wire compatibility', () => {
     expect(text).not.toContain('NAVIGATE:AUTOMATIONS:OFFPEAK');
   });
 
-  it('serves 15 API key templates with OpenAI/Anthropic first and no Coding Plan templates', async () => {
+  it('serves 16 API key templates with OpenAI/Anthropic first and no Coding Plan templates', async () => {
     const response = await fetch(origin + '/assets/builtin-config.json');
     expect(response.status).toBe(200);
     const release = BuiltinWire.parse(await response.json());
     expect(release.schemaVersion).toBe(1);
-    expect(release.revision).toBe(33);
+    expect(release.revision).toBe(35);
     expect(release.config.providerConfigRules.providerRules).toEqual([]);
     const templateIds = release.config.providerConfigRules.templateRules.map(
       (rule: { templateId: string }) => rule.templateId,
     );
-    expect(templateIds).toHaveLength(15);
+    expect(templateIds).toHaveLength(16);
     expect(templateIds.slice(0, 2)).toEqual(['openai', 'anthropic']);
     expect(templateIds).toEqual(
-      expect.arrayContaining(['deepseek', 'bigmodel-standard-api', 'zai-standard-api']),
+      expect.arrayContaining([
+        'deepseek',
+        'bigmodel-standard-api',
+        'zai-standard-api',
+        'xiaomi-mimo-token-plan',
+      ]),
     );
     expect(templateIds).not.toContain('bigmodel-api');
     expect(templateIds).not.toContain('zai-api');

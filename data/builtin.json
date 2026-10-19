@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 33,
+  "revision": 35,
   "config": {
     "providerConfigRules": {
       "templateRules": [
@@ -333,8 +333,8 @@
         {
           "templateId": "xiaomi-mimo",
           "templateNameMap": {
-            "zh-CN": "Xiaomi MiMo",
-            "en-US": "Xiaomi MiMo"
+            "zh-CN": "Xiaomi MiMo API",
+            "en-US": "Xiaomi MiMo API"
           },
           "config": {
             "access": {
@@ -352,6 +352,28 @@
               "mimo-v2.5-pro",
               "mimo-v2.5"
             ],
+            "logo": {
+              "type": "builtin",
+              "key": "xiaomi-mimo"
+            }
+          }
+        },
+        {
+          "templateId": "xiaomi-mimo-token-plan",
+          "templateNameMap": {
+            "zh-CN": "Xiaomi MiMo Token Plan",
+            "en-US": "Xiaomi MiMo Token Plan"
+          },
+          "config": {
+            "access": {
+              "type": "api-key",
+              "apiKeyManagementUrl": "https://platform.xiaomimimo.com/"
+            },
+            "api": {
+              "type": "anthropic-messages",
+              "baseUrl": "https://token-plan-cn.xiaomimimo.com/anthropic"
+            },
+            "builtinModelIds": ["mimo-v2.6-pro", "mimo-v2.6-flash"],
             "logo": {
               "type": "builtin",
               "key": "xiaomi-mimo"
@@ -614,7 +636,7 @@
           "config": {
             "enabled": true,
             "properties": {
-              "contextWindow": 200000,
+              "contextWindow": 1000000,
               "inputFormat": {
                 "supportsText": true,
                 "supportsImage": false,
@@ -633,29 +655,11 @@
             },
             "optionSpecs": {
               "maxOutputTokens": {
-                "max": 32000
+                "max": 128000
               },
               "reasoningLevel": {
                 "values": ["disabled"],
                 "map": "{}"
-              }
-            }
-          }
-        },
-        {
-          "modelMatch": ".*\\[1m\\]",
-          "config": {
-            "properties": {
-              "contextWindow": 1000000
-            }
-          }
-        },
-        {
-          "modelMatch": ".*(?:ox-alpha|glm-x-preview-f|x-preview-f-free).*",
-          "config": {
-            "optionSpecs": {
-              "maxOutputTokens": {
-                "max": 128000
               }
             }
           }
@@ -3750,6 +3754,20 @@
         {
           "modelId": "mimo-v2.5",
           "templateId": "xiaomi-mimo",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "mimo-v2.6-pro",
+          "templateId": "xiaomi-mimo-token-plan",
+          "config": {
+            "enabled": true
+          }
+        },
+        {
+          "modelId": "mimo-v2.6-flash",
+          "templateId": "xiaomi-mimo-token-plan",
           "config": {
             "enabled": true
           }

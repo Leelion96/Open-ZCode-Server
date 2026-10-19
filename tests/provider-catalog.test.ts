@@ -27,7 +27,12 @@ const release = JSON.parse(await readFile('data/builtin.json', 'utf8')) as {
     providerConfigRules: {
       templateRules: {
         templateId: string;
-        config: { api: { type: string }; builtinModelIds: string[] };
+        templateNameMap: Record<string, string>;
+        config: {
+          access: { type: string; apiKeyManagementUrl: string };
+          api: { type: string; baseUrl: string };
+          builtinModelIds: string[];
+        };
       }[];
     };
     modelConfigRules: {
@@ -46,6 +51,7 @@ const latest = {
   'zai-standard-api': ['GLM-5.2', 'GLM-5.3-FlashX'],
   'bigmodel-standard-api': ['GLM-5.2', 'GLM-5.3-FlashX'],
   'xiaomi-mimo': ['mimo-v2.6-pro', 'mimo-v2.6-flash', 'mimo-v2.6-pro-ultraspeed'],
+  'xiaomi-mimo-token-plan': ['mimo-v2.6-pro', 'mimo-v2.6-flash'],
   xai: ['grok-4.7'],
   openrouter: ['openai/gpt-6.1-sol', 'anthropic/claude-sonnet-5.5', 'z-ai/glm-5.3-flashx'],
   'opencode-zen-responses': ['gpt-6.1-sol', 'gpt-6-sol', 'gpt-6-luna', 'grok-4.7'],
@@ -53,10 +59,11 @@ const latest = {
   'opencode-zen-chat': ['deepseek-v4.1-flash', 'glm-5.3', 'glm-5.3-flash', 'mimo-v2.6-flash-free'],
 } as const;
 
-describe('official provider catalog revision 33', () => {
+describe('merged provider catalog revision 35', () => {
   it('publishes the verified model IDs through the existing templates', () => {
-    expect(release.revision).toBe(33);
-    expect(templates).toHaveLength(15);
+    // 客户端随包34已发布不同内容，本次远端目录必须递增到35才能正常应用。
+    expect(release.revision).toBe(35);
+    expect(templates).toHaveLength(16);
     for (const [templateId, modelIds] of Object.entries(latest)) {
       const template = templates.find((item) => item.templateId === templateId);
       expect(template?.config.builtinModelIds).toEqual(expect.arrayContaining([...modelIds]));
@@ -70,7 +77,46 @@ describe('official provider catalog revision 33', () => {
     }
   });
 
+  it('adds the separate MiMo Token Plan without replacing ordinary API models', () => {
+    const apiIndex = templates.findIndex((item) => item.templateId === 'xiaomi-mimo');
+    const api = templates[apiIndex]!;
+    const plan = templates[apiIndex + 1]!;
+    expect(api.templateNameMap).toEqual({
+      'zh-CN': 'Xiaomi MiMo API',
+      'en-US': 'Xiaomi MiMo API',
+    });
+    expect(api.config.api.baseUrl).toBe('https://api.xiaomimimo.com/anthropic');
+    expect(api.config.builtinModelIds).toEqual([
+      'mimo-v2.6-pro',
+      'mimo-v2.6-pro-ultraspeed',
+      'mimo-v2.6-flash',
+      'mimo-v2.5-pro',
+      'mimo-v2.5',
+    ]);
+    expect(plan.templateId).toBe('xiaomi-mimo-token-plan');
+    expect(plan.config.access).toEqual({
+      type: 'api-key',
+      apiKeyManagementUrl: 'https://platform.xiaomimimo.com/',
+    });
+    expect(plan.config.api).toEqual({
+      type: 'anthropic-messages',
+      baseUrl: 'https://token-plan-cn.xiaomimimo.com/anthropic',
+    });
+    expect(plan.config.builtinModelIds).toEqual(['mimo-v2.6-pro', 'mimo-v2.6-flash']);
+  });
+
+  it('adopts upstream generic limits while retaining the unknown-model reasoning policy', () => {
+    const fallback = rules.modelRules.find((rule) => rule.modelMatch === '.*')!;
+    expect(fallback.config.properties?.contextWindow).toBe(1000000);
+    expect(fallback.config.optionSpecs?.maxOutputTokens?.max).toBe(128000);
+    expect(fallback.config.optionSpecs?.reasoningLevel?.values).toEqual(['disabled']);
+  });
+
   it('keeps new rules paired with models and avoids duplicate template identities', () => {
+    expect(rules.templateModelRules).toHaveLength(265);
+    expect(
+      templates.reduce((count, template) => count + template.config.builtinModelIds.length, 0),
+    ).toBe(265);
     for (const template of templates) {
       expect(new Set(template.config.builtinModelIds).size).toBe(
         template.config.builtinModelIds.length,
@@ -78,6 +124,12 @@ describe('official provider catalog revision 33', () => {
     }
     const identities = rules.templateModelRules.map((rule) => `${rule.templateId}/${rule.modelId}`);
     expect(new Set(identities).size).toBe(identities.length);
+    for (const rule of rules.templateModelRules) {
+      expect(
+        templates.find((template) => template.templateId === rule.templateId)?.config
+          .builtinModelIds,
+      ).toContain(rule.modelId);
+    }
     for (const [templateId, modelIds] of Object.entries(latest)) {
       for (const modelId of modelIds) {
         expect(identities).toContain(`${templateId}/${modelId}`);
@@ -99,6 +151,15 @@ describe('official provider catalog revision 33', () => {
     expect(
       templates.find((item) => item.templateId === 'minimax')?.config.builtinModelIds,
     ).not.toContain('MiniMax-M3.1-Flash-Preview');
+    for (const templateId of [
+      'bigmodel-api',
+      'zai-api',
+      'opencode-go-chat',
+      'opencode-go-messages',
+      'opencode-go-responses',
+    ]) {
+      expect(templates.some((template) => template.templateId === templateId)).toBe(false);
+    }
   });
 
   it('separates GPT-6.1 reasoning from Sol/Luna and preserves Responses routing', () => {
