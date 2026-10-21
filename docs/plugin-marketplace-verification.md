@@ -1,5 +1,13 @@
 # 插件市场实现与验收
 
+## 2026-10-21 配套 v3.16.2 客户端合并
+
+- 沿用 `pnpm plugins:sync` 下载官方目录；源 SHA-256 为 `5a428f3770b7293cecc39a083606e734261b3813d20138ec0a7c863a445e607a`。47 个条目中过滤 14 个付费项，发布 33 个（20 个 official、13 个 community）；其余字段、顺序、包 URL、图片及签名元数据原样保留。
+- 新增 zcode-context、jupyter-notebook、typst-workbench、zotero、unreal-engine、anet；12 个已有插件条目更新。CDN 独立发布，本记录不把全部目录变化归因于 v3.16.2 源码提交。
+- HTTP/离线加载断言同步到 33 条，覆盖新增插件及 community / UI 字段；`app_version=3.16.2` 与无版本、旧版本和未知版本继续返回同一配置。未变更生产 API、数据库、模型目录 revision 35、工作流 alwaysOn 或部署配置。
+- 同步后先确认旧 27 条断言在真实 Fastify HTTP / 离线加载两处失败，再更新对应快照预期；`pnpm verify` 通过：typecheck、lint、架构（52 个生产源码文件）、内容、8 文件 / 78 项测试及全仓格式。`pnpm plugins:check` 通过。
+- 本次未执行 Compose 发布、数据库迁移或生产 TLS/手机联调，未下载或保存插件包、未修改正常用户资料；服务重启或重建后才会加载新目录。按用户明确授权在 `main` 创建中文提交，不推送。
+
 ## 2026-10-15 官方目录同步
 
 - 当前同步输入：官方 `marketplace.json`。41 个条目中排除 14 个 `requiresPaidPlan === true` 条目，Server 清单现为 27 个。

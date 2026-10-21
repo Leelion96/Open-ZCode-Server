@@ -113,6 +113,7 @@ describe('public content and wire compatibility', () => {
     for (const query of [
       '',
       '?app_version=3.14.3&platform=darwin-arm64',
+      '?app_version=3.16.2&platform=darwin-arm64',
       '?app_version=99.0.0&platform=unknown',
     ]) {
       const response = await fetch(origin + '/api/v1/client/configs' + query);
@@ -122,6 +123,7 @@ describe('public content and wire compatibility', () => {
     }
     expect(responses[1]).toEqual(responses[0]);
     expect(responses[2]).toEqual(responses[0]);
+    expect(responses[3]).toEqual(responses[0]);
   });
 
   it('serves only the two consumed scenes with intact localized prompts and default references', async () => {

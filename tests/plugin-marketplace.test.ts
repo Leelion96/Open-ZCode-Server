@@ -35,7 +35,23 @@ describe('filtered official plugin marketplace', () => {
     expect(response.status).toBe(200);
     expect(response.headers.get('cache-control')).toBe('no-cache');
     expect(body).toEqual(snapshot);
-    expect(catalog.plugins).toHaveLength(27);
+    expect(catalog.plugins).toHaveLength(33);
+    expect(catalog.plugins.map((plugin) => plugin.name)).toEqual(
+      expect.arrayContaining([
+        'zcode-context',
+        'jupyter-notebook',
+        'typst-workbench',
+        'zotero',
+        'unreal-engine',
+        'anet',
+      ]),
+    );
+    expect(catalog.plugins.find((plugin) => plugin.name === 'excalidraw')?.publisherType).toBe(
+      'community',
+    );
+    expect(
+      catalog.plugins.find((plugin) => plugin.name === 'jupyter-notebook')?.componentTypes,
+    ).toEqual(['skill', 'mcp', 'ui']);
     expect(catalog.plugins.some((plugin) => plugin.requiresPaidPlan === true)).toBe(false);
     expect(
       catalog.plugins.every((plugin) => new URL(plugin.source.url).hostname === 'cdn-zcode.z.ai'),
@@ -49,7 +65,7 @@ describe('filtered official plugin marketplace', () => {
     const network = vi.spyOn(globalThis, 'fetch').mockRejectedValue(new Error('offline'));
     try {
       const loaded = await loadCatalog(resolve('data/plugins/catalog.json'));
-      expect(loaded.plugins).toHaveLength(27);
+      expect(loaded.plugins).toHaveLength(33);
       expect(network).not.toHaveBeenCalled();
     } finally {
       network.mockRestore();

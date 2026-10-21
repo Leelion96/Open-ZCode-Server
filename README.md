@@ -8,7 +8,7 @@
 
 客户端通过 `ZCODE_BASE_URL` 接入自建服务，沿用已有请求与解析逻辑，做到尽量减少 fork 改动。当前已支持公共配置、供应商模板与自动化模板下发，内容由仓库中的 JSON 文件维护；登录、分享、反馈和更新业务留待后续实现。
 
-技术栈为 **TypeScript + NestJS + Fastify + PostgreSQL + Prisma**，按功能模块组织单体服务。当前版本 **0.1.0**，兼容基线为 ZCode **3.14.3** 的相关客户端契约。
+技术栈为 **TypeScript + NestJS + Fastify + PostgreSQL + Prisma**，按功能模块组织单体服务。当前版本 **0.1.0**，沿用 ZCode 公共接口契约，本轮配套更新客户端 **3.16.2**；具体验证范围见下方记录。
 
 ## 当前能力
 
@@ -17,7 +17,7 @@
 | `GET /api/v1/client/configs`                       | 已实现：公共功能配置，兼容版本和平台参数                   |
 | `GET /api/v1/client/scenes`                        | 已实现：草稿推荐、定时任务两个场景                         |
 | `GET /assets/builtin-config.json`                  | 已实现：15 个 API Key 供应商模板及模型规则                 |
-| `GET /api/v1/plugins/marketplace.json`             | 已实现：27 个非付费官方插件的元数据、分类及下载地址        |
+| `GET /api/v1/plugins/marketplace.json`             | 已实现：33 个非付费官方插件的元数据、分类及下载地址        |
 | 登录 3 个、分享 6 个、反馈 5 个、更新 1 个 API     | 占位：HTTP 501，业务尚未实现                               |
 | 模型网关、套餐额度、MCP 用量、闲时任务共 14 个 API | 当前不提供：未注册路由，HTTP 404                           |
 | PostgreSQL / Prisma                                | 已提供迁移、连接生命周期和就绪检查；尚无账号或业务数据模型 |
@@ -104,7 +104,7 @@ pnpm dev:desktop
 | [data/builtin.json](data/builtin.json)                 | API Key 供应商模板与模型规则；修改后必须递增 revision        |
 | [data/plugins/catalog.json](data/plugins/catalog.json) | 上游官方目录过滤 `requiresPaidPlan=true` 后的公开列表        |
 
-当前市场发布官方目录中 `requiresPaidPlan !== true` 的 27 个插件；Browser Use 与 Node Repl Host 仍由客户端提供。Server 托管市场列表 API；插件 ZIP 和图片 URL 保持官方地址，客户端直接从官方 CDN 下载。
+当前市场发布官方目录中 `requiresPaidPlan !== true` 的 33 个插件；Browser Use 与 Node Repl Host 仍由客户端提供。Server 托管市场列表 API；插件 ZIP 和图片 URL 保持官方地址，客户端直接从官方 CDN 下载。
 
 运行 `pnpm plugins:sync` 拉取官方市场目录并过滤付费插件，`pnpm plugins:check` 检查结果。Server 不下载、保存或改写插件包，详细规则见 [插件市场规范](specs/plugin-marketplace.md)。
 
@@ -185,7 +185,7 @@ pnpm test:compose
 
 ## 自建插件市场
 
-GET `/api/v1/plugins/marketplace.json` 返回上游原格式裸目录，只移除 `requiresPaidPlan === true` 的 14 个条目；其余 27 个条目的字段和顺序保持上游原样。插件包与图片仍使用官方 CDN URL，客户端直接下载；Browser Use 与 Node Repl Host 继续由客户端提供。
+GET `/api/v1/plugins/marketplace.json` 返回上游原格式裸目录，只移除 `requiresPaidPlan === true` 的 14 个条目；其余 33 个条目的字段和顺序保持上游原样。插件包与图片仍使用官方 CDN URL，客户端直接下载；Browser Use 与 Node Repl Host 继续由客户端提供。
 
 运行 `pnpm plugins:sync` 更新官方过滤后目录，`pnpm plugins:check` 验证条目来源和付费项过滤。
 

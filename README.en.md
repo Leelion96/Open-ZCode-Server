@@ -15,7 +15,7 @@ The client connects through `ZCODE_BASE_URL` while retaining its existing reques
 - **Deploy and run independently**: Docker Compose, an HTTPS example, and local API documentation are included. The service does not request or proxy official configuration services at runtime.
 - **Clear capability boundaries**: implemented, placeholder, and unavailable APIs are distinguished with explicit responses; a registered route does not imply a working business capability.
 
-The stack is **TypeScript + NestJS + Fastify + PostgreSQL + Prisma**, organized as a modular monolith. The current version is **0.1.0**, with compatibility based on the relevant ZCode **3.14.3** client contracts.
+The stack is **TypeScript + NestJS + Fastify + PostgreSQL + Prisma**, organized as a modular monolith. The current version is **0.1.0**, following the ZCode public API contracts, with this update accompanying client **3.16.2**; see the verification records for the tested scope.
 
 ## Relationship with Open-ZCode
 
@@ -34,7 +34,7 @@ Open-ZCode owns the application UI, workspaces, sessions, and Agent runtime; thi
 | `GET /api/v1/client/configs`                                    | Implemented: public feature configuration, with compatible version and platform parameters                                |
 | `GET /api/v1/client/scenes`                                     | Implemented: draft suggestions and scheduled-task scenes                                                                  |
 | `GET /assets/builtin-config.json`                               | Implemented: 15 API Key provider templates and model rules                                                                |
-| `GET /api/v1/plugins/marketplace.json`                          | Implemented: metadata, categories, and download URLs for 27 non-paid official plugins                                     |
+| `GET /api/v1/plugins/marketplace.json`                          | Implemented: metadata, categories, and download URLs for 33 non-paid official plugins                                     |
 | 3 login, 6 sharing, 5 feedback, and 1 update APIs               | Placeholders: HTTP 501; business capabilities are not implemented                                                         |
 | 14 model gateway, plan quota, MCP usage, and off-peak task APIs | Unavailable: routes are not registered, returning HTTP 404                                                                |
 | PostgreSQL / Prisma                                             | Migrations, connection lifecycle, and readiness checks are provided; account and business data models are not implemented |
@@ -121,7 +121,7 @@ The three original configuration JSON files and the plugin catalog define public
 | [data/builtin.json](data/builtin.json)                 | API Key provider templates and model rules; increment revision after changes                                         |
 | [data/plugins/catalog.json](data/plugins/catalog.json) | Official catalog with paid-plan entries removed                                                                      |
 
-The marketplace publishes 27 official entries whose `requiresPaidPlan` is not `true`. Browser Use and Node Repl Host remain client-provided. PluginMarketplaceService owns the catalog; clients fetch package archives and images from the official CDN. PublicContentService owns configuration, scenes, and provider templates.
+The marketplace publishes 33 official marketplace entries whose `requiresPaidPlan` is not `true`. Browser Use and Node Repl Host remain client-provided. PluginMarketplaceService owns the catalog; clients fetch package archives and images from the official CDN. PublicContentService owns configuration, scenes, and provider templates.
 
 Run `pnpm plugins:sync` to fetch the official marketplace JSON and remove paid-plan entries. `pnpm plugins:check` validates the resulting listing. Plugin metadata and package contents remain unchanged. See the [Plugin Marketplace Specification](specs/plugin-marketplace.md).
 
@@ -202,7 +202,7 @@ Code is licensed under [Apache-2.0](LICENSE). This project is independently main
 
 ## Self-hosted plugin marketplace
 
-GET `/api/v1/plugins/marketplace.json` returns the upstream catalog format, with only the 14 entries marked `requiresPaidPlan: true` removed. The remaining 27 entries retain their upstream fields, order, authors, versions, package URLs, and images. Clients fetch ZIPs and images directly from the official CDN. Browser Use and Node Repl Host remain client-provided.
+GET `/api/v1/plugins/marketplace.json` returns the upstream catalog format, with only the 14 entries marked `requiresPaidPlan: true` removed. The remaining 33 entries retain their upstream fields, order, authors, versions, package URLs, and images. Clients fetch ZIPs and images directly from the official CDN. Browser Use and Node Repl Host remain client-provided.
 
 Configure the client's existing `ZCODE_BASE_URL` with the product Server origin. Its default marketplace uses that origin and `/api/v1/plugins/marketplace.json`; configure the Server's `PUBLIC_ORIGIN` with the corresponding public HTTPS origin. Keep local addresses in development configuration rather than editing client source URLs.
 

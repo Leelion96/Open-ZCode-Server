@@ -78,8 +78,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/github/0.1.2/plugin.zip",
-        "sha256": "7320f15886d83625ed8eec944a7a2ab09fe99d64a42131ccec427eeecfd769b6",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/github/0.1.3/plugin.zip",
+        "sha256": "145c3b37d2527f3ba69cf200694e01629db22ac42e33011c0ded67b3d2a96755",
         "path": "github"
       },
       "description": "GitHub CLI workflows for commits, pull requests, issues, releases, Actions, repositories, Codespaces, and other GitHub resources.",
@@ -87,7 +87,7 @@
         "en": "GitHub CLI workflows for commits, pull requests, issues, releases, Actions, repositories, Codespaces, and other GitHub resources.",
         "zh-CN": "基于 GitHub CLI 的 GitHub 工作流，覆盖提交、Pull Request、Issue、Release、Actions、仓库、Codespaces 等资源。"
       },
-      "version": "0.1.2",
+      "version": "0.1.3",
       "author": {
         "name": "Z.ai",
         "url": "https://z.ai"
@@ -107,9 +107,9 @@
       "publisherType": "official",
       "componentTypes": ["skill"],
       "_artifact": {
-        "path": "plugins/github/0.1.2/plugin.zip",
-        "sha256": "7320f15886d83625ed8eec944a7a2ab09fe99d64a42131ccec427eeecfd769b6",
-        "size": 30173
+        "path": "plugins/github/0.1.3/plugin.zip",
+        "sha256": "145c3b37d2527f3ba69cf200694e01629db22ac42e33011c0ded67b3d2a96755",
+        "size": 30292
       }
     },
     {
@@ -555,12 +555,12 @@
         "en": "Excalidraw",
         "zh-CN": "Excalidraw"
       },
-      "version": "0.2.2",
+      "version": "0.3.4",
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/excalidraw/0.2.2/plugin.zip",
-        "sha256": "34a6170b72aafb7761d05930f9c1bab484efeae3d0d83f59217a4d569666b16e",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/excalidraw/0.3.4/plugin.zip",
+        "sha256": "3ff2bbe7bfbf906bc19ee79cbbd3797daa5b6fb2f8b60513ca7793b7914ed7f3",
         "path": "excalidraw"
       },
       "description": "让 Agent 生成图形，在对话侧栏用 Excalidraw 编辑、引用选区、继续修改并导出。",
@@ -570,14 +570,14 @@
       },
       "category": "productivity",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/excalidraw/icon.png",
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/excalidraw/0.2.2/plugin.zip",
-        "sha256": "34a6170b72aafb7761d05930f9c1bab484efeae3d0d83f59217a4d569666b16e",
-        "size": 16275280
+        "path": "plugins/excalidraw/0.3.4/plugin.zip",
+        "sha256": "3ff2bbe7bfbf906bc19ee79cbbd3797daa5b6fb2f8b60513ca7793b7914ed7f3",
+        "size": 16278945
       }
     },
     {
@@ -588,12 +588,12 @@
         "en": "OpenPencil",
         "zh-CN": "OpenPencil"
       },
-      "version": "0.3.1",
+      "version": "0.3.2",
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/openpencil/0.3.1/plugin.zip",
-        "sha256": "859ea449d106f068ac5677c34288caa1c86c9a18d020c5d6ed9e221eae2a2cb7",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/openpencil/0.3.2/plugin.zip",
+        "sha256": "250343f97c54e05b386ed765bf76cfc6d96ec0bbcc9477deb2fad9f8c92ad4d5",
         "path": "openpencil"
       },
       "description": "在对话侧栏用 OpenPencil 编辑工作区里的 Figma .fig 设计稿，Agent 通过设计工具协同修改、引用选区并生成代码。",
@@ -603,14 +603,14 @@
       },
       "category": "productivity",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/openpencil/icon.png",
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/openpencil/0.3.1/plugin.zip",
-        "sha256": "859ea449d106f068ac5677c34288caa1c86c9a18d020c5d6ed9e221eae2a2cb7",
-        "size": 18356830
+        "path": "plugins/openpencil/0.3.2/plugin.zip",
+        "sha256": "250343f97c54e05b386ed765bf76cfc6d96ec0bbcc9477deb2fad9f8c92ad4d5",
+        "size": 18356839
       }
     },
     {
@@ -619,8 +619,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/photocraft/0.2.2/plugin.zip",
-        "sha256": "30d8aa18f00a77841518f846f8978b18fa7c2066c2ff56bf16cbbc0599c9eca1",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/photocraft/0.2.3/plugin.zip",
+        "sha256": "d0c29fa9e6af80a2c91c96a093f45dde44ef755deb09041953bf145048830d25",
         "path": "photocraft"
       },
       "componentTypes": ["command", "mcp", "ui"],
@@ -634,17 +634,17 @@
         "en": "PhotoCraft image editing in a ZCode panel, with workspace file opening and host-mediated exports.",
         "zh-CN": "在 ZCode 面板中使用 PhotoCraft 进行图片编辑，支持打开工作区文件和通过宿主保存导出。"
       },
-      "version": "0.2.2",
+      "version": "0.2.3",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "category": "productivity",
       "keywords": ["artcraft", "wasm", "ui-plugin", "photocraft"],
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/photocraft/0.2.2/plugin.zip",
-        "sha256": "30d8aa18f00a77841518f846f8978b18fa7c2066c2ff56bf16cbbc0599c9eca1",
-        "size": 24380473
+        "path": "plugins/photocraft/0.2.3/plugin.zip",
+        "sha256": "d0c29fa9e6af80a2c91c96a093f45dde44ef755deb09041953bf145048830d25",
+        "size": 24380476
       }
     },
     {
@@ -653,8 +653,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/vectorcraft/0.2.2/plugin.zip",
-        "sha256": "68aeea49302d686d041111e678d453978ae4a5af73f7095a6a8dfa1325dc2e06",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/vectorcraft/0.2.3/plugin.zip",
+        "sha256": "cc1dba52e3edafb33a15cf794352cf8ac4df66222f9333b7747f4904158f4e1a",
         "path": "vectorcraft"
       },
       "componentTypes": ["command", "mcp", "ui"],
@@ -668,17 +668,17 @@
         "en": "VectorCraft vector illustration in a ZCode panel, with workspace file opening and host-mediated exports.",
         "zh-CN": "在 ZCode 面板中使用 VectorCraft 进行矢量绘图，支持打开工作区文件和通过宿主保存导出。"
       },
-      "version": "0.2.2",
+      "version": "0.2.3",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "category": "productivity",
       "keywords": ["artcraft", "wasm", "ui-plugin", "vectorcraft"],
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/vectorcraft/0.2.2/plugin.zip",
-        "sha256": "68aeea49302d686d041111e678d453978ae4a5af73f7095a6a8dfa1325dc2e06",
-        "size": 45831414
+        "path": "plugins/vectorcraft/0.2.3/plugin.zip",
+        "sha256": "cc1dba52e3edafb33a15cf794352cf8ac4df66222f9333b7747f4904158f4e1a",
+        "size": 45831416
       }
     },
     {
@@ -687,8 +687,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/pdfcraft/0.2.2/plugin.zip",
-        "sha256": "e2e982cb2f940a3aceaea9930ff905962c9a685d25c7078e8874dfc295d3dfb5",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/pdfcraft/0.2.3/plugin.zip",
+        "sha256": "d9dcc3c995fbeaab08eeab36fc0fc7f2bdda0bc8a1d561e76b13a768570c0996",
         "path": "pdfcraft"
       },
       "componentTypes": ["command", "mcp", "ui"],
@@ -702,17 +702,17 @@
         "en": "PdfCraft PDF editing in a ZCode panel, with workspace file opening and host-mediated exports.",
         "zh-CN": "在 ZCode 面板中使用 PdfCraft 进行PDF 编辑，支持打开工作区文件和通过宿主保存导出。"
       },
-      "version": "0.2.2",
+      "version": "0.2.3",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "category": "productivity",
       "keywords": ["artcraft", "wasm", "ui-plugin", "pdfcraft"],
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/pdfcraft/0.2.2/plugin.zip",
-        "sha256": "e2e982cb2f940a3aceaea9930ff905962c9a685d25c7078e8874dfc295d3dfb5",
-        "size": 40237956
+        "path": "plugins/pdfcraft/0.2.3/plugin.zip",
+        "sha256": "d9dcc3c995fbeaab08eeab36fc0fc7f2bdda0bc8a1d561e76b13a768570c0996",
+        "size": 40237959
       }
     },
     {
@@ -721,8 +721,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/designcraft/0.2.2/plugin.zip",
-        "sha256": "5bc3c51c9c2f2135f20e48368df6cb11709c16956caaa99d7956407a4a1ecbdb",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/designcraft/0.2.3/plugin.zip",
+        "sha256": "9ac18287f29c8ac779201e5451f63512ebac47147f36e40e8e08fcf5f87ccd79",
         "path": "designcraft"
       },
       "componentTypes": ["command", "mcp", "ui"],
@@ -736,17 +736,17 @@
         "en": "DesignCraft page layout in a ZCode panel, with workspace file opening and host-mediated exports.",
         "zh-CN": "在 ZCode 面板中使用 DesignCraft 进行页面排版，支持打开工作区文件和通过宿主保存导出。"
       },
-      "version": "0.2.2",
+      "version": "0.2.3",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "category": "productivity",
       "keywords": ["artcraft", "wasm", "ui-plugin", "designcraft"],
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/designcraft/0.2.2/plugin.zip",
-        "sha256": "5bc3c51c9c2f2135f20e48368df6cb11709c16956caaa99d7956407a4a1ecbdb",
-        "size": 40882626
+        "path": "plugins/designcraft/0.2.3/plugin.zip",
+        "sha256": "9ac18287f29c8ac779201e5451f63512ebac47147f36e40e8e08fcf5f87ccd79",
+        "size": 40882627
       }
     },
     {
@@ -755,8 +755,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/wordcraft/0.2.2/plugin.zip",
-        "sha256": "ce8e1df85d03a2a46247e46687a9897e4728142c7a61966c3521230e58b6c384",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/wordcraft/0.2.3/plugin.zip",
+        "sha256": "96db9e9d77504a32893dc7f7bbac3f7da66e43d8ad31279832714519de9f85c7",
         "path": "wordcraft"
       },
       "componentTypes": ["command", "mcp", "ui"],
@@ -770,17 +770,17 @@
         "en": "WordCraft word processing in a ZCode panel, with workspace file opening and host-mediated exports.",
         "zh-CN": "在 ZCode 面板中使用 WordCraft 进行文字处理，支持打开工作区文件和通过宿主保存导出。"
       },
-      "version": "0.2.2",
+      "version": "0.2.3",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "category": "productivity",
       "keywords": ["artcraft", "wasm", "ui-plugin", "wordcraft"],
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/wordcraft/0.2.2/plugin.zip",
-        "sha256": "ce8e1df85d03a2a46247e46687a9897e4728142c7a61966c3521230e58b6c384",
-        "size": 39952423
+        "path": "plugins/wordcraft/0.2.3/plugin.zip",
+        "sha256": "96db9e9d77504a32893dc7f7bbac3f7da66e43d8ad31279832714519de9f85c7",
+        "size": 39952425
       }
     },
     {
@@ -789,8 +789,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/gridcraft/0.2.2/plugin.zip",
-        "sha256": "8a84f38bfe45558874325b9128f0c4fe8a2fa02654787242e6970faac3e9dffc",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/gridcraft/0.2.3/plugin.zip",
+        "sha256": "f17d575f5f74a719f998ada796736d0c7405c32caf0418211405e40daba963c4",
         "path": "gridcraft"
       },
       "componentTypes": ["command", "mcp", "ui"],
@@ -804,17 +804,17 @@
         "en": "GridCraft spreadsheets in a ZCode panel, with workspace file opening and host-mediated exports.",
         "zh-CN": "在 ZCode 面板中使用 GridCraft 进行电子表格，支持打开工作区文件和通过宿主保存导出。"
       },
-      "version": "0.2.2",
+      "version": "0.2.3",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "category": "productivity",
       "keywords": ["artcraft", "wasm", "ui-plugin", "gridcraft"],
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/gridcraft/0.2.2/plugin.zip",
-        "sha256": "8a84f38bfe45558874325b9128f0c4fe8a2fa02654787242e6970faac3e9dffc",
-        "size": 20115022
+        "path": "plugins/gridcraft/0.2.3/plugin.zip",
+        "sha256": "f17d575f5f74a719f998ada796736d0c7405c32caf0418211405e40daba963c4",
+        "size": 20115024
       }
     },
     {
@@ -823,8 +823,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/deckcraft/0.2.2/plugin.zip",
-        "sha256": "a1b6ec2803038200050a8869444ca132d714c2a871397d2bc8547fdc0ad8b5f7",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/deckcraft/0.2.3/plugin.zip",
+        "sha256": "6f2d4c4a7ca4ca142e2bd12423723038ee1439513f949f183d48cfe1fdadfe13",
         "path": "deckcraft"
       },
       "componentTypes": ["command", "mcp", "ui"],
@@ -838,17 +838,17 @@
         "en": "DeckCraft presentations in a ZCode panel, with workspace file opening and host-mediated exports.",
         "zh-CN": "在 ZCode 面板中使用 DeckCraft 进行演示文稿，支持打开工作区文件和通过宿主保存导出。"
       },
-      "version": "0.2.2",
+      "version": "0.2.3",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "category": "productivity",
       "keywords": ["artcraft", "wasm", "ui-plugin", "deckcraft"],
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/deckcraft/0.2.2/plugin.zip",
-        "sha256": "a1b6ec2803038200050a8869444ca132d714c2a871397d2bc8547fdc0ad8b5f7",
-        "size": 34801700
+        "path": "plugins/deckcraft/0.2.3/plugin.zip",
+        "sha256": "6f2d4c4a7ca4ca142e2bd12423723038ee1439513f949f183d48cfe1fdadfe13",
+        "size": 34801703
       }
     },
     {
@@ -857,8 +857,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/cadcraft/0.2.2/plugin.zip",
-        "sha256": "2ffa6cb8325dbe623130e802aa59d6141a272afe9177822030444a18b1743cbe",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/cadcraft/0.2.3/plugin.zip",
+        "sha256": "b19740f5172be1a529feeade992f02f13482d8b9eb4b5bd803510bd4027fb0d9",
         "path": "cadcraft"
       },
       "componentTypes": ["command", "mcp", "ui"],
@@ -872,17 +872,17 @@
         "en": "CADCraft CAD drafting in a ZCode panel, with workspace file opening and host-mediated exports.",
         "zh-CN": "在 ZCode 面板中使用 CADCraft 进行CAD 绘图，支持打开工作区文件和通过宿主保存导出。"
       },
-      "version": "0.2.2",
+      "version": "0.2.3",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "category": "productivity",
       "keywords": ["artcraft", "wasm", "ui-plugin", "cadcraft"],
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/cadcraft/0.2.2/plugin.zip",
-        "sha256": "2ffa6cb8325dbe623130e802aa59d6141a272afe9177822030444a18b1743cbe",
-        "size": 33535414
+        "path": "plugins/cadcraft/0.2.3/plugin.zip",
+        "sha256": "b19740f5172be1a529feeade992f02f13482d8b9eb4b5bd803510bd4027fb0d9",
+        "size": 33535417
       }
     },
     {
@@ -891,8 +891,8 @@
       "source": {
         "source": "url",
         "type": "zip",
-        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/soundcraft/0.2.2/plugin.zip",
-        "sha256": "5a4b5c34a1481ac6381e7c8c6d2b1a52481b5401675b82e1ec6c8e17004a4dd1",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/soundcraft/0.2.3/plugin.zip",
+        "sha256": "37bf933404274b2649a3a9d410660269eb9e8238cf7f02e84d92c4a1106cc00f",
         "path": "soundcraft"
       },
       "componentTypes": ["command", "mcp", "ui"],
@@ -906,17 +906,17 @@
         "en": "SoundCraft audio editing in a ZCode panel, with workspace file opening and host-mediated exports.",
         "zh-CN": "在 ZCode 面板中使用 SoundCraft 进行音频编辑，支持打开工作区文件和通过宿主保存导出。"
       },
-      "version": "0.2.2",
+      "version": "0.2.3",
       "author": {
-        "name": "ZCode"
+        "name": "zcoder"
       },
       "category": "productivity",
       "keywords": ["artcraft", "wasm", "ui-plugin", "soundcraft"],
-      "publisherType": "official",
+      "publisherType": "community",
       "_artifact": {
-        "path": "plugins/soundcraft/0.2.2/plugin.zip",
-        "sha256": "5a4b5c34a1481ac6381e7c8c6d2b1a52481b5401675b82e1ec6c8e17004a4dd1",
-        "size": 18878878
+        "path": "plugins/soundcraft/0.2.3/plugin.zip",
+        "sha256": "37bf933404274b2649a3a9d410660269eb9e8238cf7f02e84d92c4a1106cc00f",
+        "size": 18878880
       }
     },
     {
@@ -975,6 +975,201 @@
         "path": "plugins/tripo-3d/0.1.3/plugin.zip",
         "sha256": "888e64c11c9c631d3d2680a943d58972092705e0a2a95a682b3c8936b8cda29d",
         "size": 29018
+      }
+    },
+    {
+      "name": "zcode-context",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/zcode-context/0.3.10/plugin.zip",
+        "sha256": "e6dc37a875f768e761eb98364597e98ddf0001ae6d49a538718e080abcbf2263",
+        "path": "zcode-context"
+      },
+      "description": "Read-only session usage, model input composition, request differences and compaction events. After installing, open the Context panel from the session sidebar (top-right panel switcher); also turn on full Model I/O retention in Settings → General — the default recording drops older requests and cannot recover them later.",
+      "description_i18n": {
+        "en": "Read-only session usage, model input composition, request differences and compaction events. After installing, open the Context panel from the session sidebar (top-right panel switcher); also turn on full Model I/O retention in Settings → General — the default recording drops older requests and cannot recover them later.",
+        "zh-CN": "只读查看会话用量、模型输入组成、请求差异和压缩事件。装好后点右上角「切换面板」，在会话侧边栏打开「上下文」面板；建议同时在「设置 → 通用」打开「完整保留模型 I/O」——默认记录会丢弃更早的请求，且无法事后恢复。"
+      },
+      "homepage": "https://github.com/Kevinzzz6/zcode-context#默认记录与完整保留",
+      "version": "0.3.10",
+      "author": {
+        "name": "Kevinzzz6",
+        "url": "https://github.com/Kevinzzz6"
+      },
+      "category": "developer-tools",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/zcode-context/icon.png",
+      "keywords": ["context", "tokens", "usage", "session", "mcp"],
+      "publisherType": "community",
+      "componentTypes": ["mcp", "ui"],
+      "_artifact": {
+        "path": "plugins/zcode-context/0.3.10/plugin.zip",
+        "sha256": "e6dc37a875f768e761eb98364597e98ddf0001ae6d49a538718e080abcbf2263",
+        "size": 528049
+      }
+    },
+    {
+      "name": "jupyter-notebook",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/jupyter-notebook/icon.png",
+      "componentTypes": ["skill", "mcp", "ui"],
+      "displayName": "Jupyter Notebook",
+      "displayName_i18n": {
+        "en": "Jupyter Notebook",
+        "zh-CN": "Jupyter Notebook"
+      },
+      "version": "0.2.0",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/jupyter-notebook/0.2.0/plugin.zip",
+        "sha256": "70b5041aea2a7566b9e91f217bc5b08363382e72043d5a4154c404907e432aba",
+        "path": "jupyter-notebook"
+      },
+      "description": "在对话侧栏打开 Jupyter Notebook：连接已有的 Jupyter Server 或为工作区启动一个，Agent 与用户一起编辑和运行 cell。",
+      "description_i18n": {
+        "en": "Work on Jupyter notebooks in a side panel: connect to a running Jupyter Server or start one for the workspace, and edit and run cells together with the agent.",
+        "zh-CN": "在对话侧栏打开 Jupyter Notebook：连接已有的 Jupyter Server 或为工作区启动一个，Agent 与用户一起编辑和运行 cell。"
+      },
+      "category": "developer-tools",
+      "author": {
+        "name": "ZCode"
+      },
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/jupyter-notebook/0.2.0/plugin.zip",
+        "sha256": "70b5041aea2a7566b9e91f217bc5b08363382e72043d5a4154c404907e432aba",
+        "size": 1072437
+      }
+    },
+    {
+      "name": "typst-workbench",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/typst-workbench/icon.png",
+      "componentTypes": ["skill", "mcp", "ui"],
+      "displayName": "Typst Workbench",
+      "displayName_i18n": {
+        "en": "Typst Workbench",
+        "zh-CN": "Typst 工作台"
+      },
+      "version": "0.2.0",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/typst-workbench/0.2.0/plugin.zip",
+        "sha256": "bd1e0899205a82162617ba63f1c4e6981446da562f28d83c8a0884d2a48f4d60",
+        "path": "typst-workbench"
+      },
+      "description": "用你本机的 Typst 在对话侧栏实时预览文档：Agent 改完文件预览即刻更新，查看错误与渲染页面、在预览中标出位置、导出 PDF；你可以选中预览中的文字，连同对应的源码位置发给 Agent。",
+      "description_i18n": {
+        "en": "Live-preview Typst documents in a side panel with the Typst installed on your computer: the preview updates the moment the agent saves a file, the agent checks errors, looks at rendered pages, points at places in the preview and exports PDFs, and you can send selected text to the agent together with its source location.",
+        "zh-CN": "用你本机的 Typst 在对话侧栏实时预览文档：Agent 改完文件预览即刻更新，查看错误与渲染页面、在预览中标出位置、导出 PDF；你可以选中预览中的文字，连同对应的源码位置发给 Agent。"
+      },
+      "category": "productivity",
+      "author": {
+        "name": "ZCode"
+      },
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/typst-workbench/0.2.0/plugin.zip",
+        "sha256": "bd1e0899205a82162617ba63f1c4e6981446da562f28d83c8a0884d2a48f4d60",
+        "size": 3429417
+      }
+    },
+    {
+      "name": "zotero",
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/zotero/icon.png",
+      "componentTypes": ["skill", "mcp", "ui"],
+      "displayName": "Zotero",
+      "displayName_i18n": {
+        "en": "Zotero",
+        "zh-CN": "Zotero"
+      },
+      "version": "0.2.1",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/zotero/0.2.1/plugin.zip",
+        "sha256": "95ed9985413aa938522643270094d64810fb959c842428d05e022281da53abc5",
+        "path": "zotero"
+      },
+      "description": "在对话侧栏使用你的 Zotero 文库：搜索与阅读论文和你的高亮，Agent 在 PDF 中标出依据、生成引用与 .bib 文件，并可导入论文、写笔记、整理分类。",
+      "description_i18n": {
+        "en": "Work with your Zotero library in a side panel: search and read papers and your highlights, let the agent highlight evidence in PDFs, cite and keep a .bib file, and import papers, write notes and organise collections.",
+        "zh-CN": "在对话侧栏使用你的 Zotero 文库：搜索与阅读论文和你的高亮，Agent 在 PDF 中标出依据、生成引用与 .bib 文件，并可导入论文、写笔记、整理分类。"
+      },
+      "category": "productivity",
+      "author": {
+        "name": "ZCode"
+      },
+      "publisherType": "official",
+      "_artifact": {
+        "path": "plugins/zotero/0.2.1/plugin.zip",
+        "sha256": "95ed9985413aa938522643270094d64810fb959c842428d05e022281da53abc5",
+        "size": 3480129
+      }
+    },
+    {
+      "name": "unreal-engine",
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/unreal-engine/0.1.0/plugin.zip",
+        "sha256": "b0a35cbc98537cc35ee4a8b097a9ee9eb70f89017f881e608f3d6f2ce04feb9c",
+        "path": "unreal-engine"
+      },
+      "displayName": "Unreal Engine",
+      "description": "Control a separately installed Unreal Editor through Epic Unreal MCP and adapted official skills. Requires UE with ModelContextProtocol and AllToolsets enabled.",
+      "description_i18n": {
+        "zh-CN": "通过 Epic 官方 MCP 和 Skills 操作独立安装的 UE 编辑器。需启用 ModelContextProtocol 和 AllToolsets。",
+        "en": "Control a separately installed Unreal Editor through Epic Unreal MCP and adapted official skills. Requires UE with ModelContextProtocol and AllToolsets enabled."
+      },
+      "version": "0.1.0",
+      "author": {
+        "name": "Z.ai"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/unreal-engine/icon.png",
+      "category": "developer-tools",
+      "keywords": ["unreal-engine", "ue", "mcp", "game-development"],
+      "publisherType": "official",
+      "componentTypes": ["skill", "mcp"],
+      "_artifact": {
+        "path": "plugins/unreal-engine/0.1.0/plugin.zip",
+        "sha256": "b0a35cbc98537cc35ee4a8b097a9ee9eb70f89017f881e608f3d6f2ce04feb9c",
+        "size": 25865
+      }
+    },
+    {
+      "name": "anet",
+      "displayName": "AgentNetwork (anet)",
+      "displayName_i18n": {
+        "en": "AgentNetwork (anet)",
+        "zh-CN": "AgentNetwork（anet）"
+      },
+      "source": {
+        "source": "url",
+        "type": "zip",
+        "url": "https://cdn-zcode.z.ai/zcode/official-plugin/plugins/anet/0.1.2/plugin.zip",
+        "sha256": "321c125d6f77f211bedb17984e22d513cfb5d58b666f4ef038b39e579f1260c3",
+        "path": "anet"
+      },
+      "icon": "https://cdn-zcode.z.ai/zcode/official-plugin/assets/anet/icon.png",
+      "description": "Delegate tasks to other AI agents over A2A through a local AgentNetwork (anet) node: find agents, send and track end-to-end encrypted tasks, settle priced skills within operator limits, and answer tasks sent to this node.",
+      "description_i18n": {
+        "en": "Delegate tasks to other AI agents over A2A through a local AgentNetwork (anet) node: find agents, send and track end-to-end encrypted tasks, settle priced skills within operator limits, and answer tasks sent to this node.",
+        "zh-CN": "通过本机 AgentNetwork（anet）节点经 A2A 协议把任务交给其他 AI 智能体：发现智能体，发送并跟踪端到端加密的任务，在运营者设定的额度内支付付费技能，并答复其他智能体发给本节点的任务。"
+      },
+      "version": "0.1.2",
+      "author": {
+        "name": "Agent Network Research",
+        "url": "https://agentnetwork.org.cn"
+      },
+      "category": "developer-tools",
+      "keywords": ["anet", "agentnetwork", "a2a", "agent-to-agent", "mcp", "x402", "multi-agent"],
+      "publisherType": "community",
+      "componentTypes": ["command", "skill", "mcp"],
+      "_artifact": {
+        "path": "plugins/anet/0.1.2/plugin.zip",
+        "sha256": "321c125d6f77f211bedb17984e22d513cfb5d58b666f4ef038b39e579f1260c3",
+        "size": 20919
       }
     }
   ]

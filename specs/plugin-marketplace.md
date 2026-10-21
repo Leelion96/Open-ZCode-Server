@@ -2,13 +2,20 @@
 
 状态：2026-10-15 已按上游原样镜像并清理本地插件副本。
 
+## v3.16.2 客户端合并配套（2026-10-21）
+
+- 使用既有 `pnpm plugins:sync` 同步当前官方目录，只过滤 `requiresPaidPlan === true` 及对应精选引用；保留组件、发布者、版本、作者、来源、签名与其他元数据，不保存插件包。
+- 同步前快照为 27 条；最终数量以本次下载的官方内容为准。只调整相关快照断言、当前能力说明与同步证据，不修改 API、数据库、模型目录 revision 35、工作流 `alwaysOn` 默认或客户端源码。
+- 增加 `app_version=3.16.2` 的 HTTP 兼容样本，保持各版本/平台同一份配置的既有规则。市场验证涵盖新增条目、公开/社区和 UI 组件字段的原样透传。
+- 官方 CDN 目录独立发布，不把本次新增插件全部归因于客户端的源码提交。沿用现有类型、Lint、测试、架构、内容与格式检查；本次不部署，Git 提交按用户明确授权在 `main` 执行，实际验证结果完成后记录。
+
 Server 侧市场同步官方 ZCode marketplace JSON，只过滤付费计划条目。Server 返回官方目录格式，客户端仍从官方 CDN 下载插件包和图片。
 
 ## 本轮实施规则
 
 - 同步输入为 `https://cdn-zcode.z.ai/zcode/official-plugin/marketplace.json`。只移除 `requiresPaidPlan === true` 的插件对象；字段缺省或为 false 的对象保留。完整替换 Server 市场目录，不与旧快照合并。
 - Server 不下载、抽取、编辑、重打包或托管 ZIP；Marketplace 条目中的 URL、SHA-256 与图片地址全部沿用上游。
-- 当前已确认的官方快照含 41 个条目，其中 14 个 `requiresPaidPlan === true`，目标目录为剩余 27 个。原有 Server 特有但官方市场缺少的 9 个条目不再发布。
+- 2026-10-21 同步的官方快照含 47 个条目，其中 14 个 `requiresPaidPlan === true`，目标目录为剩余 33 个。原有 Server 特有但官方市场缺少的 9 个条目不再发布。
 - Server 返回的 marketplace 对象与官方 JSON 结构相同，仅 `plugins` 中移除付费项；若上游未来提供 `featured`，同步时也移除对应付费插件名。
 - 不改写插件 Markdown、展示作者或 package/plugin manifest；沿用上游原文和元数据，避免制造与官方发布内容的差异。
 - 协议、环境变量、命令、路径和稳定 ID 属于运行标识，保持兼容并在审计中单列；许可证与版权声明保留真实原文。
